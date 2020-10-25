@@ -1,9 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1259
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CyberDay", "CyberDay\CyberDay.csproj", "{08A04F50-BC9A-42CF-ADFC-D7F7DAC4C40E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{37C236F7-0102-43EB-953F-DE0D86FA3DE6}"
+	ProjectSection(SolutionItems) = preProject
+		images\0.jpg = images\0.jpg
+		images\astheticQuad.jpg = images\astheticQuad.jpg
+		images\wilson.jpg = images\wilson.jpg
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
