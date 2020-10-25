@@ -51,7 +51,7 @@
                 <h2 class="form-signin-heading text-center">Login</h2>
                 <input type="text" class="form-control" name="username" placeholder="Username" required="" autofocus="" />
                 <input type="password" class="form-control" name="password" placeholder="Password" required="" />
-                <asp:Button ID="btnLogin" runat="server" OnClick="btnLogin_Click" Text="Login" class="btn btn=lg btn-primary btn-block"></asp:Button>
+                <asp:Button ID="btnLogin" runat="server" Text="Login" class="btn btn=lg btn-primary btn-block"></asp:Button>
             </section>
 
         </div>
