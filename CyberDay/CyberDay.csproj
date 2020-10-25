@@ -67,9 +67,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CoordinatorHomePage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoordinatorHomePage.aspx.cs">
+      <DependentUpon>CoordinatorHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoordinatorHomePage.aspx.designer.cs">
+      <DependentUpon>CoordinatorHomePage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CoordinatorPages.Master.cs">
       <DependentUpon>CoordinatorPages.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
