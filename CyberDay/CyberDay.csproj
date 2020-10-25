@@ -112,7 +112,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CoordinatorPages.Master" />
-    <None Include="packages.config" />
     <Content Include="StudentPages.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
