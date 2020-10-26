@@ -10,69 +10,69 @@
 namespace CyberDay {
     
     
-    public partial class CoordinatorPages {
+    public partial class MealTicket {
         
         /// <summary>
-        /// head control.
+        /// lblMealTicketInfo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.Label lblMealTicketInfo;
         
         /// <summary>
-        /// form1 control.
+        /// lblSelectCyberDay control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label lblSelectCyberDay;
         
         /// <summary>
-        /// btnLogOut control.
+        /// ddlSelectCyberDay control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLogOut;
+        protected global::System.Web.UI.WebControls.DropDownList ddlSelectCyberDay;
         
         /// <summary>
-        /// lblUserDetails control.
+        /// btnTicketQuantity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUserDetails;
+        protected global::System.Web.UI.WebControls.Button btnTicketQuantity;
         
         /// <summary>
-        /// btnReturnHome control.
+        /// btnTicketPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnReturnHome;
+        protected global::System.Web.UI.WebControls.Button btnTicketPrice;
         
         /// <summary>
-        /// lblTitle control.
+        /// lblTicketQuantity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTitle;
+        protected global::System.Web.UI.WebControls.Label lblTicketQuantity;
         
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// lblTicketPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.Label lblTicketPrice;
     }
 }

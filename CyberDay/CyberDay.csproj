@@ -69,6 +69,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AssignVolunteer.aspx" />
+    <Content Include="BuildSchedule.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -77,11 +79,12 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="CoordinatorHomePage.aspx" />
     <Content Include="EventRosters.aspx" />
-    <Content Include="HomePage.aspx" />
     <Content Include="Images\0.jpg" />
     <Content Include="Images\astheticQuad.jpg" />
     <Content Include="Images\wilson.jpg" />
-    <Content Include="LoginPage.aspx" />
+    <Content Include="MealTicket.aspx" />
+    <Content Include="NewCyberDay.aspx" />
+    <Content Include="NewVolunteer.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -184,6 +187,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssignVolunteer.aspx.cs">
+      <DependentUpon>AssignVolunteer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AssignVolunteer.aspx.designer.cs">
+      <DependentUpon>AssignVolunteer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BuildSchedule.aspx.cs">
+      <DependentUpon>BuildSchedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BuildSchedule.aspx.designer.cs">
+      <DependentUpon>BuildSchedule.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CoordinatorHomePage.aspx.cs">
       <DependentUpon>CoordinatorHomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -205,19 +222,26 @@
     <Compile Include="EventRosters.aspx.designer.cs">
       <DependentUpon>EventRosters.aspx</DependentUpon>
     </Compile>
-    <Compile Include="HomePage.aspx.cs">
-      <DependentUpon>HomePage.aspx</DependentUpon>
+    <Compile Include="MealTicket.aspx.cs">
+      <DependentUpon>MealTicket.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="HomePage.aspx.designer.cs">
-      <DependentUpon>HomePage.aspx</DependentUpon>
+    <Compile Include="MealTicket.aspx.designer.cs">
+      <DependentUpon>MealTicket.aspx</DependentUpon>
     </Compile>
-    <Compile Include="LoginPage.aspx.cs">
-      <DependentUpon>LoginPage.aspx</DependentUpon>
+    <Compile Include="NewCyberDay.aspx.cs">
+      <DependentUpon>NewCyberDay.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="LoginPage.aspx.designer.cs">
-      <DependentUpon>LoginPage.aspx</DependentUpon>
+    <Compile Include="NewCyberDay.aspx.designer.cs">
+      <DependentUpon>NewCyberDay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewVolunteer.aspx.cs">
+      <DependentUpon>NewVolunteer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewVolunteer.aspx.designer.cs">
+      <DependentUpon>NewVolunteer.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StudentPages.Master.cs">

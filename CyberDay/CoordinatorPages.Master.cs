@@ -11,7 +11,15 @@ namespace CyberDay
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+        }
 
+        protected void btnReturnHome_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CoordinatorHomePage.aspx");
+        }
+
+        protected void btnLogOut_Click(object sender, EventArgs e)
+        {
         }
     }
 }

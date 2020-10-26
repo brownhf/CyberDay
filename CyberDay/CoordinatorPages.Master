@@ -14,7 +14,7 @@
             <asp:Table runat="server" HorizontalAlign="Right">
                 <asp:TableRow>
                     <asp:TableCell>
-                        <asp:Button ID="Button1" runat="server" Text="Logout" OnClick="btnLogOut_Click" CausesValidation="false"/>
+                        <asp:Button ID="btnLogOut" runat="server" Text="Logout" OnClick="btnLogOut_Click" CausesValidation="false"/>
                     </asp:TableCell>
                 </asp:TableRow>
                 <asp:TableRow>
