@@ -10,8 +10,8 @@
                 </td>
             </tr>
             <tr>
-                <td>
-                    <h4>Basic Info:</h4>
+                <td colspan="2">
+                    <h4>Student Basic Info:</h4>
                 </td>
             </tr>
             <tr>
@@ -40,6 +40,14 @@
             </tr>
             <tr>
                 <td>
+                    <asp:Label ID="lblStudentEmail" runat="server" Text="Email:"></asp:Label>
+                </td>
+                <td>
+                    <asp:TextBox ID="txtStudentEmail" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
                     <asp:Label ID="lblNotes" runat="server" Text="Notes:"></asp:Label>
                     <br />
                 </td>
@@ -49,8 +57,8 @@
                 </td>
             </tr>
             <tr>
-                <td>
-                    <h4>School Info:</h4>
+                <td colspan="2">
+                    <h4>Student School Info:</h4>
                 </td>
             </tr>
             <tr>
@@ -71,7 +79,7 @@
             </tr>
             <tr>
                 <td>
-                    <h4>Meal Info:</h4>
+                    <h4>Student Meal Info:</h4>
                 </td>
             </tr>
             <tr>
