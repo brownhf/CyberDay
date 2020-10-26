@@ -18,6 +18,10 @@ namespace CyberDay
                   "in our CIS major, your child will participate in a \n" +
                   " variety of technical events that will further grow their \n" +
                   " curiosity and knowledge. Thank you parents!";
+
+            lblChaperoneText.Text = "We would love to have you as a chaperone! \n" +
+                "Use the chaperone link in the menu to sign up! \n" +
+                "All chaperones recieve a free T-Shirt and meal!";
         }
     }
 }

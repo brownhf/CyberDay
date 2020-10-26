@@ -27,6 +27,7 @@
                             <Items>
                                 <asp:MenuItem Text="Parents Home" NavigateUrl="~/ParentsHome.aspx"></asp:MenuItem>
                                 <asp:MenuItem Text="Register My Child" NavigateUrl="~/ParentsRegisterChild.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Chaperone" NavigateUrl="~/ParentChaperone.aspx"></asp:MenuItem>
                                 <asp:MenuItem Text="Photo Release Form"></asp:MenuItem>
                                 <asp:MenuItem Text="Logout" NavigateUrl="~/HomePage.aspx"></asp:MenuItem>
                             </Items>
