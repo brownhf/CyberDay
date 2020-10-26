@@ -51,7 +51,7 @@
                                 <a class="nav-link" href="#">Teachers</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="ParentsPage.aspx">Parents</a>
+                                <a class="nav-link" href="ParentsHome.aspx">Parents</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Students</a>
