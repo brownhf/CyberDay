@@ -11,7 +11,8 @@ namespace CyberDay
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            lblWelcomeMessage.Text = "Want to make Cyber Day even better!?";
+            lblWelcomeMsg2.Text = "Sign up to be a chaperone for the event!";
         }
     }
 }
