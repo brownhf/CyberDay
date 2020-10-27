@@ -76,6 +76,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="CoordinatorHomePage.aspx" />
+    <Content Include="CreateAccountPage.aspx" />
     <Content Include="HomePage.aspx" />
     <Content Include="Images\0.jpg" />
     <Content Include="Images\astheticQuad.jpg" />
@@ -197,6 +198,13 @@
     <Compile Include="CoordinatorPages.Master.designer.cs">
       <DependentUpon>CoordinatorPages.Master</DependentUpon>
     </Compile>
+    <Compile Include="CreateAccountPage.aspx.cs">
+      <DependentUpon>CreateAccountPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateAccountPage.aspx.designer.cs">
+      <DependentUpon>CreateAccountPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -211,6 +219,7 @@
     <Compile Include="LoginPage.aspx.designer.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PasswordHash.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StudentPages.Master.cs">
       <DependentUpon>StudentPages.Master</DependentUpon>
