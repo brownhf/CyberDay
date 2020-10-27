@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Parents.master.cs" Inherits="CyberDay.Parents" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title id="Title" runat="server"></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <fieldset>
+                <table>
+                    <tr>
+                        <td>
+                            <asp:Label ID="lblWelcome" runat="server" Text="Parents Portal" ForeColor="Purple" Font-Size="X-Large"></asp:Label>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <br />
+            <table>
+                <tr>
+                    <td>
+                        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+                            <StaticMenuItemStyle HorizontalPadding="15" />
+                            <Items>
+                                <asp:MenuItem Text="Parents Home" NavigateUrl="~/ParentsHome.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Register My Child" NavigateUrl="~/ParentsRegisterChild.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Chaperone" NavigateUrl="~/ParentChaperone.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Photo Release Form" NavigateUrl="~/ParentPhotoReleaseForm.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Logout" NavigateUrl="~/HomePage.aspx"></asp:MenuItem>
+                            </Items>
+                        </asp:Menu>
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <asp:ContentPlaceHolder ID="ParentContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

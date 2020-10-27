@@ -10,222 +10,186 @@
 namespace CyberDay {
     
     
-    public partial class AssignVolunteer {
+    public partial class ParentChaperone {
         
         /// <summary>
-        /// lblEventStudentAssign control.
+        /// lblWelcomeMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEventStudentAssign;
+        protected global::System.Web.UI.WebControls.Label lblWelcomeMessage;
         
         /// <summary>
-        /// lblSelectStudentVolunteer control.
+        /// lblWelcomeMsg2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSelectStudentVolunteer;
+        protected global::System.Web.UI.WebControls.Label lblWelcomeMsg2;
         
         /// <summary>
-        /// ddlSelectStudentVolunteer control.
+        /// lblForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlSelectStudentVolunteer;
+        protected global::System.Web.UI.WebControls.Label lblForm;
         
         /// <summary>
-        /// lblSelectStudentCyberDay control.
+        /// lblFirstName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSelectStudentCyberDay;
+        protected global::System.Web.UI.WebControls.Label lblFirstName;
         
         /// <summary>
-        /// ddlSelectStudentCyberDay control.
+        /// txtFirstName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlSelectStudentCyberDay;
+        protected global::System.Web.UI.WebControls.TextBox txtFirstName;
         
         /// <summary>
-        /// lblSelectStudentEvent control.
+        /// lblLastName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSelectStudentEvent;
+        protected global::System.Web.UI.WebControls.Label lblLastName;
         
         /// <summary>
-        /// ddlSelectStudentEvent control.
+        /// txtLastName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlSelectStudentEvent;
+        protected global::System.Web.UI.WebControls.TextBox txtLastName;
         
         /// <summary>
-        /// btnStudentVolunteerAssign control.
+        /// lblPhoneNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnStudentVolunteerAssign;
+        protected global::System.Web.UI.WebControls.Label lblPhoneNumber;
         
         /// <summary>
-        /// lblAddStatusSuccess control.
+        /// txtPhoneNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAddStatusSuccess;
+        protected global::System.Web.UI.WebControls.TextBox txtPhoneNumber;
         
         /// <summary>
-        /// lblAddStatusFail control.
+        /// lblEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAddStatusFail;
+        protected global::System.Web.UI.WebControls.Label lblEmail;
         
         /// <summary>
-        /// lblFacultyAssign control.
+        /// txtEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFacultyAssign;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
         
         /// <summary>
-        /// lblSelectFacultyVolunteer control.
+        /// lblFood control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSelectFacultyVolunteer;
+        protected global::System.Web.UI.WebControls.Label lblFood;
         
         /// <summary>
-        /// ddlSelectFacultyVolunteer control.
+        /// lblMealSelection control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlSelectFacultyVolunteer;
+        protected global::System.Web.UI.WebControls.Label lblMealSelection;
         
         /// <summary>
-        /// lblSelectFacultyCyberDay control.
+        /// ddlMeal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSelectFacultyCyberDay;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMeal;
         
         /// <summary>
-        /// ddlSelectFacultyCyberDay control.
+        /// lblAllergies control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlSelectFacultyCyberDay;
+        protected global::System.Web.UI.WebControls.Label lblAllergies;
         
         /// <summary>
-        /// lblSelectFacultyEvent control.
+        /// CheckBoxList1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSelectFacultyEvent;
+        protected global::System.Web.UI.WebControls.CheckBoxList CheckBoxList1;
         
         /// <summary>
-        /// ddlSelectFacultyEvent control.
+        /// lblShirtSize control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlSelectFacultyEvent;
+        protected global::System.Web.UI.WebControls.Label lblShirtSize;
         
         /// <summary>
-        /// btnFacultyVolunteerAssign control.
+        /// lblShirtSizeSelection control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnFacultyVolunteerAssign;
+        protected global::System.Web.UI.WebControls.Label lblShirtSizeSelection;
         
         /// <summary>
-        /// lblAddStatusSuccess2 control.
+        /// ddlShirtSize control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAddStatusSuccess2;
+        protected global::System.Web.UI.WebControls.DropDownList ddlShirtSize;
         
         /// <summary>
-        /// lblAddStatusFail2 control.
+        /// btnSubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAddStatusFail2;
-        
-        /// <summary>
-        /// sqlPopulateCyberDay control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource sqlPopulateCyberDay;
-        
-        /// <summary>
-        /// sqlPopulateEvent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource sqlPopulateEvent;
-        
-        /// <summary>
-        /// sqlPopulateStudentVolunteer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource sqlPopulateStudentVolunteer;
-        
-        /// <summary>
-        /// sqlPopulateFacultyVolunteer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource sqlPopulateFacultyVolunteer;
+        protected global::System.Web.UI.WebControls.Button btnSubmit;
     }
 }
