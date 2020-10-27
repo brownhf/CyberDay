@@ -108,6 +108,7 @@
     <Content Include="ParentsHome.aspx" />
     <Content Include="ParentsRegisterChild.aspx" />
     <Content Include="ParentChaperone.aspx" />
+    <Content Include="ParentPhotoReleaseForm.aspx" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />
@@ -250,6 +251,13 @@
     </Compile>
     <Compile Include="ParentChaperone.aspx.designer.cs">
       <DependentUpon>ParentChaperone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ParentPhotoReleaseForm.aspx.cs">
+      <DependentUpon>ParentPhotoReleaseForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ParentPhotoReleaseForm.aspx.designer.cs">
+      <DependentUpon>ParentPhotoReleaseForm.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
