@@ -7,13 +7,16 @@ using System.Web.UI.WebControls;
 
 namespace CyberDay
 {
-    public partial class CoordinatorPages : System.Web.UI.MasterPage
+    public partial class StudentContact : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
+        protected void sendbttn_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

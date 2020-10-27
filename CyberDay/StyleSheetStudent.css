@@ -1,0 +1,105 @@
+﻿.headImg{
+    width: 970px;
+    height: 200px;
+    border: solid;
+    
+    
+}
+
+body {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    /*background-color: #9F7DC6;*/
+}
+
+.topnav {
+    color: mediumpurple;
+    overflow: hidden;
+    padding-top: 20px;
+   
+}
+
+.topnav a{
+ 
+    font-weight: bold;
+    color: purple;
+    font-size: medium;
+    text-decoration: none;
+    margin-right: 20px;
+    margin-left: 20px;
+    
+}
+
+
+ 
+.topnav a:hover {
+    background-color: palegoldenrod;
+    color: black;
+    
+}
+
+.topnav a.active {
+    color: rebeccapurple;
+        
+}
+
+.info {
+    border: solid;
+    width: 950px;
+    background-color: palegoldenrod;
+    padding: 20px;
+    margin-top: 20px;
+
+
+}
+
+.info h1{
+    text-align: center;
+}
+
+.info a{
+    text-decoration: none;
+    color: black;
+}
+
+.contact{
+    padding: 15px;
+    margin: 10px;
+    border: solid;
+    background-color: palegoldenrod;
+}
+
+.contact a{
+
+    color:rebeccapurple;
+}
+
+.info{
+    background-color: palegoldenrod;
+    margin-top: 50px;
+   
+}
+
+
+
+.txt{
+    margin-bottom: 20px;
+}
+
+.fileTxt{
+    margin-right:10px;
+}
+
+.uploadBttn{
+    align-content:center;
+}
+
+.upload{
+    background-color:palegoldenrod;
+}
+
+.upload a h5{
+    color: rebeccapurple;
+    font-weight: bold;
+}

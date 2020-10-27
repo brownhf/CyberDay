@@ -27,7 +27,7 @@
         }
         footer{
             border-top: solid;
-            bor
+            
         }
     </style>
 </head>
@@ -54,7 +54,7 @@
                                 <a class="nav-link" href="ParentsPage.aspx">Parents</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Students</a>
+                                <a class="nav-link" href="StudentHome.aspx">Students</a>
                             </li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">

@@ -5,7 +5,10 @@
 <html>
 <head runat="server">
     <title>CyberDay Management System: Student Portal</title>
+   <link / rel ="stylesheet" href ="StyleSheetStudent.css " />     
     <asp:ContentPlaceHolder ID="head" runat="server">
+
+ 
     </asp:ContentPlaceHolder>
 </head>
 <body>
@@ -36,7 +39,13 @@
             <asp:Table runat="server">
                 <asp:TableRow>
                     <asp:TableCell>
-                        <asp:Label ID="lblTitle" runat="server" Text="CyberDay Management System: Coordinator Portal " Font-Bold="true" ForeColor="Purple" Font-Size="X-Large"></asp:Label>
+                        <asp:Label ID="lblTitle" runat="server" Text="CyberDay Management System: Student Portal " Font-Bold="true" ForeColor="Purple" Font-Size="X-Large"></asp:Label>
+                        <div class="topnav">
+                          <a class="active" href="StudentHome.aspx">Home</a>
+                          <a  href="StudentActivity.aspx">Activity Info</a>
+                          <a  href="StudentUpdate.aspx">Upload Project</a>
+                          <a  href="StudentContact.aspx">Contact</a>
+                        </div>
                     </asp:TableCell>
                 </asp:TableRow>
             </asp:Table>
