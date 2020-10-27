@@ -88,6 +88,7 @@
     <Content Include="Images\astheticQuad.jpg" />
     <Content Include="Images\wilson.jpg" />
     <Content Include="LoginPage.aspx" />
+    <Content Include="MainPage.aspx" />
     <Content Include="MealTicket.aspx" />
     <Content Include="NewCyberDay.aspx" />
     <Content Include="NewVolunteer.aspx" />
@@ -260,6 +261,13 @@
     </Compile>
     <Compile Include="LoginPage.aspx.designer.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.aspx.cs">
+      <DependentUpon>MainPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainPage.aspx.designer.cs">
+      <DependentUpon>MainPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="MealTicket.aspx.cs">
       <DependentUpon>MealTicket.aspx</DependentUpon>
