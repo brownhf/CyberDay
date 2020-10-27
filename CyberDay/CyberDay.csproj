@@ -87,7 +87,6 @@
     <Content Include="Images\0.jpg" />
     <Content Include="Images\astheticQuad.jpg" />
     <Content Include="Images\wilson.jpg" />
-    <Content Include="LoginBackup.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="MealTicket.aspx" />
     <Content Include="NewCyberDay.aspx" />
@@ -254,13 +253,6 @@
     </Compile>
     <Compile Include="EventRosters.aspx.designer.cs">
       <DependentUpon>EventRosters.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="LoginBackup.aspx.cs">
-      <DependentUpon>LoginBackup.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="LoginBackup.aspx.designer.cs">
-      <DependentUpon>LoginBackup.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
