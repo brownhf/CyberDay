@@ -248,10 +248,28 @@
         </div>
 
         <br />
+
+        <div>
+            <asp:Label ID="lblCoordinator" runat="server" Text="Add a Middle School Teacher Contact to the New CyberDay: " Font-Bold="true" Font-Size="Large"></asp:Label>
+            <asp:DropDownList ID="ddlCoordinator" runat="server"></asp:DropDownList>
+        </div>
+
+        <br />
+
+        <div>
+            <asp:Label ID="lblContact" runat="server" Text="Add a Middle School Teacher Contact to the New CyberDay: " Font-Bold="true" Font-Size="Large"></asp:Label>
+            <asp:DropDownList ID="ddlMiddleSchoolContact" runat="server"></asp:DropDownList>
+        </div>
+
+        <br />
         <br />
 
         <div>
             <asp:Button ID="btnCreateCyberDay" runat="server" Text="Create New Cyberday" OnClick="btnCreateCyberDay_Click" />
         </div>
     </fieldset>
+
+    <%--<asp:SqlDataSource ID="sqlPopulateTeacher" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDay %>" SelectCommand="" />
+        <asp:SqlDataSource ID="sqlPopulateCoordinator" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDay %>" SelectCommand="" />--%>
+
 </asp:Content>

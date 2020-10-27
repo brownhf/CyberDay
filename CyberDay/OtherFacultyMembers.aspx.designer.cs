@@ -10,213 +10,177 @@
 namespace CyberDay {
     
     
-    public partial class NewCyberDay {
+    public partial class OtherFacultyMembers {
         
         /// <summary>
-        /// lblDate control.
+        /// lblAddFaculty control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDate;
+        protected global::System.Web.UI.WebControls.Label lblAddFaculty;
         
         /// <summary>
-        /// ddlMonth control.
+        /// lblFirst control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlMonth;
+        protected global::System.Web.UI.WebControls.Label lblFirst;
         
         /// <summary>
-        /// lbl1 control.
+        /// txtFirst control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl1;
+        protected global::System.Web.UI.WebControls.TextBox txtFirst;
         
         /// <summary>
-        /// ddlDay control.
+        /// reqFirst control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlDay;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqFirst;
         
         /// <summary>
-        /// lbl2 control.
+        /// cmpFirstString control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl2;
+        protected global::System.Web.UI.WebControls.CompareValidator cmpFirstString;
         
         /// <summary>
-        /// ddlYear control.
+        /// lblLast control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlYear;
+        protected global::System.Web.UI.WebControls.Label lblLast;
         
         /// <summary>
-        /// lblStartTime control.
+        /// txtLast control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblStartTime;
+        protected global::System.Web.UI.WebControls.TextBox txtLast;
         
         /// <summary>
-        /// ddlHour control.
+        /// reqLast control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlHour;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqLast;
         
         /// <summary>
-        /// lbl3 control.
+        /// cmpLastString control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl3;
+        protected global::System.Web.UI.WebControls.CompareValidator cmpLastString;
         
         /// <summary>
-        /// ddlMinute control.
+        /// lblEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlMinute;
+        protected global::System.Web.UI.WebControls.Label lblEmail;
         
         /// <summary>
-        /// lbl4 control.
+        /// txtEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl4;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
         
         /// <summary>
-        /// ddlAmPm control.
+        /// reqEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlAmPm;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqEmail;
         
         /// <summary>
-        /// lblEndTime control.
+        /// cmpEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEndTime;
+        protected global::System.Web.UI.WebControls.CompareValidator cmpEmail;
         
         /// <summary>
-        /// ddlHourEnd control.
+        /// lblShirtSize control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlHourEnd;
+        protected global::System.Web.UI.WebControls.Label lblShirtSize;
         
         /// <summary>
-        /// Label2 control.
+        /// ddlShirtSize control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.DropDownList ddlShirtSize;
         
         /// <summary>
-        /// ddlMinuteEnd control.
+        /// lblSelectContactTeacher control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlMinuteEnd;
+        protected global::System.Web.UI.WebControls.Label lblSelectContactTeacher;
         
         /// <summary>
-        /// Label3 control.
+        /// ddlSelectContactTeacher control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.DropDownList ddlSelectContactTeacher;
         
         /// <summary>
-        /// ddlAmPmEnd control.
+        /// lblAddToCyberDay control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlAmPmEnd;
+        protected global::System.Web.UI.WebControls.Label lblAddToCyberDay;
         
         /// <summary>
-        /// lblCoordinator control.
+        /// btnAddtoCyberDay control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCoordinator;
-        
-        /// <summary>
-        /// ddlCoordinator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCoordinator;
-        
-        /// <summary>
-        /// lblContact control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblContact;
-        
-        /// <summary>
-        /// ddlMiddleSchoolContact control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlMiddleSchoolContact;
-        
-        /// <summary>
-        /// btnCreateCyberDay control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCreateCyberDay;
+        protected global::System.Web.UI.WebControls.Button btnAddtoCyberDay;
     }
 }

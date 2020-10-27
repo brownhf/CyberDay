@@ -7,9 +7,14 @@ using System.Web.UI.WebControls;
 
 namespace CyberDay
 {
-    public partial class StudentPages : System.Web.UI.MasterPage
+    public partial class OtherFacultyMembers : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnAddtoCyberDay_Click(object sender, EventArgs e)
         {
 
         }

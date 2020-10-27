@@ -7,19 +7,19 @@ using System.Web.UI.WebControls;
 
 namespace CyberDay
 {
-    public partial class AssignVolunteer : System.Web.UI.Page
+    public partial class TeacherPortal : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
         }
-        protected void btnStudentVolunteerAssign_Click(object sender, EventArgs e)
-        {
 
+        protected void btnReturnHome_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("TeacherHomePage.aspx");
         }
 
-        protected void btnFacultyVolunteerAssign_Click(object sender, EventArgs e)
+        protected void btnLogOut_Click(object sender, EventArgs e)
         {
-
         }
     }
 }
