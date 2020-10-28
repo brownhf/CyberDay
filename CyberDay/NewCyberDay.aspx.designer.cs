@@ -51,13 +51,13 @@ namespace CyberDay
         protected global::System.Web.UI.WebControls.DropDownList ddlDay;
 
         /// <summary>
-        /// lbl2 control.
+        /// lblDash control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl2;
+        protected global::System.Web.UI.WebControls.Label lblDash;
 
         /// <summary>
         /// ddlYear control.

@@ -54,7 +54,7 @@
                 <asp:ListItem Text="30" Value="30"></asp:ListItem>
                 <asp:ListItem Text="31" Value="31"></asp:ListItem>
             </asp:DropDownList>
-            <asp:Label ID="lbl2" runat="server" Text=" / "></asp:Label>
+            <asp:Label ID="lblDash" runat="server" Text=" / "></asp:Label>
             <asp:DropDownList ID="ddlYear" runat="server">
                 <asp:ListItem Selected="True" Text="2020" Value="2020"></asp:ListItem>
                 <asp:ListItem Text="2021" Value="2021"></asp:ListItem>
