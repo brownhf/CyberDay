@@ -6,7 +6,7 @@
         <asp:Table runat="server">
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:Label ID="lblEventStudentAssign" runat="server" Text="Assign a Student Volunteer to Events at a Given CyberDay: " Font-Bold="true" Font-Size="Larger"></asp:Label>
+                    <asp:Label ID="lblEventStudentAssign" runat="server" Text="Assign a CyberDay Event to a Student Volunteer: " Font-Bold="true" Font-Size="Larger"></asp:Label>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
