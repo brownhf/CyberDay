@@ -76,7 +76,7 @@
                     <asp:Label ID="lblAddToCyberDay" runat="server" Text="Add Teacher Contact to Selected CyberDay: "></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:DropDownList ID="ddlAddToCyberDay" runat="server">  </asp:DropDownList>
+                    <asp:DropDownList ID="ddlAddToCyberDay" runat="server" DataSourceID="sqlPopulateDdl" DataTextField="Date" DataValueField="CyberDayID" AutoPostBack="true">  </asp:DropDownList>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -90,6 +90,6 @@
         </asp:Table>
     </fieldset>
 
-    <%--<asp:SqlDataSource ID="sqlPopulateDdl" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDay %>" SelectCommand="" />--%>
+    <asp:SqlDataSource ID="sqlPopulateDdl" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDayDB %>" SelectCommand="Select CyberDayID, Date From CyberDay" />
 
 </asp:Content>

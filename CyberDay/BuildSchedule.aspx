@@ -63,7 +63,7 @@
                     <asp:Label ID="lblSelectCyberDay" runat="server" Text="Select CyberDay: "></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:DropDownList ID="ddlSelectCyberDay" runat="server" AutoPostBack="true" ></asp:DropDownList>
+                    <asp:DropDownList ID="ddlSelectCyberDay" runat="server" DataSourceID="sqlPopulateCyberDay" DataTextField="Date" DataValueField="CyberDayID" AutoPostBack="true" ></asp:DropDownList>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -71,7 +71,7 @@
                     <asp:Label ID="lblSelectEvent" runat="server" Text="Select Event: "></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:DropDownList ID="ddlSelectEvent" runat="server" AutoPostBack="true" ></asp:DropDownList>
+                    <asp:DropDownList ID="ddlSelectEvent" runat="server" DataSourceID="sqlPopulateEvent" DataTextField="EventName" DataValueField="EventID" AutoPostBack="true" ></asp:DropDownList>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -86,8 +86,8 @@
         </asp:Table>
     </fieldset>
 
-    <%--<asp:SqlDataSource ID="sqlPopulateCyberDay" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDay %>" SelectCommand="" />
+    <asp:SqlDataSource ID="sqlPopulateCyberDay" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDayDB %>" SelectCommand="Select CyberDayID, Date From CyberDay" />
 
-    <asp:SqlDataSource ID="sqlPopulateEvent" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDay %>" SelectCommand="" />--%>
+    <asp:SqlDataSource ID="sqlPopulateEvent" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDayDB %>" SelectCommand="Select EventID, EventName From Event" />
 
 </asp:Content>

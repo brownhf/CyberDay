@@ -28,5 +28,5 @@
     <fieldset>
         <asp:GridView ID="grdvCyberDayRoster" runat="server" EmptyDataText="No Students Associated" />
     </fieldset>
-    <%--<asp:SqlDataSource ID="sqlPopulateDdl" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDay %>" SelectCommand="" />--%>
+    <asp:SqlDataSource ID="sqlPopulateDdl" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDayDB %>" SelectCommand="Select CyberDayID, Date From CyberDay" />
 </asp:Content>

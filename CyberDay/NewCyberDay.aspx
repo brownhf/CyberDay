@@ -54,7 +54,7 @@
                 <asp:ListItem Text="30" Value="30"></asp:ListItem>
                 <asp:ListItem Text="31" Value="31"></asp:ListItem>
             </asp:DropDownList>
-            <asp:Label ID="lbl2" runat="server" Text=" / "></asp:Label>
+            <asp:Label ID="lblDash" runat="server" Text=" / "></asp:Label>
             <asp:DropDownList ID="ddlYear" runat="server">
                 <asp:ListItem Selected="True" Text="2020" Value="2020"></asp:ListItem>
                 <asp:ListItem Text="2021" Value="2021"></asp:ListItem>
@@ -251,14 +251,7 @@
 
         <div>
             <asp:Label ID="lblCoordinator" runat="server" Text="Add a Middle School Teacher Contact to the New CyberDay: " Font-Bold="true" Font-Size="Large"></asp:Label>
-            <asp:DropDownList ID="ddlCoordinator" runat="server"></asp:DropDownList>
-        </div>
-
-        <br />
-
-        <div>
-            <asp:Label ID="lblContact" runat="server" Text="Add a Middle School Teacher Contact to the New CyberDay: " Font-Bold="true" Font-Size="Large"></asp:Label>
-            <asp:DropDownList ID="ddlMiddleSchoolContact" runat="server"></asp:DropDownList>
+            <asp:DropDownList ID="ddlCoordinator" runat="server" DataSourceID="srcTeachers" DataTextField="Name" DataValueField="TeacherID"></asp:DropDownList >
         </div>
 
         <br />
@@ -268,6 +261,14 @@
             <asp:Button ID="btnCreateCyberDay" runat="server" Text="Create New Cyberday" OnClick="btnCreateCyberDay_Click" />
         </div>
     </fieldset>
+
+    <asp:SqlDataSource
+        ID="srcTeachers"
+        runat="server"
+        ConnectionString="<%$ ConnectionStrings:CyberDayDB %>"
+        SelectCommand="Select TeacherID, FirstName + ' ' + LastName as Name From Teacher">
+    </asp:SqlDataSource>
+
 
     <%--<asp:SqlDataSource ID="sqlPopulateTeacher" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDay %>" SelectCommand="" />
         <asp:SqlDataSource ID="sqlPopulateCoordinator" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDay %>" SelectCommand="" />--%>
