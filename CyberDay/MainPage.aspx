@@ -29,17 +29,17 @@
             border-top: solid;
             bor
         }
+        
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
             <header>
-                <nav class="navbar navbar-expand-sm " style="background-color: #450084">
-                    <div class="container-fluid">
-                        <div class="navbar-header">
-                            <a class="navbar-brand" href="MainPage.aspx">JMU Cyber Day</a>
-                        </div>
+
+                <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #450084">
+                    <a href="MainPage.aspx" class="navbar-brand" >JMU CyberDay</a>
+                    <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
                             <li class="nav-item active">
                                 <a class="nav-link" href="MainPage.aspx">Home</a>
@@ -57,12 +57,14 @@
                                 <a class="nav-link" href="StudentHome.aspx">Students</a>
                             </li>
                         </ul>
-                        <ul class="nav navbar-nav navbar-right">
+                        <ul class="nav navbar-nav ml-auto">
                             <li><a href="LoginPage.aspx"><span class=""></span>Login</a></li>
                         </ul>
                     </div>
                 </nav>
+
                 <asp:Image ID="Image2" CssClass="quad" runat="server" ImageUrl="~/Images/0.jpg" />
+
             </header>
             <section class="sectionContent" runat="server">
                 This is where all the content/info about Cyber day will go...
