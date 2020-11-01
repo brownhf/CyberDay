@@ -7,11 +7,22 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CyberDay {
-    
-    
-    public partial class CoordinatorHomePage {
-        
+namespace CyberDay
+{
+
+
+    public partial class CoordinatorHomePage
+    {
+
+        /// <summary>
+        /// btnNewCyberDay1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnNewCyberDay1;
+
         /// <summary>
         /// lblNewCyberDay control.
         /// </summary>
@@ -20,7 +31,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblNewCyberDay;
-        
+
         /// <summary>
         /// btnNewCyberDay control.
         /// </summary>
@@ -29,7 +40,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnNewCyberDay;
-        
+
         /// <summary>
         /// lblSchedule control.
         /// </summary>
@@ -38,7 +49,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblSchedule;
-        
+
         /// <summary>
         /// btnSchedule control.
         /// </summary>
@@ -47,7 +58,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSchedule;
-        
+
         /// <summary>
         /// lblRoster control.
         /// </summary>
@@ -56,7 +67,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblRoster;
-        
+
         /// <summary>
         /// btnRoster control.
         /// </summary>
@@ -65,7 +76,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnRoster;
-        
+
         /// <summary>
         /// lblCreateVolunteer control.
         /// </summary>
@@ -74,7 +85,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblCreateVolunteer;
-        
+
         /// <summary>
         /// btnCreateVolunteer control.
         /// </summary>
@@ -83,7 +94,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCreateVolunteer;
-        
+
         /// <summary>
         /// lblAssignVolunteer control.
         /// </summary>
@@ -92,7 +103,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAssignVolunteer;
-        
+
         /// <summary>
         /// btnAssignVolunteer control.
         /// </summary>
@@ -101,7 +112,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAssignVolunteer;
-        
+
         /// <summary>
         /// lblMealTicket control.
         /// </summary>
@@ -110,7 +121,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMealTicket;
-        
+
         /// <summary>
         /// btnMealTicket control.
         /// </summary>
