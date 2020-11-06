@@ -85,8 +85,11 @@
     <Content Include="CreateAccountPage.aspx" />
     <Content Include="EventRosters.aspx" />
     <Content Include="Images\0.jpg" />
+    <Content Include="Images\aerial-quad.jpg" />
     <Content Include="Images\astheticQuad.jpg" />
+    <Content Include="Images\dukeDogs.png" />
     <Content Include="Images\students-on-quad.jpg" />
+    <Content Include="Images\studentsOnQuad.jpg" />
     <Content Include="Images\wilson.jpg" />
     <Content Include="LoginPage.aspx" />
     <Content Include="MainPage.aspx" />

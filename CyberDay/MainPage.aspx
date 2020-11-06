@@ -39,7 +39,7 @@
             <header>
 
                 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #450084">
-                    <a href="MainPage.aspx" class="navbar-brand" >JMU CyberDay</a>
+                    <a href="MainPage.aspx" class="navbar-brand" >James Madison University CyberDay</a>
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
                             <li class="nav-item active">
