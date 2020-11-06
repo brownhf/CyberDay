@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CyberDay {
-    
-    
-    public partial class StudentContact {
-        
+namespace CyberDay
+{
+
+
+    public partial class StudentContact
+    {
+
         /// <summary>
         /// contactTable control.
         /// </summary>
@@ -20,16 +22,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Table contactTable;
-        
-        /// <summary>
-        /// totxt control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox totxt;
-        
+
         /// <summary>
         /// fromtxt control.
         /// </summary>
@@ -38,7 +31,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox fromtxt;
-        
+
         /// <summary>
         /// subjecttxt control.
         /// </summary>
@@ -47,7 +40,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox subjecttxt;
-        
+
         /// <summary>
         /// mesgtxt control.
         /// </summary>
@@ -56,14 +49,14 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox mesgtxt;
-        
+
         /// <summary>
-        /// sendbttn control.
+        /// sendBttn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button sendbttn;
+        protected global::System.Web.UI.WebControls.Button sendBttn;
     }
 }

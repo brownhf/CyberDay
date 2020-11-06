@@ -18,25 +18,28 @@
             margin-right: auto;
             margin-left: auto;
         }
+        h1{
+            text-align: center;
+        }
     </style>
     <section class="info">
 
-        <h1>Welcome to the Student Page</h1>
+        <h1>STUDENT HOME</h1>
         <hr />
 
         <h3><a href="StudentActivity.aspx">View Activity Information</a></h3>
         <br />
-        <p>Access information regarding Cyber Day tasks and instructions</p>
+        <p>Here is where you will access all information regarding CyberDay. You can find out more about various tasks and related instructions.</p>
         <hr />
 
         <h3><a href="StudentUpdate.aspx">Finished a Project? </a></h3>
         <br />
-        <p>If you have finished a project, visit this section to upload your finished work for judging</p>
+        <p>Done with a project? If you have completed a project, visit this section to upload your finished work. </p>
         <hr />
 
         <h3><a href="StudentContact.aspx">Need to Chat? </a></h3>
         <br />
-        <p>Visit this section to email a volunteer/coordinator about any questions regarding the event</p>
+        <p>If you need to get in touch with any staff of CyberDay visit this section to get in contact with coordinators about any questions you ma have.</p>
 
     </section>
 </asp:Content>
