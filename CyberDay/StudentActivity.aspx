@@ -56,9 +56,10 @@
             <fieldset class="info">
 
                 <%--<legend>View Activity Information</legend>--%>
+                <%--<asp:TextBox ID="searchtxt" runat="server" Width ="150px"></asp:TextBox>--%>
                 <h1>VIEW ACTIVITY INFORMATION</h1>
                 <p>Here you will be able to see information regarding CyberDay. You will be ablt to find out more about various tasks and their related instructions.</p>
-                <%--<asp:TextBox ID="searchtxt" runat="server" Width ="150px"></asp:TextBox>--%>
+                
 
                 <asp:DropDownList ID="cyberDayDDL" runat="server" CssClass="cyberDayDDL">
                     <asp:ListItem Text="Cyber1" Value="1"></asp:ListItem>

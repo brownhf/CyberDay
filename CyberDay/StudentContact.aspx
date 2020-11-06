@@ -9,18 +9,20 @@
 
 
 
-<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server" >
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <style>
-        body{
+        /*Added CssClass for alot of the elements below so we could style them and add padding to each*/
+        body {
             background: #eee;
         }
+
         section {
             width: 75%;
             margin-right: auto;
             margin-left: auto;
         }
-        
-        h1{
+
+        h1 {
             text-align: center;
             margin-bottom: 20px;
         }
@@ -37,15 +39,17 @@
             border: 1px solid #e5e5e5;
             border-radius: 10px;
         }
-        .txtFrom{
+
+        .txtFrom {
             margin-top: 20px;
-            
         }
-        .txtSubject{
+
+        .txtSubject {
             margin-top: 10px;
             margin-bottom: 10px;
         }
-        .sendBttn{
+
+        .sendBttn {
             margin-top: 10px;
         }
     </style>
@@ -57,7 +61,9 @@
             <h1>CONTACT US</h1>
             <p>We are here to answer any questions you may have about CyberDay. Reach out to us and well respond as soon as we can.</p>
             <asp:Table ID="contactTable" runat="server" CssClass="contact">
-             <%--   <asp:TableRow>
+
+                <%-- DO WE NEED A 'TO' TEXTBOX? WONT IT ALWAYS JUST BE GOING TO THE SAME TWO COORDINATORS? --%>
+                <%--   <asp:TableRow>
                     <asp:TableCell>
                <a>To:</a> 
                     </asp:TableCell>
@@ -65,6 +71,7 @@
                         <asp:TextBox ID="totxt" runat="server" Width="500px" Height="20px" CssClass="txt"></asp:TextBox>
                     </asp:TableCell>
                 </asp:TableRow>--%>
+
                 <asp:TableRow>
                     <asp:TableCell>
                 <a>From:</a>
@@ -97,11 +104,10 @@
                     </asp:TableCell>
                 </asp:TableRow>
 
-
-
             </asp:Table>
 
         </section>
 
     </div>
+
 </asp:Content>

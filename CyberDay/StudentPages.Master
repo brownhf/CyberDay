@@ -12,6 +12,7 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <style>
+
         /*  section{
             width: 75%;
             margin-right: auto;
@@ -23,6 +24,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <%--/NavBar1...Still need to work out formatting and spacing of text/--%>
             <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #450084">
                 <a href="MainPage.aspx" class="navbar-brand">CYBERDAY: STUDENT PORTAL</a>
                 <div class="collapse navbar-collapse">
@@ -33,6 +35,8 @@
                     </ul>
                 </div>
             </nav>
+
+            <%-- NavBar2...Still need to work out formatting and spacing, as well as some of the links/onclick events --%>
             <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #CBB677">
                 <ul class="nav navbar-nav text-center">
                     <li class="nav-item active">
@@ -70,7 +74,6 @@
                     </asp:TableCell>
                 </asp:TableRow>
             </asp:Table>--%>
-
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 
             </asp:ContentPlaceHolder>
