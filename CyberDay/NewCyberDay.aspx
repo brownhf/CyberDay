@@ -251,14 +251,14 @@
 
         <div>
             <asp:Label ID="lblCoordinator" runat="server" Text="Select a Coordinator for the Event: " Font-Bold="true" Font-Size="Large"></asp:Label>
-            <asp:DropDownList ID="ddlCoordinator" runat="server" DataSourceID="sqlPopulateCoordinator" DataTextField="FullName" DataValueField="CoordinatorID" AutoPostBack="true"></asp:DropDownList>
+            <asp:DropDownList ID="ddlCoordinator" runat="server" AutoPostBack="true"></asp:DropDownList>
         </div>
 
         <br />
 
         <div>
             <asp:Label ID="lblContact" runat="server" Text="Add Teacher Contact to the New CyberDay: " Font-Bold="true" Font-Size="Large"></asp:Label>
-            <asp:DropDownList ID="ddlMiddleSchoolContact" runat="server" DataSourceID="sqlPopulateTeacher" DataTextField="FullName" DataValueField="TeacherID" AutoPostBack="true"></asp:DropDownList>
+            <asp:DropDownList ID="ddlMiddleSchoolContact" runat="server" AutoPostBack="true"></asp:DropDownList>
         </div>
 
         <br />
@@ -269,7 +269,7 @@
         </div>
     </fieldset>
 
-    <asp:SqlDataSource ID="sqlPopulateTeacher" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDayDB %>" SelectCommand="Select TeacherID, FirstName + ' ' + LastName As FullName From Teacher" />
-    <asp:SqlDataSource ID="sqlPopulateCoordinator" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDay %>" SelectCommand="Select CoordinatorID, FirstName + ' ' + LastName As FullName From Coordinator" />
+    <%--<asp:SqlDataSource ID="sqlPopulateTeacher" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDayDB %>" SelectCommand="Select TeacherID, FirstName + ' ' + LastName As FullName From Teacher" />
+    <asp:SqlDataSource ID="sqlPopulateCoordinator" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDay %>" SelectCommand="Select CoordinatorID, FirstName + ' ' + LastName As FullName From Coordinator" />--%>
 
 </asp:Content>
