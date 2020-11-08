@@ -17,7 +17,7 @@ namespace CyberDay
 
         protected void btnLogOut_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("MainPage.aspx");
         }
 
         protected void btnReturnHome_Click(object sender, EventArgs e)

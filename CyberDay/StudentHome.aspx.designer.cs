@@ -7,18 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CyberDay {
-    
-    
-    public partial class StudentHome {
-        
+namespace CyberDay
+{
+
+
+    public partial class StudentHome
+    {
+
         /// <summary>
-        /// studentImg control.
+        /// dukeDogs control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image studentImg;
+        protected global::System.Web.UI.WebControls.Image dukeDogs;
     }
 }
