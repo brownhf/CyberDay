@@ -13,7 +13,10 @@ namespace CyberDay
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            drpDwnUserType.Items.Add("Student");
+            drpDwnUserType.Items.Add("Coordinator");
+            drpDwnUserType.Items.Add("Volunteer");
+            drpDwnUserType.Items.Add("Parent");
         }
 
         protected void btnCreateAccount_Click(object sender, EventArgs e)
@@ -21,9 +24,10 @@ namespace CyberDay
             SqlConnection sqlConnect = new SqlConnection(WebConfigurationManager.ConnectionStrings["LoginData"].ToString());
             SqlCommand createUser = new SqlCommand();
             createUser.Connection = sqlConnect;
-            createUser.CommandText = "INSERT INTO [CoordinatorLogin] VALUES(@Username, @Password)";
+            createUser.CommandText = "INSERT INTO [LoginCredentials] VALUES(@Username, @Password, @UserType)";
             createUser.Parameters.Add(new SqlParameter("@Username", txtUsername.Text));
             createUser.Parameters.Add(new SqlParameter("@Password", PasswordHash.HashPassword(txtPassword.Text)));
+            createUser.Parameters.Add(new SqlParameter("@UserType", drpDwnUserType.SelectedItem.ToString()));
             sqlConnect.Open();
             createUser.ExecuteNonQuery();
             sqlConnect.Close();
