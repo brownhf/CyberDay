@@ -57,7 +57,7 @@
                     <asp:Label ID="lblSelectContactTeacher" runat="server" Text="Select Teacher Contact with which Faculty Member is Attending: "></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:DropDownList ID="ddlSelectContactTeacher" runat="server" DataSourceID="sqlPopulateDdl" DataTextField="FullName" DataValueField="TeacherID" AutoPostBack="true">  </asp:DropDownList>
+                    <asp:DropDownList ID="ddlSelectContactTeacher" runat="server" AutoPostBack="true">  </asp:DropDownList>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>

@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CyberDay {
-    
-    
-    public partial class ParentsRegisterChild {
-        
+namespace CyberDay
+{
+
+
+    public partial class ParentsRegisterChild
+    {
+
         /// <summary>
         /// lblFirstName control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblFirstName;
-        
+
         /// <summary>
         /// txtFirstName control.
         /// </summary>
@@ -29,7 +31,16 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFirstName;
-        
+
+        /// <summary>
+        /// lblFirstNameError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblFirstNameError;
+
         /// <summary>
         /// lblLastName control.
         /// </summary>
@@ -38,7 +49,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblLastName;
-        
+
         /// <summary>
         /// txtLastName control.
         /// </summary>
@@ -47,7 +58,43 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtLastName;
-        
+
+        /// <summary>
+        /// lblLastNameError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblLastNameError;
+
+        /// <summary>
+        /// lblGender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblGender;
+
+        /// <summary>
+        /// ddlGenders control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlGenders;
+
+        /// <summary>
+        /// lblGenderError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblGenderError;
+
         /// <summary>
         /// lblAge control.
         /// </summary>
@@ -56,7 +103,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAge;
-        
+
         /// <summary>
         /// txtAge control.
         /// </summary>
@@ -65,7 +112,16 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAge;
-        
+
+        /// <summary>
+        /// lblAgeError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAgeError;
+
         /// <summary>
         /// lblStudentEmail control.
         /// </summary>
@@ -74,7 +130,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblStudentEmail;
-        
+
         /// <summary>
         /// txtStudentEmail control.
         /// </summary>
@@ -83,7 +139,43 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtStudentEmail;
-        
+
+        /// <summary>
+        /// lblEmailError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEmailError;
+
+        /// <summary>
+        /// lblShirtSize control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblShirtSize;
+
+        /// <summary>
+        /// ddlShirtSize control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlShirtSize;
+
+        /// <summary>
+        /// lblShirtSizeError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblShirtSizeError;
+
         /// <summary>
         /// lblNotes control.
         /// </summary>
@@ -92,7 +184,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblNotes;
-        
+
         /// <summary>
         /// txtNotes control.
         /// </summary>
@@ -101,25 +193,16 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNotes;
-        
+
         /// <summary>
-        /// lblStudentSchool control.
+        /// lblNotesError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblStudentSchool;
-        
-        /// <summary>
-        /// txtSchool control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSchool;
-        
+        protected global::System.Web.UI.WebControls.Label lblNotesError;
+
         /// <summary>
         /// lblSelectTeacher control.
         /// </summary>
@@ -128,7 +211,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblSelectTeacher;
-        
+
         /// <summary>
         /// ddlTeacher control.
         /// </summary>
@@ -137,7 +220,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlTeacher;
-        
+
         /// <summary>
         /// lblSelectMeal control.
         /// </summary>
@@ -146,16 +229,25 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblSelectMeal;
-        
+
         /// <summary>
-        /// ddlMeal control.
+        /// ddlDietaryNeeds control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlMeal;
-        
+        protected global::System.Web.UI.WebControls.DropDownList ddlDietaryNeeds;
+
+        /// <summary>
+        /// lblSelectMealError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSelectMealError;
+
         /// <summary>
         /// lblAllergies control.
         /// </summary>
@@ -164,16 +256,25 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAllergies;
-        
+
         /// <summary>
-        /// CheckBoxList1 control.
+        /// cbAllergies control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList CheckBoxList1;
-        
+        protected global::System.Web.UI.WebControls.CheckBoxList cbAllergies;
+
+        /// <summary>
+        /// lblAllergiesError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAllergiesError;
+
         /// <summary>
         /// btnSubmit control.
         /// </summary>
@@ -182,5 +283,32 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSubmit;
+
+        /// <summary>
+        /// btnClear control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnClear;
+
+        /// <summary>
+        /// lblStudentSubmitError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblStudentSubmitError;
+
+        /// <summary>
+        /// srcTeachers control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource srcTeachers;
     }
 }
