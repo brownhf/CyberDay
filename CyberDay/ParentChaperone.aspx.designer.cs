@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CyberDay {
-    
-    
-    public partial class ParentChaperone {
-        
+namespace CyberDay
+{
+
+
+    public partial class ParentChaperone
+    {
+
         /// <summary>
         /// lblWelcomeMessage control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblWelcomeMessage;
-        
+
         /// <summary>
         /// lblWelcomeMsg2 control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblWelcomeMsg2;
-        
+
         /// <summary>
         /// lblForm control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblForm;
-        
+
         /// <summary>
         /// lblFirstName control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblFirstName;
-        
+
         /// <summary>
         /// txtFirstName control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFirstName;
-        
+
         /// <summary>
         /// lblLastName control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblLastName;
-        
+
         /// <summary>
         /// txtLastName control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtLastName;
-        
+
         /// <summary>
         /// lblPhoneNumber control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPhoneNumber;
-        
+
         /// <summary>
         /// txtPhoneNumber control.
         /// </summary>
@@ -92,7 +94,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPhoneNumber;
-        
+
         /// <summary>
         /// lblEmail control.
         /// </summary>
@@ -101,7 +103,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblEmail;
-        
+
         /// <summary>
         /// txtEmail control.
         /// </summary>
@@ -110,7 +112,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
-        
+
         /// <summary>
         /// lblFood control.
         /// </summary>
@@ -119,25 +121,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblFood;
-        
-        /// <summary>
-        /// lblMealSelection control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMealSelection;
-        
-        /// <summary>
-        /// ddlMeal control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlMeal;
-        
+
         /// <summary>
         /// lblAllergies control.
         /// </summary>
@@ -146,7 +130,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAllergies;
-        
+
         /// <summary>
         /// CheckBoxList1 control.
         /// </summary>
@@ -155,7 +139,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBoxList CheckBoxList1;
-        
+
         /// <summary>
         /// lblShirtSize control.
         /// </summary>
@@ -164,7 +148,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblShirtSize;
-        
+
         /// <summary>
         /// lblShirtSizeSelection control.
         /// </summary>
@@ -173,7 +157,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblShirtSizeSelection;
-        
+
         /// <summary>
         /// ddlShirtSize control.
         /// </summary>
@@ -182,7 +166,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlShirtSize;
-        
+
         /// <summary>
         /// btnSubmit control.
         /// </summary>
