@@ -101,6 +101,7 @@
     <Content Include="ParentPhotoReleaseForm.aspx" />
     <Content Include="ParentsRegisterChild.aspx" />
     <Content Include="ParentsHome.aspx" />
+    <Content Include="SchoolRegister.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -207,6 +208,7 @@
     <Content Include="StudentUpdate.aspx" />
     <Content Include="StyleSheetStudent.css" />
     <Content Include="TeacherHomePage.aspx" />
+    <Content Include="TeacherRegister.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -324,6 +326,13 @@
     </Compile>
     <Compile Include="PasswordHash.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SchoolRegister.aspx.cs">
+      <DependentUpon>SchoolRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchoolRegister.aspx.designer.cs">
+      <DependentUpon>SchoolRegister.aspx</DependentUpon>
+    </Compile>
     <Compile Include="StudentActivity.aspx.cs">
       <DependentUpon>StudentActivity.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -372,6 +381,13 @@
     </Compile>
     <Compile Include="TeacherPortal.Master.designer.cs">
       <DependentUpon>TeacherPortal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherRegister.aspx.cs">
+      <DependentUpon>TeacherRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeacherRegister.aspx.designer.cs">
+      <DependentUpon>TeacherRegister.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
