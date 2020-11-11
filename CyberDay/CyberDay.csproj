@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AspNet.ScriptManager.jQuery, Version=3.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.5.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -79,6 +82,7 @@
     <Content Include="Images\0.jpg" />
     <Content Include="Images\astheticQuad.jpg" />
     <Content Include="Images\wilson.jpg" />
+    <Content Include="NewCyberDay.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -194,6 +198,13 @@
     </Compile>
     <Compile Include="CoordinatorPages.Master.designer.cs">
       <DependentUpon>CoordinatorPages.Master</DependentUpon>
+    </Compile>
+    <Compile Include="NewCyberDay.aspx.cs">
+      <DependentUpon>NewCyberDay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewCyberDay.aspx.designer.cs">
+      <DependentUpon>NewCyberDay.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
