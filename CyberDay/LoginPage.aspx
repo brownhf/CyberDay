@@ -50,24 +50,9 @@
             <section class="form-signin" runat="server">
                 <h2 class="form-signin-heading text-center">Login</h2>
 
-                <%--<div class="btn-group">
-                    <asp:Button ID="drpDwnUserType" runat="server" Text="User Type" type="button" onclick="drpDwnUserType_Click" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-                        
-                    </asp:Button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Coordinator</a>
-                        <a class="dropdown-item" href="#">Teacher</a>
-                        <a class="dropdown-item" href="#">Student</a>
-                    </div>
-                </div>--%>
                 <asp:Label ID="lblBlankIncorrectLogin" runat="server" Text="" ForeColor="Red" Font-Size="Smaller"></asp:Label>
                 <asp:Label ID="lblUserType" runat="server" Text="User Type: "></asp:Label>
                 <br />
-                <asp:RadioButton ID="rBtnCoordinator" Text="Coordinator" runat="server" GroupName="userType" />
-                <asp:Label ID="Div1" runat="server" Text="  ||  "></asp:Label>
-                <asp:RadioButton ID="rBtnTeacher" Text=" Teacher" runat="server" GroupName="userType" />
-                <asp:Label ID="Div2" runat="server" Text="  ||  "></asp:Label>
-                <asp:RadioButton ID="rBtnStudent" Text=" Student" runat="server" GroupName="userType" />
 
                 <input id="txtUsername" runat="server" type="text" class="form-control" name="username" placeholder="Username" required="" autofocus="" />
                 <input id="txtPassword" runat="server" type="password" class="form-control" name="password" placeholder="Password" required="" />

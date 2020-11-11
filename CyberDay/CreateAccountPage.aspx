@@ -13,6 +13,7 @@
             <br />
             Password: <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
             <br />
+            UserType: <asp:DropDownList ID="drpDwnUserType" runat="server"></asp:DropDownList>
             <asp:Button ID="btnCreateAccount" runat="server" Text="Create Account" OnClick="btnCreateAccount_Click" />
             <br />
             <asp:Label ID="lblBlankAccountCreated" runat="server" Text="" ForeColor="Green"></asp:Label>

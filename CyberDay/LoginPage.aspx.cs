@@ -24,54 +24,39 @@ namespace CyberDay
             SqlCommand loginCommand = new SqlCommand();
             loginCommand.Connection = sqlConnect;
             loginCommand.CommandType = CommandType.StoredProcedure;
-            if (rBtnCoordinator.Checked)
+            loginCommand.CommandText = "spLoginCredentials";
+            loginCommand.Parameters.AddWithValue("@Username", HttpUtility.HtmlEncode(txtUsername.Value.ToString()));
+            sqlConnect.Open();
+            SqlDataReader loginResults = loginCommand.ExecuteReader();
+            if (loginResults.Read())
             {
-                loginCommand.CommandText = "spCoordinatorLogin";
-                loginCommand.Parameters.AddWithValue("@Username", HttpUtility.HtmlEncode(txtUsername.Value.ToString()));
-                sqlConnect.Open();
-                SqlDataReader loginResults = loginCommand.ExecuteReader();
-                if (loginResults.Read())
+                string storedHash = loginResults["Password"].ToString();
+                string userType = loginResults["UserType"].ToString();
+                if (PasswordHash.ValidatePassword(HttpUtility.HtmlEncode(txtPassword.Value.ToString()), storedHash))
                 {
-                    string storedHash = loginResults["Password"].ToString();
-                    if (PasswordHash.ValidatePassword(HttpUtility.HtmlEncode(txtPassword.Value.ToString()), storedHash))
+                    Session["Username"] = HttpUtility.HtmlEncode(txtUsername.Value.ToString());
+
+                    if (userType == "Coordinator")
                     {
-                        Session["Username"] = HttpUtility.HtmlEncode(txtUsername.Value.ToString());
                         Response.Redirect("CoordinatorHomePage.aspx");
-                    }
-                }
-            }
-            if (rBtnTeacher.Checked)
-            {
-                loginCommand.CommandText = "spTeacherLogin";
-                loginCommand.Parameters.AddWithValue("@Username", HttpUtility.HtmlEncode(txtUsername.Value.ToString()));
-                sqlConnect.Open();
-                SqlDataReader loginResults = loginCommand.ExecuteReader();
-                if (loginResults.Read())
-                {
-                    string storedHash = loginResults["Password"].ToString();
-                    if (PasswordHash.ValidatePassword(HttpUtility.HtmlEncode(txtPassword.Value.ToString()), storedHash))
-                    {
-                        Session["Username"] = HttpUtility.HtmlEncode(txtUsername.Value.ToString());
-                        Response.Redirect("TeacherHomePage.aspx");
 
                     }
-                }
-            }
-            if (rBtnStudent.Checked)
-            {
-                loginCommand.CommandText = "spStudentLogin";
-                loginCommand.Parameters.AddWithValue("@Username", HttpUtility.HtmlEncode(txtUsername.Value.ToString()));
-                sqlConnect.Open();
-                SqlDataReader loginResults = loginCommand.ExecuteReader();
-                if (loginResults.Read())
-                {
-                    string storedHash = loginResults["Password"].ToString();
-                    if (PasswordHash.ValidatePassword(HttpUtility.HtmlEncode(txtPassword.Value.ToString()), storedHash))
+                    //if (userType == "Volunteer")
+                    //{
+                    //    Response.Redirect("VolunteerrHomePage.aspx");
+
+                    //}
+                    if (userType == "Parent")
                     {
-                        Session["Username"] = HttpUtility.HtmlEncode(txtUsername.Value.ToString());
-                        Response.Redirect("StudentHomePage.aspx");
+                        Response.Redirect("ParentsHome.aspx");
 
                     }
+                    if (userType == "Student")
+                    {
+                        Response.Redirect("StudentHome.aspx");
+
+                    }
+                    //Response.Redirect("MainPage.aspx");
                 }
             }
             else
