@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ParentContentPlaceHolder" runat="server">
     <style>
         section {
-            width: 75%;
+            width: 50%;
             margin-right: auto;
             margin-left: auto;
         }
@@ -24,6 +24,5 @@
         <h3><a href="ParentPhotoReleaseForm.aspx">Child Photo Releazse Form</a></h3>
         <p>Sign and upload a photo release form so we can take pictures of your child at CyberDay!</p>
         <hr />
-        <asp:Image ID="imgQuad" runat="server" ImageUrl="/images/astheticQuad.jpg" />
     </section>
 </asp:Content>

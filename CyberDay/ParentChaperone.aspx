@@ -101,14 +101,6 @@
                     </tr>
                     <tr>
                         <td>
-                            <asp:Label ID="lblMealSelection" runat="server" Text="Select Meal:"></asp:Label>
-                        </td>
-                        <td>
-                            <asp:DropDownList ID="ddlMeal" runat="server"></asp:DropDownList>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
                             <asp:Label ID="lblAllergies" runat="server" Text="Allergies:"></asp:Label>
                         </td>
                         <td>
