@@ -29,6 +29,18 @@
         footer {
             border-top: solid;
         }
+
+        .navbar navbar-expand-md navbar-dark {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
+        .nav navbar-nav {
+        }
+        h1{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -37,14 +49,14 @@
             <header>
 
                 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #450084">
-                    <a href="MainPage.aspx" class="navbar-brand">James Madison University CyberDay</a>
+                    <a href="MainPage.aspx" class="navbar-brand">JAMES MADISON UNIVERSITY: CyberDay</a>
                     <div class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav">
+                        <%--                        <ul class="nav navbar-nav">
                             <li class="nav-item active">
                                 <a class="nav-link" href="MainPage.aspx">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="LoginPage.aspx">Coordinators</a>
+                                <a class="nav-link" href="CoordinatorHomePage.aspx">Coordinators</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="TeacherHomePage.aspx">Teachers</a>
@@ -55,17 +67,38 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="StudentHome.aspx">Students</a>
                             </li>
-                        </ul>
+                        </ul>--%>
                         <ul class="nav navbar-nav ml-auto">
                             <li><a href="LoginPage.aspx"><span class=""></span>Login</a></li>
                         </ul>
                     </div>
                 </nav>
 
+
+                <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #CBB677">
+                    <ul class="nav navbar-nav navbar-center">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="LoginPage.aspx">COORDINATORS</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="TeacherHomePage.aspx">TEACHERS</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="ParentsHome.aspx">PARENTS</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="StudentHome.aspx">STUDENTS</a>
+                        </li>
+                    </ul>
+                </nav>
+
+
+
                 <asp:Image ID="Image2" CssClass="quad" runat="server" ImageUrl="~/Images/0.jpg" />
 
             </header>
             <section class="sectionContent" runat="server">
+                <h1>ABOUT CYBERDAY</h1>
                 This is where all the content/info about Cyber day will go...
                 <br />
                 <br />
