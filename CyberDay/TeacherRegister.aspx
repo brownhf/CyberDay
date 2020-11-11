@@ -100,7 +100,7 @@
                         </asp:TableRow>
                         <asp:TableRow>
                             <asp:TableCell>
-                                <asp:Button ID="btnAddSchool" runat="server" Text="Add School to CyberDay" OnClick="btnAddSchool_Click" />
+                                <asp:Button ID="btnAddSchool" runat="server" Text="Register Teacher" OnClick="btnAddSchool_Click" />
                             </asp:TableCell>
                             <asp:TableCell>
                                 <asp:Label ID="lblAddStatusSuccess" runat="server" Text="" ForeColor="Green"></asp:Label>
