@@ -44,7 +44,7 @@
                                 <a class="nav-link" href="MainPage.aspx">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="CoordinatorHomePage.aspx">Coordinators</a>
+                                <a class="nav-link" href="LoginPage.aspx">Coordinators</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="TeacherHomePage.aspx">Teachers</a>
