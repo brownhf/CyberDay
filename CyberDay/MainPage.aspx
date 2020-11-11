@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs" Inherits="CyberDay.HomePage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MainPage.aspx.cs" Inherits="CyberDay.MainPage" %>
 
 <!DOCTYPE html>
 
@@ -25,9 +25,9 @@
             max-width: 100%;
             height: auto;
         }
-        footer{
+
+        footer {
             border-top: solid;
-            bor
         }
     </style>
 </head>
@@ -35,34 +35,35 @@
     <form id="form1" runat="server">
         <div>
             <header>
-                <nav class="navbar navbar-expand-sm " style="background-color: #450084">
-                    <div class="container-fluid">
-                        <div class="navbar-header">
-                            <a class="navbar-brand" href="#">JMU Cyber Day</a>
-                        </div>
+
+                <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #450084">
+                    <a href="MainPage.aspx" class="navbar-brand">James Madison University CyberDay</a>
+                    <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Home</a>
+                                <a class="nav-link" href="MainPage.aspx">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Coordinators</a>
+                                <a class="nav-link" href="CoordinatorHomePage.aspx">Coordinators</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Teachers</a>
+                                <a class="nav-link" href="TeacherHomePage.aspx">Teachers</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="ParentsPage.aspx">Parents</a>
+                                <a class="nav-link" href="ParentsHome.aspx">Parents</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Students</a>
+                                <a class="nav-link" href="StudentHome.aspx">Students</a>
                             </li>
                         </ul>
-                        <ul class="nav navbar-nav navbar-right">
+                        <ul class="nav navbar-nav ml-auto">
                             <li><a href="LoginPage.aspx"><span class=""></span>Login</a></li>
                         </ul>
                     </div>
                 </nav>
+
                 <asp:Image ID="Image2" CssClass="quad" runat="server" ImageUrl="~/Images/0.jpg" />
+
             </header>
             <section class="sectionContent" runat="server">
                 This is where all the content/info about Cyber day will go...
@@ -92,7 +93,6 @@
                 ...
 
                 <footer>
-
                 </footer>
             </section>
         </div>
@@ -106,3 +106,5 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+

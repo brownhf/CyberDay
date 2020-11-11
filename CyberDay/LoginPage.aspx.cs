@@ -35,8 +35,8 @@ namespace CyberDay
                 if (PasswordHash.ValidatePassword(HttpUtility.HtmlEncode(txtPassword.Value.ToString()), storedHash))
                 {
                     Session["Username"] = HttpUtility.HtmlEncode(txtUsername.Value.ToString());
-                    
-                    if(userType == "Coordinator")
+
+                    if (userType == "Coordinator")
                     {
                         Response.Redirect("CoordinatorHomePage.aspx");
 

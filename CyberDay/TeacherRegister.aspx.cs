@@ -1,0 +1,80 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+using System.Data;
+using System.Data.SqlClient;
+using System.Web.Configuration;
+
+namespace CyberDay
+{
+    public partial class TeacherRegister : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            lblAddStatusFail.Visible = false;
+            lblAddStatusSuccess.Visible = false;
+        }
+
+        protected void btnAddSchool_Click(object sender, EventArgs e)
+        {
+            DataSet duplicateSet = new DataSet();
+            String duplicateQuery = "SELECT * FROM [dbo].[Teacher] ";
+            duplicateQuery += "WHERE [Teacher].[FirstName] = '" + txtFirst.Text.Trim() + "' ";
+            duplicateQuery += "AND [Teacher].[LastName] = '" + txtLast.Text.Trim() + "' ";
+            duplicateQuery += "AND [Teacher].[Email] = '" + txtEmail.Text.Trim() + "' ";
+            duplicateQuery += "AND [Teacher].[PhoneNumber] = '" + txtPhone.Text.Trim() + "' ";
+            duplicateQuery += "AND [Teacher].[ShirtSize] = '" + ddlShirtSize.Text.Trim() + "' ";
+            duplicateQuery += "AND [Teacher].[SchoolID] = '" + ddlSchool.Text.Trim() + "' ";
+            SqlConnection sc = new SqlConnection(WebConfigurationManager.ConnectionStrings["CyberDayDB"].ToString());
+            SqlCommand duplicateCmd = new SqlCommand(duplicateQuery, sc);
+            SqlDataAdapter duplicateTable = new SqlDataAdapter(duplicateCmd);
+            duplicateTable.Fill(duplicateSet);
+            int i = duplicateSet.Tables[0].Rows.Count;
+            if (i > 0)
+            {
+                lblAddStatusSuccess.Visible = false;
+                lblAddStatusFail.Visible = true;
+                lblAddStatusFail.Text = "There is a Duplicate Teacher Already Saved";
+                duplicateSet.Clear();
+            }
+            else
+            {
+
+                try
+                {
+                    String insertCmd = "INSERT INTO Teacher VALUES (@txtFirst, @txtLast, @txtEmail, @txtPhone, @ddlShirtSize, @ddlSchool)";
+                    SqlConnection sqlConnect = new SqlConnection(WebConfigurationManager.ConnectionStrings["CyberDayDB"].ToString());
+                    SqlCommand sqlCommand = new SqlCommand(insertCmd, sqlConnect);
+                    sqlCommand.Parameters.AddWithValue("@txtFirst", HttpUtility.HtmlEncode(txtFirst.Text.Trim()));
+                    sqlCommand.Parameters.AddWithValue("@txtLast", HttpUtility.HtmlEncode(txtLast.Text.Trim()));
+                    sqlCommand.Parameters.AddWithValue("@txtEmail", HttpUtility.HtmlEncode(txtEmail.Text.Trim()));
+                    sqlCommand.Parameters.AddWithValue("@txtPhone", HttpUtility.HtmlEncode(txtPhone.Text.Trim()));
+                    sqlCommand.Parameters.AddWithValue("@ddlShirtSize", HttpUtility.HtmlEncode(ddlShirtSize.Text.Trim()));
+                    sqlCommand.Parameters.AddWithValue("@ddlSchool", HttpUtility.HtmlEncode(ddlSchool.SelectedValue));
+                    sqlConnect.Open();
+                    sqlCommand.ExecuteNonQuery();
+                    sqlConnect.Close();
+                    lblAddStatusFail.Visible = false;
+                    lblAddStatusSuccess.Visible = true;
+                    lblAddStatusSuccess.Text = "Teacher succesfully created";
+
+                    txtFirst.Text = String.Empty;
+                    txtLast.Text = String.Empty;
+                    txtEmail.Text = String.Empty;
+                    txtPhone.Text = String.Empty;
+                }
+                catch (Exception)
+                {
+                    lblAddStatusSuccess.Visible = false;
+                    lblAddStatusFail.Visible = true;
+                    lblAddStatusFail.Text = "Failed to add Teacher";
+                    System.Diagnostics.Debug.WriteLine("Error");
+                }
+            }
+        }
+    }
+}
