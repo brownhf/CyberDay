@@ -7,128 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CyberDay
-{
-
-
-    public partial class CoordinatorHomePage
-    {
-
+namespace CyberDay {
+    
+    
+    public partial class CoordinatorHomePage {
+        
         /// <summary>
-        /// btnNewCyberDay1 control.
+        /// ExploreJMU control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnNewCyberDay1;
-
-        /// <summary>
-        /// lblNewCyberDay control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNewCyberDay;
-
-        /// <summary>
-        /// btnNewCyberDay control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnNewCyberDay;
-
-        /// <summary>
-        /// lblSchedule control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSchedule;
-
-        /// <summary>
-        /// btnSchedule control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSchedule;
-
-        /// <summary>
-        /// lblRoster control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRoster;
-
-        /// <summary>
-        /// btnRoster control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRoster;
-
-        /// <summary>
-        /// lblCreateVolunteer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCreateVolunteer;
-
-        /// <summary>
-        /// btnCreateVolunteer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCreateVolunteer;
-
-        /// <summary>
-        /// lblAssignVolunteer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAssignVolunteer;
-
-        /// <summary>
-        /// btnAssignVolunteer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAssignVolunteer;
-
-        /// <summary>
-        /// lblMealTicket control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMealTicket;
-
-        /// <summary>
-        /// btnMealTicket control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnMealTicket;
+        protected global::System.Web.UI.WebControls.Image ExploreJMU;
     }
 }

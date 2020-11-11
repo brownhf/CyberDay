@@ -72,9 +72,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AddContactTeacher.aspx" />
     <Content Include="AssignVolunteer.aspx" />
-    <Content Include="BuildSchedule.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -87,7 +85,9 @@
     <Content Include="Images\0.jpg" />
     <Content Include="Images\aerial-quad.jpg" />
     <Content Include="Images\astheticQuad.jpg" />
+    <Content Include="Images\COBphoto.jpg" />
     <Content Include="Images\dukeDogs.png" />
+    <Content Include="Images\ExploreJMU.jpg" />
     <Content Include="Images\students-on-quad.jpg" />
     <Content Include="Images\studentsOnQuad.jpg" />
     <Content Include="Images\wilson.jpg" />
@@ -210,26 +210,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddContactTeacher.aspx.cs">
-      <DependentUpon>AddContactTeacher.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AddContactTeacher.aspx.designer.cs">
-      <DependentUpon>AddContactTeacher.aspx</DependentUpon>
-    </Compile>
     <Compile Include="AssignVolunteer.aspx.cs">
       <DependentUpon>AssignVolunteer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AssignVolunteer.aspx.designer.cs">
       <DependentUpon>AssignVolunteer.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="BuildSchedule.aspx.cs">
-      <DependentUpon>BuildSchedule.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="BuildSchedule.aspx.designer.cs">
-      <DependentUpon>BuildSchedule.aspx</DependentUpon>
     </Compile>
     <Compile Include="CoordinatorHomePage.aspx.cs">
       <DependentUpon>CoordinatorHomePage.aspx</DependentUpon>
