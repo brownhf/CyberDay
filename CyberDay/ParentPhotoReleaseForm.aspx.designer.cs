@@ -7,29 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CyberDay
-{
-
-
-    public partial class HomePage
-    {
-
+namespace CyberDay {
+    
+    
+    public partial class ParentPhotoReleaseForm {
+        
         /// <summary>
-        /// form1 control.
+        /// lblRelease control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
+        protected global::System.Web.UI.WebControls.Label lblRelease;
+        
         /// <summary>
-        /// Image2 control.
+        /// FileUpload1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image2;
+        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
     }
 }

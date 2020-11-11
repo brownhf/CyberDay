@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AspNet.ScriptManager.jQuery, Version=3.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.5.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -69,6 +72,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AssignVolunteer.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -76,11 +80,27 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="CoordinatorHomePage.aspx" />
-    <Content Include="HomePage.aspx" />
+    <Content Include="CreateAccountPage.aspx" />
+    <Content Include="EventRosters.aspx" />
     <Content Include="Images\0.jpg" />
+    <Content Include="Images\aerial-quad.jpg" />
     <Content Include="Images\astheticQuad.jpg" />
+    <Content Include="Images\COBphoto.jpg" />
+    <Content Include="Images\dukeDogs.png" />
+    <Content Include="Images\ExploreJMU.jpg" />
+    <Content Include="Images\students-on-quad.jpg" />
+    <Content Include="Images\studentsOnQuad.jpg" />
     <Content Include="Images\wilson.jpg" />
     <Content Include="LoginPage.aspx" />
+    <Content Include="MainPage.aspx" />
+    <Content Include="MealTicket.aspx" />
+    <Content Include="NewCyberDay.aspx" />
+    <Content Include="NewVolunteer.aspx" />
+    <Content Include="OtherFacultyMembers.aspx" />
+    <Content Include="ParentChaperone.aspx" />
+    <Content Include="ParentPhotoReleaseForm.aspx" />
+    <Content Include="ParentsRegisterChild.aspx" />
+    <Content Include="ParentsHome.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -104,6 +124,7 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Parents.Master" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />
@@ -180,9 +201,22 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="StudentActivity.aspx" />
+    <Content Include="StudentContact.aspx" />
+    <Content Include="StudentHome.aspx" />
+    <Content Include="StudentUpdate.aspx" />
+    <Content Include="StyleSheetStudent.css" />
+    <Content Include="TeacherHomePage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssignVolunteer.aspx.cs">
+      <DependentUpon>AssignVolunteer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AssignVolunteer.aspx.designer.cs">
+      <DependentUpon>AssignVolunteer.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CoordinatorHomePage.aspx.cs">
       <DependentUpon>CoordinatorHomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -197,12 +231,19 @@
     <Compile Include="CoordinatorPages.Master.designer.cs">
       <DependentUpon>CoordinatorPages.Master</DependentUpon>
     </Compile>
-    <Compile Include="HomePage.aspx.cs">
-      <DependentUpon>HomePage.aspx</DependentUpon>
+    <Compile Include="CreateAccountPage.aspx.cs">
+      <DependentUpon>CreateAccountPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="HomePage.aspx.designer.cs">
-      <DependentUpon>HomePage.aspx</DependentUpon>
+    <Compile Include="CreateAccountPage.aspx.designer.cs">
+      <DependentUpon>CreateAccountPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EventRosters.aspx.cs">
+      <DependentUpon>EventRosters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EventRosters.aspx.designer.cs">
+      <DependentUpon>EventRosters.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
@@ -211,7 +252,99 @@
     <Compile Include="LoginPage.aspx.designer.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MainPage.aspx.cs">
+      <DependentUpon>MainPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainPage.aspx.designer.cs">
+      <DependentUpon>MainPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MealTicket.aspx.cs">
+      <DependentUpon>MealTicket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MealTicket.aspx.designer.cs">
+      <DependentUpon>MealTicket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewCyberDay.aspx.cs">
+      <DependentUpon>NewCyberDay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewCyberDay.aspx.designer.cs">
+      <DependentUpon>NewCyberDay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewVolunteer.aspx.cs">
+      <DependentUpon>NewVolunteer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewVolunteer.aspx.designer.cs">
+      <DependentUpon>NewVolunteer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OtherFacultyMembers.aspx.cs">
+      <DependentUpon>OtherFacultyMembers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OtherFacultyMembers.aspx.designer.cs">
+      <DependentUpon>OtherFacultyMembers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ParentChaperone.aspx.cs">
+      <DependentUpon>ParentChaperone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ParentChaperone.aspx.designer.cs">
+      <DependentUpon>ParentChaperone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ParentPhotoReleaseForm.aspx.cs">
+      <DependentUpon>ParentPhotoReleaseForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ParentPhotoReleaseForm.aspx.designer.cs">
+      <DependentUpon>ParentPhotoReleaseForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ParentsRegisterChild.aspx.cs">
+      <DependentUpon>ParentsRegisterChild.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ParentsRegisterChild.aspx.designer.cs">
+      <DependentUpon>ParentsRegisterChild.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Parents.Master.cs">
+      <DependentUpon>Parents.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Parents.Master.designer.cs">
+      <DependentUpon>Parents.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ParentsHome.aspx.cs">
+      <DependentUpon>ParentsHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ParentsHome.aspx.designer.cs">
+      <DependentUpon>ParentsHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordHash.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentActivity.aspx.cs">
+      <DependentUpon>StudentActivity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentActivity.aspx.designer.cs">
+      <DependentUpon>StudentActivity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentContact.aspx.cs">
+      <DependentUpon>StudentContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentContact.aspx.designer.cs">
+      <DependentUpon>StudentContact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentHome.aspx.cs">
+      <DependentUpon>StudentHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentHome.aspx.designer.cs">
+      <DependentUpon>StudentHome.aspx</DependentUpon>
+    </Compile>
     <Compile Include="StudentPages.Master.cs">
       <DependentUpon>StudentPages.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -219,11 +352,31 @@
     <Compile Include="StudentPages.Master.designer.cs">
       <DependentUpon>StudentPages.Master</DependentUpon>
     </Compile>
+    <Compile Include="StudentUpdate.aspx.cs">
+      <DependentUpon>StudentUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentUpdate.aspx.designer.cs">
+      <DependentUpon>StudentUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherHomePage.aspx.cs">
+      <DependentUpon>TeacherHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeacherHomePage.aspx.designer.cs">
+      <DependentUpon>TeacherHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherPortal.Master.cs">
+      <DependentUpon>TeacherPortal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeacherPortal.Master.designer.cs">
+      <DependentUpon>TeacherPortal.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="CoordinatorPages.Master" />
     <None Include="packages.config" />
-    <Content Include="StudentPages.Master" />
     <Content Include="Scripts\jquery-3.5.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.5.1.min.map" />
     <Content Include="Scripts\umd\popper.min.js.map" />
@@ -236,6 +389,8 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="TeacherPortal.Master" />
+    <Content Include="StudentPages.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
