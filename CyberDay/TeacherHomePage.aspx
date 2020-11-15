@@ -28,11 +28,6 @@
         <h1>TEACHER HOME</h1>
         <hr />
 
-        <h3><a href="SchoolRegister.aspx">ADD A SCHOOL TO A CYBERDAY</a></h3>
-        <br />
-        <p>Click here to add a school to a CyberDay.</p>
-        <hr />
-
         <h3><a href="TeacherRegister.aspx">REGISTER A TEACHER</a></h3>
         <br />
         <p>Click here to register a teacher for a CyberDay.</p>

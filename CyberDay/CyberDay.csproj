@@ -73,13 +73,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AssignVolunteer.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="CoordinatorEvents.aspx" />
     <Content Include="CoordinatorHomePage.aspx" />
     <Content Include="CreateAccountPage.aspx" />
     <Content Include="EventRosters.aspx" />
@@ -215,12 +215,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AssignVolunteer.aspx.cs">
-      <DependentUpon>AssignVolunteer.aspx</DependentUpon>
+    <Compile Include="CoordinatorEvents.aspx.cs">
+      <DependentUpon>CoordinatorEvents.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AssignVolunteer.aspx.designer.cs">
-      <DependentUpon>AssignVolunteer.aspx</DependentUpon>
+    <Compile Include="CoordinatorEvents.aspx.designer.cs">
+      <DependentUpon>CoordinatorEvents.aspx</DependentUpon>
     </Compile>
     <Compile Include="CoordinatorHomePage.aspx.cs">
       <DependentUpon>CoordinatorHomePage.aspx</DependentUpon>

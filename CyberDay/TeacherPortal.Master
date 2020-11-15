@@ -33,9 +33,6 @@
                         <a class="nav-link" href="TeacherHomePage.aspx">TEACHER HOME</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="SchoolRegister.aspx">ADD A SCHOOL TO A CYBERDAY</a>
-                    </li>
-                    <li class="nav-item active">
                         <a class="nav-link" href="TeacherRegister.aspx">REGISTER TEACHERS</a>
                     </li>
                 </ul>
