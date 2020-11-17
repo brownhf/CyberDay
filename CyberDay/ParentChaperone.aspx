@@ -45,9 +45,6 @@
                     </tr>
                     <tr>
                         <td>
-                            <asp:Label ID="lblWelcomeMessage" runat="server" Text=""></asp:Label>
-                            <br />
-                            <asp:Label ID="lblWelcomeMsg2" runat="server" Text=""></asp:Label>
                         </td>
                     </tr>
                 </table>
@@ -69,6 +66,9 @@
                         <td>
                             <asp:TextBox ID="txtFirstName" runat="server"></asp:TextBox>
                         </td>
+                        <td>
+                            <asp:Label ID="lblFirstNameError" runat="server" Text="" ForeColor="Red"></asp:Label>
+                        </td>
                     </tr>
                     <tr>
                         <td>
@@ -76,6 +76,9 @@
                         </td>
                         <td>
                             <asp:TextBox ID="txtLastName" runat="server"></asp:TextBox>
+                        </td>
+                        <td>
+                            <asp:Label ID="lblLastNameError" runat="server" Text="" ForeColor="Red"></asp:Label>
                         </td>
                     </tr>
                     <tr>
@@ -85,6 +88,9 @@
                         <td>
                             <asp:TextBox ID="txtPhoneNumber" runat="server"></asp:TextBox>
                         </td>
+                        <td>
+                            <asp:Label ID="lblPhoneError" runat="server" Text="" ForeColor="Red"></asp:Label>
+                        </td>
                     </tr>
                     <tr>
                         <td>
@@ -92,6 +98,9 @@
                         </td>
                         <td>
                             <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+                        </td>
+                        <td>
+                            <asp:Label ID="lblEmailError" runat="server" Text="" ForeColor="Red"></asp:Label>
                         </td>
                     </tr>
                     <tr>
@@ -102,32 +111,31 @@
                     <tr>
                         <td>
                             <asp:Label ID="lblAllergies" runat="server" Text="Allergies:"></asp:Label>
+                            <br />
+                            <br />
                         </td>
                         <td>
-                            <asp:CheckBoxList ID="CheckBoxList1" runat="server">
-                                <asp:ListItem Text="Peanut"></asp:ListItem>
-                                <asp:ListItem Text="Dairy"></asp:ListItem>
-                                <asp:ListItem Text="Other"></asp:ListItem>
-                                <asp:ListItem Text="None"></asp:ListItem>
-                            </asp:CheckBoxList>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:Label ID="lblShirtSize" runat="server" Text="Shirt Size:" Font-Bold="true"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:Label ID="lblShirtSizeSelection" runat="server" Text="T-Shirt Size:"></asp:Label>
+                            <asp:TextBox ID="txtAllergies" runat="server"></asp:TextBox>
+                            <br />
+                            <br />
                         </td>
                         <td>
-                            <asp:DropDownList ID="ddlShirtSize" runat="server"></asp:DropDownList>
+                            <asp:Label ID="lblAllergiesError" runat="server" Text="" ForeColor="Red"></asp:Label>
+                            <br />
+                            <br />
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <asp:Button ID="btnSubmit" runat="server" Text="Sign Up" />
+                            <asp:Button ID="btnSubmit" runat="server" Text="Sign Up" OnClick="btnSubmit_Click" />
+                        </td>
+                        <td>
+                            <asp:Button ID="btnPopulate" runat="server" Text="Populate" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <asp:Label ID="lblDuplicateError" runat="server" Text="" ForeColor="Red"></asp:Label>
                         </td>
                     </tr>
                 </table>
