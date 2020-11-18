@@ -247,6 +247,33 @@ namespace CyberDay {
         protected global::System.Web.UI.WebControls.Label lblAddStatusFailEvent;
         
         /// <summary>
+        /// lblGridviewTitle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblGridviewTitle;
+        
+        /// <summary>
+        /// btnRefreshEvents control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnRefreshEvents;
+        
+        /// <summary>
+        /// grdvEvents control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grdvEvents;
+        
+        /// <summary>
         /// sqlPopulateCyberDay control.
         /// </summary>
         /// <remarks>

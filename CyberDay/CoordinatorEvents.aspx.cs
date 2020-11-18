@@ -78,5 +78,19 @@ namespace CyberDay
                 }
             }
         }
+
+        protected void btnRefreshEvents_Click(object sender, EventArgs e)
+        {
+            String sqlQuery = "SELECT [Event].[EventName], [Event].[Description], [Event].[Building], [Event].[RoomNumber], [Event].[StartTime] + ' - ' + [Event].[EndTime] AS [Time]";
+            sqlQuery += "FROM [Event] ";
+            sqlQuery += "WHERE [Event].[CyberDayID] = " + ddlCyberDay.SelectedValue;
+
+            SqlConnection sqlConnect = new SqlConnection(WebConfigurationManager.ConnectionStrings["CyberDayDB"].ToString());
+            SqlDataAdapter sqlAdapter = new SqlDataAdapter(sqlQuery, sqlConnect);
+            DataTable dtCyberDayEvents = new DataTable();
+            sqlAdapter.Fill(dtCyberDayEvents);
+            grdvEvents.DataSource = dtCyberDayEvents;
+            grdvEvents.DataBind();
+        }
     }
 }

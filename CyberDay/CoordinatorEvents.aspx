@@ -150,6 +150,28 @@
                         </asp:TableRow>
                     </asp:Table>
                 </fieldset>
+                <br />
+                <br />
+                <hr />
+                <fieldset>
+                    <asp:Table runat="server">
+                        <asp:TableRow>
+                            <asp:TableCell>
+                                <asp:Label ID="lblGridviewTitle" runat="server" Text="View Events for the Currently Selected CyberDay "></asp:Label>
+                            </asp:TableCell>
+                        </asp:TableRow>
+                        <asp:TableRow>
+                            <asp:TableCell>
+                                <asp:Button ID="btnRefreshEvents" runat="server" Text="View/Refresh Associated Events" OnClick="btnRefreshEvents_Click" />
+                            </asp:TableCell>
+                        </asp:TableRow>
+                        <asp:TableRow>
+                            <asp:TableCell>
+                                <asp:GridView ID="grdvEvents" runat="server" EmptyDataText="Selected CyberDay currently has no associated events"></asp:GridView>
+                            </asp:TableCell>
+                        </asp:TableRow>
+                    </asp:Table>
+                </fieldset>
             </section>
     </div>
     <asp:SqlDataSource ID="sqlPopulateCyberDay" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDayDB %>" SelectCommand="SELECT [dbo].[CyberDay].[CyberDayID], [dbo].[CyberDay].[Date] + ' Coordinated By: ' + [dbo].[Coordinator].[FirstName] + ' ' + [dbo].[Coordinator].[LastName] AS CyberDayDisplay FROM [dbo].[CyberDay], [dbo].[Coordinator] WHERE [dbo].[CyberDay].[CoordinatorID] = [dbo].[Coordinator].[CoordinatorID] ORDER BY [dbo].[CyberDay].[CyberDayID] DESC" />
