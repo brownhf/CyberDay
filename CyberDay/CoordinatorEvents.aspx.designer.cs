@@ -10,231 +10,276 @@
 namespace CyberDay {
     
     
-    public partial class NewCyberDay {
+    public partial class CoordinatorEvents {
         
         /// <summary>
-        /// lblNewCyberDay control.
+        /// lblBuildSchedule control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNewCyberDay;
+        protected global::System.Web.UI.WebControls.Label lblBuildSchedule;
         
         /// <summary>
-        /// lblDate control.
+        /// lblCyberDay control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDate;
+        protected global::System.Web.UI.WebControls.Label lblCyberDay;
         
         /// <summary>
-        /// ddlMonth control.
+        /// ddlCyberDay control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlMonth;
+        protected global::System.Web.UI.WebControls.DropDownList ddlCyberDay;
         
         /// <summary>
-        /// lbl1 control.
+        /// lblEventName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl1;
+        protected global::System.Web.UI.WebControls.Label lblEventName;
         
         /// <summary>
-        /// ddlDay control.
+        /// txtEventName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlDay;
+        protected global::System.Web.UI.WebControls.TextBox txtEventName;
         
         /// <summary>
-        /// lbl2 control.
+        /// lblEventDescription control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl2;
+        protected global::System.Web.UI.WebControls.Label lblEventDescription;
         
         /// <summary>
-        /// ddlYear control.
+        /// txtEventDescription control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlYear;
+        protected global::System.Web.UI.WebControls.TextBox txtEventDescription;
         
         /// <summary>
-        /// lblStartTime control.
+        /// lblBuilding control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblStartTime;
+        protected global::System.Web.UI.WebControls.Label lblBuilding;
         
         /// <summary>
-        /// ddlHour control.
+        /// txtBuilding control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlHour;
+        protected global::System.Web.UI.WebControls.TextBox txtBuilding;
         
         /// <summary>
-        /// lbl3 control.
+        /// lblRoomNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl3;
+        protected global::System.Web.UI.WebControls.Label lblRoomNumber;
         
         /// <summary>
-        /// ddlMinute control.
+        /// txtRoomNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlMinute;
+        protected global::System.Web.UI.WebControls.TextBox txtRoomNumber;
         
         /// <summary>
-        /// lbl4 control.
+        /// lblEventStartTime control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl4;
+        protected global::System.Web.UI.WebControls.Label lblEventStartTime;
         
         /// <summary>
-        /// ddlAmPm control.
+        /// ddlEventStartHour control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlAmPm;
+        protected global::System.Web.UI.WebControls.DropDownList ddlEventStartHour;
         
         /// <summary>
-        /// lblEndTime control.
+        /// Label10 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEndTime;
+        protected global::System.Web.UI.WebControls.Label Label10;
         
         /// <summary>
-        /// ddlHourEnd control.
+        /// ddlEventStartMinute control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlHourEnd;
+        protected global::System.Web.UI.WebControls.DropDownList ddlEventStartMinute;
         
         /// <summary>
-        /// Label2 control.
+        /// Label11 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label Label11;
         
         /// <summary>
-        /// ddlMinuteEnd control.
+        /// ddlEventStartAmPm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlMinuteEnd;
+        protected global::System.Web.UI.WebControls.DropDownList ddlEventStartAmPm;
         
         /// <summary>
-        /// Label3 control.
+        /// lblEventEnd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label lblEventEnd;
         
         /// <summary>
-        /// ddlAmPmEnd control.
+        /// ddlEventEndHour control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlAmPmEnd;
+        protected global::System.Web.UI.WebControls.DropDownList ddlEventEndHour;
         
         /// <summary>
-        /// lblAddCoordinator control.
+        /// Label4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAddCoordinator;
+        protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
-        /// ddlAddCoordinator control.
+        /// ddlEventEndMinute control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlAddCoordinator;
+        protected global::System.Web.UI.WebControls.DropDownList ddlEventEndMinute;
         
         /// <summary>
-        /// btnCreateCyberDay control.
+        /// Label5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCreateCyberDay;
+        protected global::System.Web.UI.WebControls.Label Label5;
         
         /// <summary>
-        /// lblAddStatusSuccess control.
+        /// ddlEventEndAmPm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAddStatusSuccess;
+        protected global::System.Web.UI.WebControls.DropDownList ddlEventEndAmPm;
         
         /// <summary>
-        /// lblAddStatusFail control.
+        /// btnAddEvent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAddStatusFail;
+        protected global::System.Web.UI.WebControls.Button btnAddEvent;
         
         /// <summary>
-        /// SqlPopulateCoordinator control.
+        /// lblAddStatusSuccessEvent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlPopulateCoordinator;
+        protected global::System.Web.UI.WebControls.Label lblAddStatusSuccessEvent;
+        
+        /// <summary>
+        /// lblAddStatusFailEvent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAddStatusFailEvent;
+        
+        /// <summary>
+        /// lblGridviewTitle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblGridviewTitle;
+        
+        /// <summary>
+        /// btnRefreshEvents control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnRefreshEvents;
+        
+        /// <summary>
+        /// grdvEvents control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grdvEvents;
+        
+        /// <summary>
+        /// sqlPopulateCyberDay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource sqlPopulateCyberDay;
     }
 }

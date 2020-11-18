@@ -35,17 +35,30 @@
         <p>Click here to create a new cyberday, and build an event schedule.</p>
         <hr />
 
+        <h3><a href="CoordinatorEvents.aspx">ADD TO SCHEDULE FOR AN EXISTING CYBERDAY</a></h3>
+        <br />
+        <p>Click here to add to the schedule for an existing CyberDay.</p>
+        <hr />
+
         <h3><a href="NewVolunteer.aspx">Add/Assign Volunteer</a></h3>
         <br />
         <p>Here you will be able to save a new volunteer, add the volunteer to any CyberDay, and assign the volunteer to an event.</p>
+        <hr />
+
+        <h3><a href="SchoolRegister.aspx">REGISTER A SCHOOL</a></h3>
+        <br />
+        <p>Here you will be able to save a new school to the system for teachers and students to register to.</p>
+        <hr />
 
         <h3><a href="EventRosters.aspx">ROSTERS</a></h3>
         <br />
         <p>Here you will be able to select from a variety of roster options.</p>
+        <hr />
 
         <h3><a href="MealTicket.aspx">MEAL TICKETS</a></h3>
         <br />
         <p>Here you will be able to view meal ticket information needed for a CyberDay.</p>
+        <hr />
 
     </section>
 </asp:Content>
