@@ -116,19 +116,6 @@
                     </asp:TableRow>
                     <asp:TableRow>
                         <asp:TableCell>
-                            <asp:Label ID="lblShirtSize" runat="server" Text="Shirt Size: "></asp:Label>
-                        </asp:TableCell>
-                        <asp:TableCell>
-                            <asp:DropDownList ID="ddlShirtSize" runat="server" >
-                                <asp:ListItem Selected="True" Text="S" Value="S"></asp:ListItem>
-                                <asp:ListItem Text="M" Value="M"></asp:ListItem>
-                                <asp:ListItem Text="L" Value="L"></asp:ListItem>
-                                <asp:ListItem Text="XL" Value="XL"></asp:ListItem>
-                            </asp:DropDownList>
-                        </asp:TableCell>
-                    </asp:TableRow>
-                    <asp:TableRow>
-                        <asp:TableCell>
                             <asp:Button ID="btnSaveVolunteer" runat="server" Text="Save New Volunteer" OnClick="btnSaveVolunteer_Click" />
                         </asp:TableCell>
                         <asp:TableCell>
