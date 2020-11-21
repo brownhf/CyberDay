@@ -51,7 +51,7 @@
                 <h2 class="form-signin-heading text-center">Login</h2>
 
                 <asp:Label ID="lblBlankIncorrectLogin" runat="server" Text="" ForeColor="Red" Font-Size="Smaller"></asp:Label>
-                <asp:Label ID="lblUserType" runat="server" Text="User Type: "></asp:Label>
+                <%--<asp:Label ID="lblUserType" runat="server" Text="User Type: "></asp:Label>--%>
                 <br />
 
                 <input id="txtUsername" runat="server" type="text" class="form-control" name="username" placeholder="Username" required="" autofocus="" />

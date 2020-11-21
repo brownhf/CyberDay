@@ -30,7 +30,7 @@ namespace CyberDay
             duplicateQuery += "AND [Volunteer].[PreviousParticipation] = '" + ddlPreviousParticipation.Text.Trim() + "' ";
             duplicateQuery += "AND [Volunteer].[Email] = '" + txtEmail.Text.Trim() + "' ";
             duplicateQuery += "AND [Volunteer].[PhoneNumber] = '" + txtPhone.Text.Trim() + "' ";
-            duplicateQuery += "AND [Volunteer].[ShirtSize] = '" + ddlShirtSize.Text.Trim() + "' ";
+            //duplicateQuery += "AND [Volunteer].[ShirtSize] = '" + ddlShirtSize.Text.Trim() + "' ";
             SqlConnection sc = new SqlConnection(WebConfigurationManager.ConnectionStrings["CyberDayDB"].ToString());
             SqlCommand duplicateCmd = new SqlCommand(duplicateQuery, sc);
             SqlDataAdapter duplicateTable = new SqlDataAdapter(duplicateCmd);
@@ -58,7 +58,7 @@ namespace CyberDay
                     sqlCommand.Parameters.AddWithValue("@ddlPreviousParticipation", HttpUtility.HtmlEncode(ddlPreviousParticipation.Text.Trim()));
                     sqlCommand.Parameters.AddWithValue("@txtEmail", HttpUtility.HtmlEncode(txtEmail.Text.Trim()));
                     sqlCommand.Parameters.AddWithValue("@txtPhone", HttpUtility.HtmlEncode(txtPhone.Text.Trim()));
-                    sqlCommand.Parameters.AddWithValue("@ddlShirtSize", HttpUtility.HtmlEncode(ddlShirtSize.Text.Trim()));
+                    //sqlCommand.Parameters.AddWithValue("@ddlShirtSize", HttpUtility.HtmlEncode(ddlShirtSize.Text.Trim()));
                     sqlConnect.Open();
                     sqlCommand.ExecuteNonQuery();
                     sqlConnect.Close();

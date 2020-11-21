@@ -38,7 +38,14 @@
 
         .nav navbar-nav {
         }
-        h1{
+
+        .navbar navbar-expand-md navbar-dark {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
             text-align: center;
         }
     </style>
@@ -75,8 +82,10 @@
                 </nav>
 
 
-                <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #CBB677">
-                    <ul class="nav navbar-nav navbar-center">
+
+
+                <nav class="navbar navbar-expand-md navbar-dark justify-content-center" style="background-color: #CBB677">
+                    <ul class="nav navbar-nav">
                         <li class="nav-item active">
                             <a class="nav-link" href="LoginPage.aspx">COORDINATORS</a>
                         </li>
@@ -92,35 +101,41 @@
                     </ul>
                 </nav>
 
-
-
                 <asp:Image ID="Image2" CssClass="quad" runat="server" ImageUrl="~/Images/0.jpg" />
 
             </header>
             <section class="sectionContent" runat="server">
                 <h1>ABOUT CYBERDAY</h1>
                 <br />
-                
-                <p>By teaching others about Computer Information Systems, you will learn to develop advanced competencies and diagnostic skills to correct 
+
+                <p>
+                    By teaching others about Computer Information Systems, you will learn to develop advanced competencies and diagnostic skills to correct 
                     software problems. Mentorship in the CyberDay program, which is a collaborative effort between the College of Business (CoB) and the 
                     JMU Office of Admissions, will offer the opportunity to engage middle school students in animation programming or other computer technology 
                     activities.  Share your excitement in the field of computer information systems and cultivate the interests of young people in future 
-                    business/technology related careers.</p>
+                    business/technology related careers.
+                </p>
 
                 <br />
 
-                <p>According to Dr. Tom Dillon, co-director of CyberDay, “The JMU mission has always been to educate leaders. Our students exemplify that mission 
-                    by not only being leaders in their academic studies, but also by leading these visiting young people to promising technology careers.” </p>
+                <p>
+                    According to Dr. Tom Dillon, co-director of CyberDay, “The JMU mission has always been to educate leaders. Our students exemplify that mission 
+                    by not only being leaders in their academic studies, but also by leading these visiting young people to promising technology careers.”
+                </p>
 
                 <br />
 
-                <p>A successful diversity program, CyberDay/CyberCity has provided learning experiences for over 800 students and 100 teachers. This event is open
-                    to all CIS majors, minors, and other students with the requisite skills. To get involved, contact, Tom Dillon, or Shawn Lough.</p>
+                <p>
+                    A successful diversity program, CyberDay/CyberCity has provided learning experiences for over 800 students and 100 teachers. This event is open
+                    to all CIS majors, minors, and other students with the requisite skills. To get involved, contact, Tom Dillon, or Shawn Lough.
+                </p>
 
                 <br />
 
-                <p>CyberDay events can be designed for up to 50 middle and high school students. If your school is interested, please contact Tom Dillon, 
-                    Co-Director of CyberDay (<a href=dillontw@jmu.edu>dillontw@jmu.edu</a>, 540-568-3015).</p>
+                <p>
+                    CyberDay events can be designed for up to 50 middle and high school students. If your school is interested, please contact Tom Dillon, 
+                    Co-Director of CyberDay (<a href="dillontw@jmu.edu">dillontw@jmu.edu</a>, 540-568-3015).
+                </p>
 
                 <br />
                 <br />
