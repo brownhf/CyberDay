@@ -35,34 +35,36 @@ namespace CyberDay
                 if (PasswordHash.ValidatePassword(HttpUtility.HtmlEncode(txtPassword.Value.ToString()), storedHash))
                 {
                     Session["Username"] = HttpUtility.HtmlEncode(txtUsername.Value.ToString());
+                    Response.Redirect("MainPage.aspx");
 
-                    if (userType == "Coordinator")
-                    {
-                        Response.Redirect("CoordinatorHomePage.aspx");
-
-                    }
-                    //if (userType == "Volunteer")
+                    //if (userType == "Coordinator")
                     //{
-                    //    Response.Redirect("VolunteerrHomePage.aspx");
+                    //    Response.Redirect("CoordinatorHomePage.aspx");
 
                     //}
-                    if (userType == "Parent")
-                    {
-                        Response.Redirect("ParentsHome.aspx");
+                    ////if (userType == "Volunteer")
+                    ////{
+                    ////    Response.Redirect("VolunteerrHomePage.aspx");
 
-                    }
-                    if (userType == "Student")
-                    {
-                        Response.Redirect("StudentHome.aspx");
+                    ////}
+                    //if (userType == "Parent")
+                    //{
+                    //    Response.Redirect("ParentsHome.aspx");
 
-                    }
-                    //Response.Redirect("MainPage.aspx");
+                    //}
+                    //if (userType == "Student")
+                    //{
+                    //    Response.Redirect("StudentHome.aspx");
+
+                    //}
+                    ////Response.Redirect("MainPage.aspx");
+                }
+                else
+                {
+                    lblBlankIncorrectLogin.Text = "* Incorrect Username or Password";
                 }
             }
-            else
-            {
-                lblBlankIncorrectLogin.Text = "* Incorrect Username or Password";
-            }
+
 
         }
 

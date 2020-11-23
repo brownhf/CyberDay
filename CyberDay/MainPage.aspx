@@ -58,25 +58,22 @@
                 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #450084">
                     <a href="MainPage.aspx" class="navbar-brand">JAMES MADISON UNIVERSITY: CyberDay</a>
                     <div class="collapse navbar-collapse">
-                        <%--                        <ul class="nav navbar-nav">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="MainPage.aspx">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="CoordinatorHomePage.aspx">Coordinators</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="TeacherHomePage.aspx">Teachers</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="ParentsHome.aspx">Parents</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="StudentHome.aspx">Students</a>
-                            </li>
-                        </ul>--%>
                         <ul class="nav navbar-nav ml-auto">
-                            <li><a href="LoginPage.aspx"><span class=""></span>Login</a></li>
+                            <li>
+                                <%--<a href=""><span class=""></span>--%>
+                                <%--<asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn btn-light" Visible="true" PostBackUrl="~/LoginPage.aspx"></asp:Button>--%>
+
+                                <button type="button" id="btnUserLogin" runat="server" class="btn btn-light" onserverclick="btnUserLogin_ServerClick">
+                                    Login
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-box-arrow-in-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"></path>
+                                        <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"></path>
+                                    </svg>
+                                </button>
+
+                                <asp:DropDownList ID="ddlUser" Visible="false" runat="server" CssClass="btn btn-light" AutoPostBack="true" OnSelectedIndexChanged="ddlUser_SelectedIndexChanged"></asp:DropDownList>
+                                <%--</a>--%>
+                            </li>
                         </ul>
                     </div>
                 </nav>
@@ -87,7 +84,7 @@
                 <nav class="navbar navbar-expand-md navbar-dark justify-content-center" style="background-color: #CBB677">
                     <ul class="nav navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link" href="LoginPage.aspx">COORDINATORS</a>
+                            <a class="nav-link" id="coordinatorLink" runat="server" href="" onserverclick="coordinatorLink_ServerClick">COORDINATORS</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="TeacherHomePage.aspx">TEACHERS</a>
