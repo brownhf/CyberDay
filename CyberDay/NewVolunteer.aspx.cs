@@ -31,6 +31,9 @@ namespace CyberDay
             duplicateQuery += "AND [Volunteer].[Email] = '" + txtEmail.Text.Trim() + "' ";
             duplicateQuery += "AND [Volunteer].[PhoneNumber] = '" + txtPhone.Text.Trim() + "' ";
             duplicateQuery += "AND [Volunteer].[ShirtSize] = '" + ddlShirtSize.Text.Trim() + "' ";
+
+            string sqlInsertLunch = "Insert Into Lunch Values (@FirstName, @LastName, @Attendance, @CyberDayID)";
+
             SqlConnection sc = new SqlConnection(WebConfigurationManager.ConnectionStrings["CyberDayDB"].ToString());
             SqlCommand duplicateCmd = new SqlCommand(duplicateQuery, sc);
             SqlDataAdapter duplicateTable = new SqlDataAdapter(duplicateCmd);
@@ -59,8 +62,16 @@ namespace CyberDay
                     sqlCommand.Parameters.AddWithValue("@txtEmail", HttpUtility.HtmlEncode(txtEmail.Text.Trim()));
                     sqlCommand.Parameters.AddWithValue("@txtPhone", HttpUtility.HtmlEncode(txtPhone.Text.Trim()));
                     sqlCommand.Parameters.AddWithValue("@ddlShirtSize", HttpUtility.HtmlEncode(ddlShirtSize.Text.Trim()));
+
+                    SqlCommand sqlComInsertLunch = new SqlCommand(sqlInsertLunch, sqlConnect);
+                    sqlComInsertLunch.Parameters.AddWithValue("@FirstName", txtFirst.Text);
+                    sqlComInsertLunch.Parameters.AddWithValue("@LastName", txtLast.Text);
+                    sqlComInsertLunch.Parameters.AddWithValue("@Attendance", ddlLunchAttendance.SelectedValue);
+                    sqlComInsertLunch.Parameters.AddWithValue("@CyberDayID", ddlCyberDay.SelectedValue);
+
                     sqlConnect.Open();
                     sqlCommand.ExecuteNonQuery();
+                    sqlComInsertLunch.ExecuteNonQuery();
                     sqlConnect.Close();
                     lblAddStatusFail.Visible = false;
                     lblAddStatusSuccess.Visible = true;

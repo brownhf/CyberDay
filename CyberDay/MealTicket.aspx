@@ -42,10 +42,10 @@
                     </asp:TableRow>
                     <asp:TableRow>
                         <asp:TableCell>
-                            <asp:Button ID="btnTicketQuantity" runat="server" Text="Print the Total Amount of Tickets for the Given CyberDay" />
+                            <asp:Button ID="btnTicketQuantity" runat="server" Text="Print the Total Amount of Tickets for the Given CyberDay" OnClick="btnTicketQuantity_Click"/>
                         </asp:TableCell>
                         <asp:TableCell>
-                            <asp:Button ID="btnTicketPrice" runat="server" Text="Print the Total Price of Tickets for the Given CyberDay" />
+                            <asp:Button ID="btnTicketPrice" runat="server" Text="Print the Total Price of Tickets for the Given CyberDay" OnClick="btnTicketPrice_Click"/>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow>

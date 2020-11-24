@@ -156,10 +156,33 @@
                     </tr>
                     <tr>
                         <td>
+                            <asp:Label ID="lblCyberDay" runat="server" Text="Assign to CyberDay: "></asp:Label>
+                        </td>
+                        <td>
+                            <asp:DropDownList ID="ddlCyberDay" runat="server" DataSourceID="sqlPopulateCyberDay" DataTextField="CyberDayDisplay" DataValueField="CyberDayID" ></asp:DropDownList>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
                             <h4>Student Meal Info:</h4>
                         </td>
                     </tr>
                     <tr>
+                        <tr>
+                        <td>
+                            <asp:Label ID="lblLunchAttendance" runat="server" Text="Attending Lunch:"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:DropDownList ID="ddlLunchAttendance" runat="server">
+                                <asp:ListItem Text="--Select--" Value="select"></asp:ListItem>
+                                <asp:ListItem Text="Yes" Value="yes"></asp:ListItem>
+                                <asp:ListItem Text="No" Value="no"></asp:ListItem>
+                            </asp:DropDownList>
+                        </td>
+                        <td>
+                            <asp:Label ID="lblLunchAttendanceError" runat="server" Text="" ForeColor="Red" Font-Italic="true"></asp:Label>
+                        </td>
+                        </tr>
                         <td>
                             <asp:Label ID="lblSelectMeal" runat="server" Text="Dietary Needs:"></asp:Label>
                         </td>
@@ -213,5 +236,6 @@
         ConnectionString="<%$ ConnectionStrings:CyberDayDB %>"
         SelectCommand="Select TeacherID, FirstName + ' ' + LastName as [Name] From Teacher"
         runat="server"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="sqlPopulateCyberDay" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDayDB %>" SelectCommand="SELECT [dbo].[CyberDay].[CyberDayID], [dbo].[CyberDay].[Date] + ' Coordinated By: ' + [dbo].[Coordinator].[FirstName] + ' ' + [dbo].[Coordinator].[LastName] AS CyberDayDisplay FROM [dbo].[CyberDay], [dbo].[Coordinator] WHERE [dbo].[CyberDay].[CoordinatorID] = [dbo].[Coordinator].[CoordinatorID] ORDER BY [dbo].[CyberDay].[CyberDayID] DESC" />
 </asp:Content>
 

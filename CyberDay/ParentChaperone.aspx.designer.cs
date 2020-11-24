@@ -132,6 +132,24 @@ namespace CyberDay
         protected global::System.Web.UI.WebControls.Label lblEmailError;
 
         /// <summary>
+        /// lblCyberDay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCyberDay;
+
+        /// <summary>
+        /// ddlCyberDay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlCyberDay;
+
+        /// <summary>
         /// lblFood control.
         /// </summary>
         /// <remarks>
@@ -139,6 +157,33 @@ namespace CyberDay
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblFood;
+
+        /// <summary>
+        /// lblLunchAttendance control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblLunchAttendance;
+
+        /// <summary>
+        /// ddlLunchAttendance control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlLunchAttendance;
+
+        /// <summary>
+        /// lblLunchAttendanceError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblLunchAttendanceError;
 
         /// <summary>
         /// lblAllergies control.
@@ -193,5 +238,14 @@ namespace CyberDay
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblDuplicateError;
+
+        /// <summary>
+        /// sqlPopulateCyberDay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource sqlPopulateCyberDay;
     }
 }

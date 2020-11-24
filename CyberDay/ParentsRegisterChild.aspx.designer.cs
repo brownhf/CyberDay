@@ -222,6 +222,51 @@ namespace CyberDay
         protected global::System.Web.UI.WebControls.DropDownList ddlTeacher;
 
         /// <summary>
+        /// lblCyberDay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCyberDay;
+
+        /// <summary>
+        /// ddlCyberDay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlCyberDay;
+
+        /// <summary>
+        /// lblLunchAttendance control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblLunchAttendance;
+
+        /// <summary>
+        /// ddlLunchAttendance control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlLunchAttendance;
+
+        /// <summary>
+        /// lblLunchAttendanceError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblLunchAttendanceError;
+
+        /// <summary>
         /// lblSelectMeal control.
         /// </summary>
         /// <remarks>
@@ -310,5 +355,14 @@ namespace CyberDay
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource srcTeachers;
+
+        /// <summary>
+        /// sqlPopulateCyberDay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource sqlPopulateCyberDay;
     }
 }
