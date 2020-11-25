@@ -15,31 +15,21 @@ namespace CyberDay
             {
                 //btnLogin.Visible = false;
                 btnUserLogin.Visible = false;
-                //btnLogout.Visible = true;
-                //btnLogout.Text = Session["Username"].ToString() + " - Logout";
 
-                //ddlUserLogout.Visible = true;
                 string currentUser = Session["Username"].ToString();
-                //ddlCurrentUser.InnerHtml = currentUser;
-
 
                 ddlUser.Visible = true;
                 ddlUser.Items.Insert(0, currentUser);
-                //ddlUser.Items.Add(Session["Username"].ToString());
                 ListItem separator = new ListItem("----------", "");
                 separator.Attributes.Add("disabled", "true");
-                //ddlUser.Items.Add(separator);
                 ddlUser.Items.Insert(1, separator);
-                //ddlUser.Items.Add("Logout");
                 ddlUser.Items.Insert(2, "Logout");
-                if(ddlUser.SelectedIndex == 2)
-                {
-                    Session.Abandon();
-                    Response.Redirect(Request.RawUrl);
-                }
+                //if(ddlUser.SelectedIndex == 2)
+                //{
+                //    Session.Abandon();
+                //    Response.Redirect(Request.RawUrl);
+                //}
 
-                //lblCurrentUser.Text = Session["Username"].ToString();
-                //lblCurrentUser.Visible = true;
             }
         }
 

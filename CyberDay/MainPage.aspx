@@ -78,9 +78,6 @@
                     </div>
                 </nav>
 
-
-
-
                 <nav class="navbar navbar-expand-md navbar-dark justify-content-center" style="background-color: #CBB677">
                     <ul class="nav navbar-nav">
                         <li class="nav-item active">
