@@ -4,94 +4,48 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    
+    <asp:Image ID="ExploreJMU" runat="server" CssClass="ExploreJMU" ImageUrl="Images/ExploreJMU.jpg" />
 
-    <asp:Button ID="btnNewCyberDay1" runat="server" Text="Add a New CyberDay" type="button" class="btn btn=lg btn-primary btn-block" Width="160" Height="70"></asp:Button>
+    <style>
+        /*WAS HAVING ISSUE WITH CURRENT PICTURE FITTING WHOLE SCREEN SO I HAD TO FIND A NEW ONE*/
+        .ExploreJMU {
+            max-width: 100%;
+        }
+        /*SECTION IS THE BODY OF THE SUB PAGES/THE CONTENT PLACE HOLDERS BODY, SO THE 75% ONLY APPLIES TO THAT PORTION OF THE PAGE*/
+        section {
+            width: 75%;
+            margin-right: auto;
+            margin-left: auto;
+        }
 
-    <fieldset>
-        <asp:Table runat="server">
-            <asp:TableRow>
-                <asp:TableCell>
-                    <asp:Label ID="lblNewCyberDay" runat="server" Text="Add a New CyberDay: " Font-Bold="true" Font-Size="Large"></asp:Label>
-                </asp:TableCell>
-                <asp:TableCell>
-                    <asp:Button ID="btnNewCyberDay" runat="server" Text="Set Date" OnClick="btnNewCyberDay_Click" />
-                </asp:TableCell>
-            </asp:TableRow>
-        </asp:Table>
-    </fieldset>
+        h1 {
+            text-align: center;
+        }
+    </style>
 
-    <br />
+   <%-- <asp:Button ID="btnNewCyberDay1" runat="server" Text="Add a New CyberDay" type="button" class="btn btn=lg btn-primary btn-block" Width="160" Height="70"></asp:Button>--%>
 
-    <fieldset>
-        <asp:Table runat="server">
-            <asp:TableRow>
-                <asp:TableCell>
-                    <asp:Label ID="lblSchedule" runat="server" Text="Build a CyberDay Schedule/Event List: " Font-Bold="true" Font-Size="Large"></asp:Label>
-                </asp:TableCell>
-                <asp:TableCell>
-                    <asp:Button ID="btnSchedule" runat="server" Text="Proceed To Event Entry Page" OnClick="btnSchedule_Click" />
-                </asp:TableCell>
-            </asp:TableRow>
-        </asp:Table>
-    </fieldset>
+    <section>
 
-    <br />
+        <h1>COORDINATOR HOME</h1>
+        <hr />
 
-    <fieldset>
-        <asp:Table runat="server">
-            <asp:TableRow>
-                <asp:TableCell>
-                    <asp:Label ID="lblRoster" runat="server" Text="View and Update CyberDay Roster: " Font-Bold="true" Font-Size="Large"></asp:Label>
-                </asp:TableCell>
-                <asp:TableCell>
-                    <asp:Button ID="btnRoster" runat="server" Text="Proceed to Roster Information" OnClick="btnRoster_Click" />
-                </asp:TableCell>
-            </asp:TableRow>
-        </asp:Table>
-    </fieldset>
+        <h3><a href="NewCyberDay.aspx">NEW CYBERDAY</a></h3>
+        <br />
+        <p>Click here to create a new cyberday, and build an event schedule.</p>
+        <hr />
 
-    <br />
+        <h3><a href="NewVolunteer.aspx">Add/Assign Volunteer</a></h3>
+        <br />
+        <p>Here you will be able to save a new volunteer, add the volunteer to any CyberDay, and assign the volunteer to an event.</p>
 
-    <fieldset>
-        <asp:Table runat="server">
-            <asp:TableRow>
-                <asp:TableCell>
-                    <asp:Label ID="lblCreateVolunteer" runat="server" Text="Add New Volunteers: " Font-Bold="true" Font-Size="Large"></asp:Label>
-                </asp:TableCell>
-                <asp:TableCell>
-                    <asp:Button ID="btnCreateVolunteer" runat="server" Text="Proceed to Volunteer Entry Page" OnClick="btnCreateVolunteer_Click" />
-                </asp:TableCell>
-            </asp:TableRow>
-        </asp:Table>
-    </fieldset>
+        <h3><a href="EventRosters.aspx">ROSTERS</a></h3>
+        <br />
+        <p>Here you will be able to select from a variety of roster options.</p>
 
-    <br />
+        <h3><a href="MealTicket.aspx">MEAL TICKETS</a></h3>
+        <br />
+        <p>Here you will be able to view meal ticket information needed for a CyberDay.</p>
 
-    <fieldset>
-        <asp:Table runat="server">
-            <asp:TableRow>
-                <asp:TableCell>
-                    <asp:Label ID="lblAssignVolunteer" runat="server" Text="Build a Volunteers Schedule: " Font-Bold="true" Font-Size="Large"></asp:Label>
-                </asp:TableCell>
-                <asp:TableCell>
-                    <asp:Button ID="btnAssignVolunteer" runat="server" Text="Proceed to Volunteer Assignment Page" OnClick="btnAssignVolunteer_Click" />
-                </asp:TableCell>
-            </asp:TableRow>
-        </asp:Table>
-    </fieldset>
-
-    <br />
-
-    <fieldset>
-        <asp:Table runat="server">
-            <asp:TableRow>
-                <asp:TableCell>
-                    <asp:Label ID="lblMealTicket" runat="server" Text="View Meal Ticket Information: " Font-Bold="true" Font-Size="Large"></asp:Label>
-                </asp:TableCell>
-                <asp:TableCell>
-                    <asp:Button ID="btnMealTicket" runat="server" Text="Proceed to Meal Ticket Page" OnClick="btnMealTicket_Click" />
-                </asp:TableCell>
-            </asp:TableRow>
-        </asp:Table>
-    </fieldset>
+    </section>
 </asp:Content>

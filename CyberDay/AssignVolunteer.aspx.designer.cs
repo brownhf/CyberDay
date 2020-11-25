@@ -157,15 +157,6 @@ namespace CyberDay {
         protected global::System.Web.UI.WebControls.Label lblSelectFacultyEvent;
         
         /// <summary>
-        /// ddlSelectFacultyEvent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlSelectFacultyEvent;
-        
-        /// <summary>
         /// btnFacultyVolunteerAssign control.
         /// </summary>
         /// <remarks>
@@ -191,41 +182,5 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAddStatusFail2;
-        
-        /// <summary>
-        /// sqlPopulateCyberDay control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource sqlPopulateCyberDay;
-        
-        /// <summary>
-        /// sqlPopulateEvent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource sqlPopulateEvent;
-        
-        /// <summary>
-        /// sqlPopulateStudentVolunteer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource sqlPopulateStudentVolunteer;
-        
-        /// <summary>
-        /// sqlPopulateFacultyVolunteer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource sqlPopulateFacultyVolunteer;
     }
 }

@@ -4,7 +4,11 @@
 
 <html>
 <head runat="server">
-    <title></title>
+    <title>CyberDay Management System: Teacher Portal</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
