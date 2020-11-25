@@ -38,7 +38,7 @@ namespace CyberDay
             counter.CommandText = "SELECT count(Attendance) from Lunch WHERE Attendance = 'yes' AND CyberDayID =" + ddlSelectCyberDay.SelectedValue;
             int count = (int)counter.ExecuteScalar();
 
-            lblTicketPrice.Text = (count * 14).ToString();
+            lblTicketPrice.Text = "$" + (count * 14).ToString();
         }
     }
 }
