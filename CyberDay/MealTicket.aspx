@@ -42,10 +42,10 @@
                     </asp:TableRow>
                     <asp:TableRow>
                         <asp:TableCell>
-                            <asp:Button ID="btnTicketQuantity" runat="server" Text="Print the Total Amount of Tickets for the Given CyberDay" />
+                            <asp:Button ID="btnTicketQuantity" runat="server" Text="Print the Total Amount of Tickets for the Given CyberDay" OnClick="btnTicketQuantity_Click"/>
                         </asp:TableCell>
                         <asp:TableCell>
-                            <asp:Button ID="btnTicketPrice" runat="server" Text="Print the Total Price of Tickets for the Given CyberDay" />
+                            <asp:Button ID="btnTicketPrice" runat="server" Text="Print the Total Price of Tickets for the Given CyberDay" OnClick="btnTicketPrice_Click"/>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow>
@@ -57,8 +57,21 @@
                         </asp:TableCell>
                     </asp:TableRow>
                 </asp:Table>
+                <br />
+                <asp:Table>
+                    <asp:GridView 
+                        id="grdLunchAttendance" 
+                        DataSourceID="srcLunchAttendance" 
+                        runat="server">
+                    </asp:GridView>
+                </asp:Table>
             </fieldset>
         </section>
     </div>
+    <asp:SqlDataSource ID="srcLunchAttendance" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDayDB %>" SelectCommand="SELECT [dbo].[Lunch].[FirstName], [dbo].[Lunch].[LastName] FROM [dbo].[Lunch] WHERE [dbo].[Lunch].[Attendance] = 'yes' AND [dbo].[Lunch].[CyberDayID] = @CyberDay">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="ddlSelectCyberDay" PropertyName="SelectedValue" Name="CyberDay" Type="String" />
+            </SelectParameters>
+    </asp:SqlDataSource>
     <asp:SqlDataSource ID="sqlPopulateCyberDay" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDayDB %>" SelectCommand="SELECT [dbo].[CyberDay].[CyberDayID], [dbo].[CyberDay].[Date] + ' Coordinated By: ' + [dbo].[Coordinator].[FirstName] + ' ' + [dbo].[Coordinator].[LastName] AS CyberDayDisplay FROM [dbo].[CyberDay], [dbo].[Coordinator] WHERE [dbo].[CyberDay].[CoordinatorID] = [dbo].[Coordinator].[CoordinatorID] ORDER BY [dbo].[CyberDay].[CyberDayID] DESC" />
 </asp:Content>

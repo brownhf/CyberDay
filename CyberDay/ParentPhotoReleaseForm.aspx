@@ -37,11 +37,40 @@
     <div class="wrapper">
         <section class="activityInfo">
             <fieldset class="info">
-                <h3>Upload Student Release Form</h3>
+                <h3>Download Form</h3>
+                <asp:GridView ID="gvFormsDownload" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowCommand="gvFormsDownload_RowCommand">
+                    <AlternatingRowStyle BackColor="White" />
+                    <Columns>
+                        <asp:TemplateField HeaderText="File">
+                            <ItemTemplate>
+                                <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("File") %>' CommandName="Download" Text='<%# Eval("File") %>'></asp:LinkButton>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:BoundField DataField="Size" HeaderText="Size in Bytes" />
+                        <asp:BoundField DataField="Type" HeaderText="File Type" />
+                    </Columns>
+                    <EditRowStyle BackColor="#2461BF" />
+                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#EFF3FB" />
+                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                    <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                    <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                    <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                    <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                </asp:GridView>
                 <br />
                 <br />
-                <asp:Label ID="lblRelease" runat="server" Text="Upload Release Form: " ForeColor="Purple"></asp:Label>
-                <asp:FileUpload ID="FileUpload1" runat="server" />
+                <h3>Submit Permission Forms:</h3>
+                <p><a href="ParentUploadPhoto.aspx">Upload Photo Release Form</a></p>
+                <table>
+                    <tr>
+                        <td>
+                            <p><a href="ParentUploadPermission.aspx">Upload Permission Form</a></p>
+                        </td>
+                    </tr>
+                </table>
             </fieldset>
         </section>
     </div>

@@ -21,8 +21,8 @@
         <br />
         <p>Sign up to be a chaperone at a CyberDay Event!</p>
         <hr />
-        <h3><a href="ParentPhotoReleaseForm.aspx">Child Photo Releazse Form</a></h3>
-        <p>Sign and upload a photo release form so we can take pictures of your child at CyberDay!</p>
+        <h3><a href="ParentPhotoReleaseForm.aspx">Upload Permission Forms</a></h3>
+        <p>Sign and upload a photo release form and/or a CyberDay attendance permission so we can take pictures of your child at CyberDay!</p>
         <hr />
     </section>
 </asp:Content>

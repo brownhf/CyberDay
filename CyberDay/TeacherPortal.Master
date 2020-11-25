@@ -33,7 +33,10 @@
                         <a class="nav-link" href="TeacherHomePage.aspx">TEACHER HOME</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="TeacherRegister.aspx">REGISTER TEACHERS</a>
+                        <a class="nav-link" href="ParentChaperone.aspx">REGISTER OTHER TEACHERS/CHAPERONES</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="TeacherRoster.aspx">VIEW/EDIT A CLASS ROSTER</a>
                     </li>
                 </ul>
             </nav>

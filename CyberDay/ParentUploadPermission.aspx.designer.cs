@@ -11,97 +11,70 @@ namespace CyberDay
 {
 
 
-    public partial class MealTicket
+    public partial class WebForm1
     {
 
         /// <summary>
-        /// lblMealTicketInfo control.
+        /// lblStudent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMealTicketInfo;
+        protected global::System.Web.UI.WebControls.Label lblStudent;
 
         /// <summary>
-        /// lblSelectCyberDay control.
+        /// ddlStudents control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSelectCyberDay;
+        protected global::System.Web.UI.WebControls.DropDownList ddlStudents;
 
         /// <summary>
-        /// ddlSelectCyberDay control.
+        /// fileUploadPermission control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlSelectCyberDay;
+        protected global::System.Web.UI.WebControls.FileUpload fileUploadPermission;
 
         /// <summary>
-        /// btnTicketQuantity control.
+        /// btnUpload control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnTicketQuantity;
+        protected global::System.Web.UI.WebControls.Button btnUpload;
 
         /// <summary>
-        /// btnTicketPrice control.
+        /// lblError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnTicketPrice;
+        protected global::System.Web.UI.WebControls.Label lblError;
 
         /// <summary>
-        /// lblTicketQuantity control.
+        /// btnBack control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTicketQuantity;
+        protected global::System.Web.UI.WebControls.Button btnBack;
 
         /// <summary>
-        /// lblTicketPrice control.
+        /// srcStudent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTicketPrice;
-
-        /// <summary>
-        /// grdLunchAttendance control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdLunchAttendance;
-
-        /// <summary>
-        /// srcLunchAttendance control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource srcLunchAttendance;
-
-        /// <summary>
-        /// sqlPopulateCyberDay control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource sqlPopulateCyberDay;
+        protected global::System.Web.UI.WebControls.SqlDataSource srcStudent;
     }
 }

@@ -26,6 +26,9 @@ namespace CyberDay
             duplicateQuery += "WHERE [CyberDay].[Date] = '" + ddlMonth.SelectedValue + "/" + ddlDay.SelectedValue + "/" + ddlYear.SelectedValue + "' ";
             duplicateQuery += "AND [CyberDay].[StartTime] = '" + ddlHour.SelectedValue + ":" + ddlMinute.SelectedValue + ddlAmPm.Text.Trim() + "' ";
             duplicateQuery += "AND [CyberDay].[EndTime] = '" + ddlHourEnd.SelectedValue + ":" + ddlMinuteEnd.SelectedValue + ddlAmPmEnd.Text.Trim() + "' ";
+
+
+
             SqlConnection sc = new SqlConnection(WebConfigurationManager.ConnectionStrings["CyberDayDB"].ToString());
             SqlCommand duplicateCmd = new SqlCommand(duplicateQuery, sc);
             SqlDataAdapter duplicateTable = new SqlDataAdapter(duplicateCmd);

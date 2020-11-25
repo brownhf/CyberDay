@@ -20,8 +20,9 @@ namespace CyberDay
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            string sqlInsertStudent = "Insert Into Student Values (@FirstName, @LastName, @Age, @Gender, @Email, @ShirtSize, @Notes, @Dietary, @Allergies, @TeacherID)";
+            string sqlInsertStudent = "Insert Into Student Values (@FirstName, @LastName, @Age, @Gender, @Email, @ShirtSize, @Notes, @Dietary, @Allergies, @TeacherID, @LunchAttendance, @CyberDayID)";
             string sqlCheck = "Select Count(1) From Student Where FirstName = @FirstName and LastName = @LastName and TeacherID = @TeacherID and Email = @Email";
+            string sqlInsertLunch = "Insert Into Lunch Values (@FirstName, @LastName, @Attendance, @CyberDayID)";
             SqlConnection sqlCon = new SqlConnection(WebConfigurationManager.ConnectionStrings["CyberDayDB"].ToString());
             SqlCommand sqlComCheck = new SqlCommand(sqlCheck, sqlCon);
 
@@ -61,7 +62,7 @@ namespace CyberDay
             }
             else if(txtNotes.Text == "")
             {
-                lblNotes.Text = "Error - field left blank";
+                lblNotesError.Text = "Error - field left blank";
             }
             else if(ddlShirtSize.SelectedValue == "select")
             {
@@ -70,6 +71,10 @@ namespace CyberDay
             else if(ddlGenders.SelectedValue == "select")
             {
                 lblGenderError.Text = "Error - field left blank";
+            }
+            else if (ddlLunchAttendance.SelectedValue == "select")
+            {
+                lblLunchAttendanceError.Text = "Error - field left blank";
             }
             else if(ddlDietaryNeeds.SelectedValue == "select")
             {
@@ -96,12 +101,25 @@ namespace CyberDay
                 sqlComInsertStudent.Parameters.AddWithValue("@Dietary", ddlDietaryNeeds.SelectedValue);
                 sqlComInsertStudent.Parameters.AddWithValue("@Allergies", cbAllergies.Text);
                 sqlComInsertStudent.Parameters.AddWithValue("@TeacherID", ddlTeacher.SelectedValue);
+                sqlComInsertStudent.Parameters.AddWithValue("@LunchAttendance", ddlLunchAttendance.SelectedValue);
+                sqlComInsertStudent.Parameters.AddWithValue("@CyberDayID", ddlCyberDay.SelectedValue);
+
+                SqlCommand sqlComInsertLunch = new SqlCommand(sqlInsertLunch, sqlCon);
+                sqlComInsertLunch.Parameters.AddWithValue("@FirstName", txtFirstName.Text);
+                sqlComInsertLunch.Parameters.AddWithValue("@LastName", txtLastName.Text);
+                sqlComInsertLunch.Parameters.AddWithValue("@Attendance", ddlLunchAttendance.SelectedValue);
+                sqlComInsertLunch.Parameters.AddWithValue("@CyberDayID", ddlCyberDay.SelectedValue);
 
                 sqlCon.Open();
                 sqlComInsertStudent.ExecuteNonQuery();
+                sqlComInsertLunch.ExecuteNonQuery();
                 sqlCon.Close();
                 lblStudentSubmitError.Text = "Student Signed Up!";
                 //Clear text fields
+                Session["FirstName"] = txtFirstName.Text.ToString();
+                Session["LastName"] = txtLastName.Text.ToString();
+                Session["CyberDayID"] = ddlCyberDay.SelectedValue;
+                Response.Redirect("ParentsActivity.aspx");
 
             }
         }
