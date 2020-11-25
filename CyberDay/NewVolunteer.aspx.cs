@@ -51,7 +51,7 @@ namespace CyberDay
 
                 try
                 {
-                    String insertCmd = "INSERT INTO Volunteer VALUES (@txtFirst, @txtLast, @ddlGender, @ddlCISRelation, @ddlPreviousParticipation, @txtEmail, @txtPhone, @ddlShirtSize)";
+                    String insertCmd = "INSERT INTO Volunteer VALUES (@txtFirst, @txtLast, @ddlGender, @ddlCISRelation, @ddlPreviousParticipation, @txtEmail, @txtPhone, @ddlShirtSize,@LunchAttendance, @CyberDayID)";
                     SqlConnection sqlConnect = new SqlConnection(WebConfigurationManager.ConnectionStrings["CyberDayDB"].ToString());
                     SqlCommand sqlCommand = new SqlCommand(insertCmd, sqlConnect);
                     sqlCommand.Parameters.AddWithValue("@txtFirst", HttpUtility.HtmlEncode(txtFirst.Text.Trim()));
@@ -62,6 +62,8 @@ namespace CyberDay
                     sqlCommand.Parameters.AddWithValue("@txtEmail", HttpUtility.HtmlEncode(txtEmail.Text.Trim()));
                     sqlCommand.Parameters.AddWithValue("@txtPhone", HttpUtility.HtmlEncode(txtPhone.Text.Trim()));
                     sqlCommand.Parameters.AddWithValue("@ddlShirtSize", HttpUtility.HtmlEncode(ddlShirtSize.Text.Trim()));
+                    sqlCommand.Parameters.AddWithValue("@LunchAttendance", HttpUtility.HtmlEncode(ddlLunchAttendance.SelectedValue));
+                    sqlCommand.Parameters.AddWithValue("@CyberDayID", HttpUtility.HtmlEncode(ddlCyberDay.SelectedValue));
 
                     SqlCommand sqlComInsertLunch = new SqlCommand(sqlInsertLunch, sqlConnect);
                     sqlComInsertLunch.Parameters.AddWithValue("@FirstName", txtFirst.Text);

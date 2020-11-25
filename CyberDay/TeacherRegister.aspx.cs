@@ -46,7 +46,8 @@ namespace CyberDay
 
                 try
                 {
-                    String insertCmd = "INSERT INTO Teacher VALUES (@txtFirst, @txtLast, @txtEmail, @txtPhone, @ddlShirtSize, @ddlSchool)";
+                    String insertCmd = "INSERT INTO Teacher VALUES (@txtFirst, @txtLast, @txtEmail, @txtPhone, @ddlShirtSize, @ddlSchool, @LunchAttendance, @CyberDayID)";
+                    string sqlInsertLunch = "Insert Into Lunch Values (@FirstName, @LastName, @Attendance, @CyberDayID)";
                     SqlConnection sqlConnect = new SqlConnection(WebConfigurationManager.ConnectionStrings["CyberDayDB"].ToString());
                     SqlCommand sqlCommand = new SqlCommand(insertCmd, sqlConnect);
                     sqlCommand.Parameters.AddWithValue("@txtFirst", HttpUtility.HtmlEncode(txtFirst.Text.Trim()));
@@ -55,8 +56,18 @@ namespace CyberDay
                     sqlCommand.Parameters.AddWithValue("@txtPhone", HttpUtility.HtmlEncode(txtPhone.Text.Trim()));
                     sqlCommand.Parameters.AddWithValue("@ddlShirtSize", HttpUtility.HtmlEncode(ddlShirtSize.Text.Trim()));
                     sqlCommand.Parameters.AddWithValue("@ddlSchool", HttpUtility.HtmlEncode(ddlSchool.SelectedValue));
+                    sqlCommand.Parameters.AddWithValue("@LunchAttendance", HttpUtility.HtmlEncode(ddlLunchAttendance.SelectedValue));
+                    sqlCommand.Parameters.AddWithValue("@CyberDayID", HttpUtility.HtmlEncode(ddlCyberDay.SelectedValue));
+
+                    SqlCommand sqlComInsertLunch = new SqlCommand(sqlInsertLunch, sqlConnect);
+                    sqlComInsertLunch.Parameters.AddWithValue("@FirstName", txtFirst.Text);
+                    sqlComInsertLunch.Parameters.AddWithValue("@LastName", txtLast.Text);
+                    sqlComInsertLunch.Parameters.AddWithValue("@Attendance", ddlLunchAttendance.SelectedValue);
+                    sqlComInsertLunch.Parameters.AddWithValue("@CyberDayID", ddlCyberDay.SelectedValue);
+
                     sqlConnect.Open();
                     sqlCommand.ExecuteNonQuery();
+                    sqlComInsertLunch.ExecuteNonQuery();
                     sqlConnect.Close();
                     lblAddStatusFail.Visible = false;
                     lblAddStatusSuccess.Visible = true;
