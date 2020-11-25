@@ -62,7 +62,7 @@ namespace CyberDay
             }
             else if(txtNotes.Text == "")
             {
-                lblNotes.Text = "Error - field left blank";
+                lblNotesError.Text = "Error - field left blank";
             }
             else if(ddlShirtSize.SelectedValue == "select")
             {
@@ -116,6 +116,10 @@ namespace CyberDay
                 sqlCon.Close();
                 lblStudentSubmitError.Text = "Student Signed Up!";
                 //Clear text fields
+                Session["FirstName"] = txtFirstName.Text.ToString();
+                Session["LastName"] = txtLastName.Text.ToString();
+                Session["CyberDayID"] = ddlCyberDay.SelectedValue;
+                Response.Redirect("ParentsActivity.aspx");
 
             }
         }
