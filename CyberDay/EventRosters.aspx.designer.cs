@@ -22,6 +22,24 @@ namespace CyberDay {
         protected global::System.Web.UI.WebControls.Label lblCyberDayRoster;
         
         /// <summary>
+        /// lblSelectRoster control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSelectRoster;
+        
+        /// <summary>
+        /// ddlRosterType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlRosterType;
+        
+        /// <summary>
         /// lblSelectCyberDay control.
         /// </summary>
         /// <remarks>
@@ -31,13 +49,13 @@ namespace CyberDay {
         protected global::System.Web.UI.WebControls.Label lblSelectCyberDay;
         
         /// <summary>
-        /// ddlSelectCyberDay control.
+        /// ddlCyberDay control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlSelectCyberDay;
+        protected global::System.Web.UI.WebControls.DropDownList ddlCyberDay;
         
         /// <summary>
         /// btnSelectCyberDay control.
@@ -49,21 +67,39 @@ namespace CyberDay {
         protected global::System.Web.UI.WebControls.Button btnSelectCyberDay;
         
         /// <summary>
-        /// grdvCyberDayRoster control.
+        /// lblIncorrectSelections control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdvCyberDayRoster;
+        protected global::System.Web.UI.WebControls.Label lblIncorrectSelections;
         
         /// <summary>
-        /// sqlPopulateDdl control.
+        /// grdvStudentRoster control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource sqlPopulateDdl;
+        protected global::System.Web.UI.WebControls.GridView grdvStudentRoster;
+        
+        /// <summary>
+        /// grdvVolunteerRoster control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grdvVolunteerRoster;
+        
+        /// <summary>
+        /// sqlPopulateCyberDay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource sqlPopulateCyberDay;
     }
 }

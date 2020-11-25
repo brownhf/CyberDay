@@ -212,6 +212,7 @@
     <Content Include="StyleSheetStudent.css" />
     <Content Include="TeacherHomePage.aspx" />
     <Content Include="TeacherRegister.aspx" />
+    <Content Include="TeacherRoster.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -391,6 +392,13 @@
     </Compile>
     <Compile Include="TeacherRegister.aspx.designer.cs">
       <DependentUpon>TeacherRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherRoster.aspx.cs">
+      <DependentUpon>TeacherRoster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeacherRoster.aspx.designer.cs">
+      <DependentUpon>TeacherRoster.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
