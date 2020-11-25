@@ -7,11 +7,22 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CyberDay {
-    
-    
-    public partial class StudentUpdate {
-        
+namespace CyberDay
+{
+
+
+    public partial class StudentUpdate
+    {
+
+        /// <summary>
+        /// studentNametxt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox studentNametxt;
+
         /// <summary>
         /// FileUpload1 control.
         /// </summary>
@@ -20,7 +31,16 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
-        
+
+        /// <summary>
+        /// fileRequiredFV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator fileRequiredFV;
+
         /// <summary>
         /// cmmttxt control.
         /// </summary>
@@ -29,7 +49,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox cmmttxt;
-        
+
         /// <summary>
         /// uploadBttn control.
         /// </summary>
@@ -38,7 +58,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button uploadBttn;
-        
+
         /// <summary>
         /// StatusLabel control.
         /// </summary>

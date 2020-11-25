@@ -18,6 +18,14 @@
             margin-right: auto;
             margin-left: auto;
         }*/
+
+        
+       .nav- ul li a.active{
+            background-color:green;
+        }
+        a:hover{
+            background-color: #450084;
+        }
         
     </style>
 </head>
@@ -42,11 +50,12 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="StudentHome.aspx">HOME</a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item active dropdown">
                         <a class="nav-link" href="StudentActivity.aspx">ACTIVITY INFO</a>
+                        
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="Upload Project">UPLOAD PROJECT</a>
+                        <a class="nav-link" href="StudentUpdate.aspx">UPLOAD PROJECT</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="StudentContact.aspx">CONTACT</a>

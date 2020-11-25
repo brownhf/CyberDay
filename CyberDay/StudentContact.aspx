@@ -16,6 +16,12 @@
             background: #eee;
         }
 
+        p{
+            font-family:"Trebuchet MS", Helvetica, sans-serif;
+            text-align: center;
+
+        }
+
         section {
             width: 75%;
             margin-right: auto;
@@ -28,16 +34,33 @@
         }
 
         .wrapper {
-            margin: 80px;
+           margin: 80px;
         }
+
+        .contact{
+            
+            line-height: 65px;
+           
+        }
+
+      
 
         .contactUs {
             max-width: 800px;
             margin: 0 auto;
             background-color: #fff;
-            padding: 15px 40px 50px;
+            
+            padding: 40px;
             border: 1px solid #e5e5e5;
             border-radius: 10px;
+            line-height: 40px;
+           
+        }
+
+        .row{
+            line-height:20px;
+            padding:15px;
+            margin:15px;
         }
 
         .txtFrom {
@@ -71,13 +94,22 @@
                         <asp:TextBox ID="totxt" runat="server" Width="500px" Height="20px" CssClass="txt"></asp:TextBox>
                     </asp:TableCell>
                 </asp:TableRow>--%>
-
-                <asp:TableRow>
+               
+            
+               <asp:TableRow>
                     <asp:TableCell>
-                <a>From:</a>
+               <a>Name:</a> 
                     </asp:TableCell>
                     <asp:TableCell>
-                        <asp:TextBox ID="fromtxt" runat="server" Width="500px" Height="20px" CssClass="txtFrom"></asp:TextBox>
+                        <asp:TextBox ID="nametxt" runat="server" Width="500px" Height="35px" class="form-control input-lg"></asp:TextBox>
+                    </asp:TableCell>
+              </asp:TableRow>
+              <asp:TableRow>
+                    <asp:TableCell>
+                <a>Your Email:</a>
+                    </asp:TableCell>
+                  <asp:TableCell>
+                <asp:TextBox ID="fromtxt" runat="server" Width="500px" Height="35px" class=" form-control input-lg" TextMode="Email"></asp:TextBox>
                     </asp:TableCell>
                 </asp:TableRow>
                 <asp:TableRow>
@@ -85,22 +117,23 @@
                 <a>Subject:</a>
                     </asp:TableCell>
                     <asp:TableCell>
-                        <asp:TextBox ID="subjecttxt" runat="server" Width="500px" Height="20px" CssClass="txtSubject"></asp:TextBox>
+                        <asp:TextBox ID="subjecttxt" runat="server" Width="500px" Height="35px" class=" form-control input-lg" ></asp:TextBox>
                     </asp:TableCell>
                 </asp:TableRow>
+               
                 <asp:TableRow>
                     <asp:TableCell>
                <a> Message: </a>
                     </asp:TableCell>
                     <asp:TableCell>
-                        <asp:TextBox ID="mesgtxt" runat="server" Height="300px" Width="600px" TextMode="MultiLine"></asp:TextBox>
+                        <asp:TextBox ID="mesgtxt" runat="server" Height="300px" Width="600px" TextMode="MultiLine" class=" form-control input-lg" ></asp:TextBox>
                     </asp:TableCell>
                 </asp:TableRow>
                 <asp:TableRow>
                     <asp:TableCell>
                     </asp:TableCell>
                     <asp:TableCell>
-                        <asp:Button ID="sendBttn" runat="server" Text="Send" Width="100px" CssClass="sendBttn" OnClick="sendbttn_Click" />
+                        <asp:Button ID="sendBttn" runat="server" Text="Send" Width="100px" class="btn btn-primary" OnClick="sendbttn_Click" />
                     </asp:TableCell>
                 </asp:TableRow>
 

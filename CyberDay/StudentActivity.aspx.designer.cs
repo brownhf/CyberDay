@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CyberDay {
-    
-    
-    public partial class StudentActivity {
-        
+namespace CyberDay
+{
+
+
+    public partial class StudentActivity
+    {
+
         /// <summary>
         /// cyberDayDDL control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList cyberDayDDL;
-        
+
         /// <summary>
         /// eventDDL control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList eventDDL;
-        
+
         /// <summary>
         /// searchbttn control.
         /// </summary>
@@ -38,23 +40,41 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button searchbttn;
-        
+
         /// <summary>
-        /// DetailsView1 control.
+        /// DV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DetailsView DetailsView1;
-        
+        protected global::System.Web.UI.WebControls.DetailsView DV;
+
         /// <summary>
-        /// dwnldBttn control.
+        /// pdfbttn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button dwnldBttn;
+        protected global::System.Web.UI.WebControls.Button pdfbttn;
+
+        /// <summary>
+        /// cyberDayDS control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource cyberDayDS;
+
+        /// <summary>
+        /// activityDS control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource activityDS;
     }
 }

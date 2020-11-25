@@ -24,6 +24,15 @@ namespace CyberDay
         protected global::System.Web.UI.WebControls.Table contactTable;
 
         /// <summary>
+        /// nametxt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox nametxt;
+
+        /// <summary>
         /// fromtxt control.
         /// </summary>
         /// <remarks>
