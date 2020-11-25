@@ -1,6 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Net;
 using System.Net.Mail;
-using System.Windows;
+using System.Windows.Forms;
+
 
 namespace CyberDay
 {
@@ -16,21 +23,27 @@ namespace CyberDay
             try
             {
 
+
+                string credEmail = "thisIsATestExample1234@gmail.com";
+                string credPasswd = "Dukes98!";
                 MailMessage message = new MailMessage();
-                message.From = new MailAddress(fromtxt.Text);
+                message.From = new MailAddress(credEmail, fromtxt.Text);
+
                 message.To.Add("lopriesn@dukes.jmu.edu");
-                message.To.Add("sloprieno98@gmail.com");
                 message.Subject = "Subject: " + subjecttxt.Text;
                 message.Body = mesgtxt.Text;
-                message.IsBodyHtml = true;
+                message.IsBodyHtml = false;
+                message.ReplyToList.Add(fromtxt.Text);
 
-                SmtpClient smtpClient = new SmtpClient();
+                SmtpClient smtpClient = new SmtpClient("smtpserver");
+                smtpClient.DeliveryMethod = System.Net.Mail.SmtpDeliveryMethod.Network;
                 smtpClient.Host = "smtp.gmail.com";
                 smtpClient.Port = 587;
 
                 smtpClient.UseDefaultCredentials = false;
                 //MUST SET CREDENTIALS EMAIL TO ALLOW LESS SECURE APPS 
-                smtpClient.Credentials = new System.Net.NetworkCredential("thisisatestexample1234@gmail.com", "Dukes98!");
+                smtpClient.Credentials = new System.Net.NetworkCredential(credEmail, credPasswd);
+
                 smtpClient.EnableSsl = true;
                 smtpClient.Send(message);
                 MessageBox.Show("Your email has been sent!");

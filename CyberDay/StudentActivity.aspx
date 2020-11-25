@@ -7,9 +7,17 @@
 
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-    <style>
-        body {
+
+    
+
+
+
+  <style>
+ 
+    
+    body {
             background: #eee;
+           /* background-image: linear-gradient(150deg, #A252FF 10%, #CBB677 100%);*/
         }
 
         section {
@@ -47,6 +55,25 @@
         .dwnldBttn{
             margin-top: 10px;
         }
+
+        .cybDDL{
+            margin-right: 50px;
+            width: 200px;
+            height: 50px;
+            border-radius: 25px;
+            padding-left: 50px;
+            
+        }
+        .dv{
+            text-align: center;
+            padding: 50px;
+            margin-left: 150px;
+            
+        }
+
+        
+        
+        
     </style>
 
     <div class="wrapper">
@@ -55,30 +82,69 @@
 
             <fieldset class="info">
 
-                <%--<legend>View Activity Information</legend>--%>
-                <%--<asp:TextBox ID="searchtxt" runat="server" Width ="150px"></asp:TextBox>--%>
-                <h1>VIEW ACTIVITY INFORMATION</h1>
-                <p>Here you will be able to see information regarding CyberDay. You will be ablt to find out more about various tasks and their related instructions.</p>
+              
+              <h1>VIEW ACTIVITY INFORMATION</h1>
+                <p>Here you will be able to see information regarding CyberDay. You will be able to find out more about various tasks and their related instructions.</p>
                 
+                <div class ="DDL"> 
+                    <asp:DropDownList ID="cyberDayDDL" 
+                        runat="server"  
+                        AutoPostBack="true" 
+                        CssClass="cybDDL" 
+                        DataSourceID="cyberDayDS" 
+                        DataTextField="Date" 
+                        DataValueField="CyberDayID" 
+                        OnSelectedIndexChanged="CyberDayDDL_SelectedIndexChanged">
+                    </asp:DropDownList>
+                    
+                
+                    <asp:DropDownList ID="eventDDL" 
+                        runat="server" 
+                        CssClass="cybDDL" 
+                        AutoPostBack="true"  
+                        DataTextField="EventName"
+                        DataValueField="EventID" >                           
+                    </asp:DropDownList>
 
-                <asp:DropDownList ID="cyberDayDDL" runat="server" CssClass="cyberDayDDL">
-                    <asp:ListItem Text="Cyber1" Value="1"></asp:ListItem>
-                    <asp:ListItem Text="Cyber2" Value="2"></asp:ListItem>
-                </asp:DropDownList>
-                <asp:DropDownList ID="eventDDL" runat="server" CssClass="eventDDL">
-                    <asp:ListItem Text="Event1" Value="1"></asp:ListItem>
-                    <asp:ListItem Text="Event2" Value="2"></asp:ListItem>
-                </asp:DropDownList>
-
-                <asp:Button ID="searchbttn" runat="server" Text="Search" OnClick="searchbttn_Click" />
-
+                    <asp:Button ID="searchbttn" 
+                        runat="server" 
+                        Text="Search" 
+                        OnClick="searchbttn_Click" 
+                        class=" btn-primary btn" />
+               </div>
+               <br />
+                       
+                <asp:DetailsView ID="DV" 
+                    runat="server" 
+                    Height="250px" 
+                    Width="300px" 
+                    CellPadding="2" 
+                    CellSpacing="2"
+                    HeaderStyle-Font-Bold="true" 
+                    CssClass="dv" 
+                    BorderColor="Purple" 
+                    AlternatingRowStyle-BackColor="PaleGoldenrod">  
+                </asp:DetailsView>
                 <br />
-                <asp:DetailsView ID="DetailsView1" runat="server" Height="250px" Width="250px"></asp:DetailsView>
+                
+                
+                <asp:Button ID="pdfbttn" 
+                runat="server" 
+                Text="Export to PDF" 
+                class=" btn-primary btn"
+                OnClick="pdfbttn_Click" />
+                
                 <br />
-                <asp:Button ID="dwnldBttn" runat="server" Text="Download" OnClick="dwnldBttn_Click" CssClass="dwnldBttn" />
+            
             </fieldset>
         </section>
-        
+        <br />
+        <br />   
     </div>
+
+    <asp:SqlDataSource ID="cyberDayDS" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDayDB %>" SelectCommand="Select CyberDayID, Date From CyberDay" ></asp:SqlDataSource>
+    <asp:SqlDataSource ID="activityDS" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDayDB %>" SelectCommand="Select EventID, EventName From Event" ></asp:SqlDataSource>
+
+
 </asp:Content>
 

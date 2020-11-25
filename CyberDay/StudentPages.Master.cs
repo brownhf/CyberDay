@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+
 namespace CyberDay
 {
     public partial class StudentPages : System.Web.UI.MasterPage
@@ -13,5 +14,19 @@ namespace CyberDay
         {
 
         }
+
+        protected void btnLogOut_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("MainPage.aspx");
+        }
+
+        protected void btnReturnHome_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("StudentHome.aspx");
+        }
+
+
+
+
     }
 }
