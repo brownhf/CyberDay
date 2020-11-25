@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CyberDay {
-    
-    
-    public partial class MealTicket {
-        
+namespace CyberDay
+{
+
+
+    public partial class MealTicket
+    {
+
         /// <summary>
         /// lblMealTicketInfo control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMealTicketInfo;
-        
+
         /// <summary>
         /// lblSelectCyberDay control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblSelectCyberDay;
-        
+
         /// <summary>
         /// ddlSelectCyberDay control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlSelectCyberDay;
-        
+
         /// <summary>
         /// btnTicketQuantity control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnTicketQuantity;
-        
+
         /// <summary>
         /// btnTicketPrice control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnTicketPrice;
-        
+
         /// <summary>
         /// lblTicketQuantity control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblTicketQuantity;
-        
+
         /// <summary>
         /// lblTicketPrice control.
         /// </summary>
@@ -74,7 +76,25 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblTicketPrice;
-        
+
+        /// <summary>
+        /// grdLunchAttendance control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grdLunchAttendance;
+
+        /// <summary>
+        /// srcLunchAttendance control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource srcLunchAttendance;
+
         /// <summary>
         /// sqlPopulateCyberDay control.
         /// </summary>

@@ -20,7 +20,7 @@ namespace CyberDay
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            string sqlInsertStudent = "Insert Into Student Values (@FirstName, @LastName, @Age, @Gender, @Email, @ShirtSize, @Notes, @Dietary, @Allergies, @TeacherID, @CyberDayID, @LunchAttendance)";
+            string sqlInsertStudent = "Insert Into Student Values (@FirstName, @LastName, @Age, @Gender, @Email, @ShirtSize, @Notes, @Dietary, @Allergies, @TeacherID, @LunchAttendance, @CyberDayID)";
             string sqlCheck = "Select Count(1) From Student Where FirstName = @FirstName and LastName = @LastName and TeacherID = @TeacherID and Email = @Email";
             string sqlInsertLunch = "Insert Into Lunch Values (@FirstName, @LastName, @Attendance, @CyberDayID)";
             SqlConnection sqlCon = new SqlConnection(WebConfigurationManager.ConnectionStrings["CyberDayDB"].ToString());
@@ -101,8 +101,8 @@ namespace CyberDay
                 sqlComInsertStudent.Parameters.AddWithValue("@Dietary", ddlDietaryNeeds.SelectedValue);
                 sqlComInsertStudent.Parameters.AddWithValue("@Allergies", cbAllergies.Text);
                 sqlComInsertStudent.Parameters.AddWithValue("@TeacherID", ddlTeacher.SelectedValue);
-                sqlComInsertStudent.Parameters.AddWithValue("@CyberDayID", ddlCyberDay.SelectedValue);
                 sqlComInsertStudent.Parameters.AddWithValue("@LunchAttendance", ddlLunchAttendance.SelectedValue);
+                sqlComInsertStudent.Parameters.AddWithValue("@CyberDayID", ddlCyberDay.SelectedValue);
 
                 SqlCommand sqlComInsertLunch = new SqlCommand(sqlInsertLunch, sqlCon);
                 sqlComInsertLunch.Parameters.AddWithValue("@FirstName", txtFirstName.Text);

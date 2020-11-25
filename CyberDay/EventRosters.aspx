@@ -36,13 +36,29 @@
                     </asp:TableRow>
                     <asp:TableRow>
                         <asp:TableCell>
+                            <asp:Label ID="lblSelectRoster" runat="server" Text="Select Roster Type: "></asp:Label>
+                        </asp:TableCell>
+                        <asp:TableCell>
+                            <asp:DropDownList ID="ddlRosterType" runat="server">
+                                <asp:ListItem Text="Student" Value="Student"></asp:ListItem>
+                                <asp:ListItem Text="Volunteer" Value="Volunteer"></asp:ListItem>
+                            </asp:DropDownList>
+                        </asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow>
+                        <asp:TableCell>
                             <asp:Label ID="lblSelectCyberDay" runat="server" Text="Select CyberDay: "></asp:Label>
                         </asp:TableCell>
                         <asp:TableCell>
-                            <asp:DropDownList ID="ddlSelectCyberDay" runat="server" ></asp:DropDownList>
+                            <asp:DropDownList ID="ddlCyberDay" runat="server" DataSourceID="sqlPopulateCyberDay" DataTextField="CyberDayDisplay" DataValueField="CyberDayID" ></asp:DropDownList>
                         </asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow>
                         <asp:TableCell>
                             <asp:Button ID="btnSelectCyberDay" runat="server" Text="Print CyberDay Roster" OnClick="btnSelectCyberDay_Click" />
+                        </asp:TableCell>
+                        <asp:TableCell>
+                            <asp:Label ID="lblIncorrectSelections" runat="server" Text=""></asp:Label>
                         </asp:TableCell>
                     </asp:TableRow>
                 </asp:Table>
@@ -51,10 +67,16 @@
             <br />
 
             <fieldset>
-                <asp:GridView ID="grdvCyberDayRoster" runat="server" EmptyDataText="No Students Associated" />
+                <asp:GridView ID="grdvStudentRoster" runat="server" EmptyDataText="No Students Associated" />
+            </fieldset>
+
+            <br />
+
+            <fieldset>
+                <asp:GridView ID="grdvVolunteerRoster" runat="server" EmptyDataText="No Volunteers Associated" />
             </fieldset>
         </section>
     </div>
 
-    <asp:SqlDataSource ID="sqlPopulateDdl" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDayDB %>" SelectCommand="Select CyberDayID, Date From CyberDay" />
+    <asp:SqlDataSource ID="sqlPopulateCyberDay" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDayDB %>" SelectCommand="SELECT [dbo].[CyberDay].[CyberDayID], [dbo].[CyberDay].[Date] + ' Coordinated By: ' + [dbo].[Coordinator].[FirstName] + ' ' + [dbo].[Coordinator].[LastName] AS CyberDayDisplay FROM [dbo].[CyberDay], [dbo].[Coordinator] WHERE [dbo].[CyberDay].[CoordinatorID] = [dbo].[Coordinator].[CoordinatorID] ORDER BY [dbo].[CyberDay].[CyberDayID] DESC" />
 </asp:Content>
