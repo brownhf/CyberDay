@@ -48,6 +48,10 @@
         h1 {
             text-align: center;
         }
+
+        a:hover {
+            background-color: #450084;
+        }
     </style>
 </head>
 <body>
