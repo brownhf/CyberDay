@@ -81,7 +81,7 @@
                     <a class="nav-link" href="MealTicket.aspx">MEAL TICKETS</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-item" href="CoordinatorStudentForms.aspx">FORMS ROSTER</a>
+                    <a class="nav-link" href="CoordinatorStudentForms.aspx">FORMS ROSTER</a>
                 </li>
             </ul>
         </nav>
