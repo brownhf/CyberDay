@@ -141,6 +141,7 @@
     <Content Include="ParentUploadPhoto.aspx" />
     <Content Include="ParentUploadPermission.aspx" />
     <Content Include="ParentsActivity.aspx" />
+    <Content Include="CoordinatorStudentForms.aspx" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />
@@ -424,6 +425,13 @@
     </Compile>
     <Compile Include="ParentsActivity.aspx.designer.cs">
       <DependentUpon>ParentsActivity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoordinatorStudentForms.aspx.cs">
+      <DependentUpon>CoordinatorStudentForms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoordinatorStudentForms.aspx.designer.cs">
+      <DependentUpon>CoordinatorStudentForms.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
