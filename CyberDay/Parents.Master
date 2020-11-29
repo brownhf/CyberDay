@@ -15,7 +15,7 @@
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link" onclick="btnLogOut_Click">LOGOUT</a>
+                            <a class="nav-link" href="MainPage.aspx">LOGOUT</a>
                         </li>
                     </ul>
                 </div>
@@ -32,21 +32,19 @@
                         <a class="nav-link" href="ParentChaperone.aspx">CHAPERONE</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="ParentPhotoReleaseForm.aspx">PHOTO RELEASE FORM</a>
+                        <a class="nav-link" href="ParentPhotoReleaseForm.aspx">PERMISSION FORMS</a>
                     </li>
-                    <%--<li class="nav-item active">
-                        <a class="nav-link" onclick="btnReturnHome_Click">HOME PAGE</a>
-                    </li>--%>
                 </ul>
             </nav>
             <asp:Image ID="imgQuad" CssClass="astheticQuad" ImageUrl="Images/jmu_football.jpg" runat="server" />
             <style>
-                .astheticQuad{
+                .astheticQuad {
                     max-width: 100%;
                     max-height: 20%;
                 }
-                h1{
-                    text-align:center;
+
+                h1 {
+                    text-align: center;
                 }
             </style>
             <h1>Parent Portal</h1>
