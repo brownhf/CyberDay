@@ -8,7 +8,6 @@ using System.Net;
 using System.Net.Mail;
 using System.Windows;
 
-
 namespace CyberDay
 {
     public partial class StudentContact : System.Web.UI.Page

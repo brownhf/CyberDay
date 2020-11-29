@@ -11,17 +11,8 @@ namespace CyberDay
 {
 
 
-    public partial class MealTicket
+    public partial class WebForm4
     {
-
-        /// <summary>
-        /// lblMealTicketInfo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMealTicketInfo;
 
         /// <summary>
         /// lblSelectCyberDay control.
@@ -33,76 +24,58 @@ namespace CyberDay
         protected global::System.Web.UI.WebControls.Label lblSelectCyberDay;
 
         /// <summary>
-        /// ddlSelectCyberDay control.
+        /// ddlCyberDayDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlSelectCyberDay;
+        protected global::System.Web.UI.WebControls.DropDownList ddlCyberDayDate;
 
         /// <summary>
-        /// btnTicketQuantity control.
+        /// lblSelectForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnTicketQuantity;
+        protected global::System.Web.UI.WebControls.Label lblSelectForm;
 
         /// <summary>
-        /// btnTicketPrice control.
+        /// ddlForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnTicketPrice;
+        protected global::System.Web.UI.WebControls.DropDownList ddlForm;
 
         /// <summary>
-        /// lblTicketQuantity control.
+        /// btnSubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTicketQuantity;
+        protected global::System.Web.UI.WebControls.Button btnSubmit;
 
         /// <summary>
-        /// lblTicketPrice control.
+        /// lblPrintError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTicketPrice;
+        protected global::System.Web.UI.WebControls.Label lblPrintError;
 
         /// <summary>
-        /// grdLunchAttendance control.
+        /// gvFormsRoster control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdLunchAttendance;
-
-        /// <summary>
-        /// btnPdf control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPdf;
-
-        /// <summary>
-        /// srcLunchAttendance control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource srcLunchAttendance;
+        protected global::System.Web.UI.WebControls.GridView gvFormsRoster;
 
         /// <summary>
         /// sqlPopulateCyberDay control.
