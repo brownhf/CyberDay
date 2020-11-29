@@ -33,6 +33,9 @@
             border: 1px solid #e5e5e5;
             border-radius: 10px;
         }
+        td{
+            padding-top: 15px;
+        }
     </style>
     <div class="wrapper">
         <section class="activityInfo">
@@ -60,7 +63,8 @@
                             <asp:Label ID="lblFirstNameError" runat="server" Text="" ForeColor="Red" Font-Italic="true"></asp:Label>
                         </td>
                     </tr>
-                    <tr>
+
+                    <tr >
                         <td>
                             <asp:Label ID="lblLastName" runat="server" Text="Last Name:"></asp:Label>
                         </td>
