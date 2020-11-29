@@ -48,7 +48,7 @@
                         <a class="nav-link" href="ParentChaperone.aspx">CHAPERONE</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="ParentPhotoReleaseForm.aspx">PHOTO RELEASE FORM</a>
+                        <a class="nav-link" href="ParentPhotoReleaseForm.aspx">UPLOAD PERMISSION FORMS</a>
                     </li>
                     <%--<li class="nav-item active">
                         <a class="nav-link" onclick="btnReturnHome_Click">HOME PAGE</a>
