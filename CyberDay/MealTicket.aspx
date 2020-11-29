@@ -22,6 +22,12 @@
             border: 1px solid #e5e5e5;
             border-radius: 10px;
         }
+        .dv{
+            text-align: center;
+            padding: 50px;
+            margin-left: 150px;
+            
+        }
     </style>
     <div class="wrapper">
         <section class="newCyber">
@@ -37,12 +43,12 @@
                             <asp:Label ID="lblSelectCyberDay" runat="server" Text="Select CyberDay: "></asp:Label>
                         </asp:TableCell>
                         <asp:TableCell>
-                            <asp:DropDownList ID="ddlSelectCyberDay" runat="server" DataSourceID="sqlPopulateCyberDay" DataTextField="CyberDayDisplay" DataValueField="CyberDayID" ></asp:DropDownList>
+                            <asp:DropDownList ID="ddlSelectCyberDay" runat="server" DataSourceID="sqlPopulateCyberDay" DataTextField="CyberDayDisplay" DataValueField="CyberDayID" OnSelectedIndexChanged="ddlSelectCyberDay_SelectedIndexChanged"></asp:DropDownList>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow>
                         <asp:TableCell>
-                            <asp:Button ID="btnTicketQuantity" runat="server" Text="Print the Total Amount of Tickets for the Given CyberDay" OnClick="btnTicketQuantity_Click"/>
+                            <asp:Button ID="btnTicketQuantity" runat="server" Text="Print the Total Tickets for the Given CyberDay" OnClick="btnTicketQuantity_Click"/>
                         </asp:TableCell>
                         <asp:TableCell>
                             <asp:Button ID="btnTicketPrice" runat="server" Text="Print the Total Price of Tickets for the Given CyberDay" OnClick="btnTicketPrice_Click"/>
@@ -58,13 +64,20 @@
                     </asp:TableRow>
                 </asp:Table>
                 <br />
-                <asp:Table>
-                    <asp:GridView 
-                        id="grdLunchAttendance" 
-                        DataSourceID="srcLunchAttendance" 
-                        runat="server">
+                <div>
+                    <asp:GridView
+                        ID="grdLunchAttendance"
+                        DataSourceID="srcLunchAttendance"
+                        runat="server"
+                        CellPadding="3"
+                        CellSpacing="2"
+                        CssClass="dv"
+                        BorderColor="Purple"
+                        AlternatingRowStyle-BackColor="PaleGoldenrod">
                     </asp:GridView>
-                </asp:Table>
+                    <br />
+                    <asp:Button ID="btnPdf" runat="server" Text="Download" OnClick="btnPdf_Click" />
+                </div>
             </fieldset>
         </section>
     </div>
