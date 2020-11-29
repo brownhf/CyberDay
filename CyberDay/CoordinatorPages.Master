@@ -1,7 +1,11 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CoordinatorPages.master.cs" Inherits="CyberDay.CoordinatorPages" %>
 
 <!DOCTYPE html>
-
+<style>
+    a:hover {
+        background-color: #450084;
+    }
+</style>
 <html>
 <head runat="server">
     <title>CyberDay Management System: Coordinator Portal</title>
@@ -20,48 +24,67 @@
             <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #450084">
                 <a href="MainPage.aspx" class="navbar-brand">CYBERDAY: COORDINATOR PORTAL</a>
                 <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
+                    <%--   <ul class="nav navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link" href="LoginPage.aspx" >LOGOUT</a>
+                             <div class="collapse navbar-collapse">--%>
+                    <ul class="nav navbar-nav ml-auto">
+                        <li>
+                            <%--<a href=""><span class=""></span>--%>
+                            <%--<asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn btn-light" Visible="true" PostBackUrl="~/LoginPage.aspx"></asp:Button>--%>
+
+                            <button type="button" id="btnUserLogin" runat="server" class="btn btn-light" onserverclick="btnUserLogin_ServerClick">
+                                Login
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-box-arrow-in-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"></path>
+                                        <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"></path>
+                                    </svg>
+                            </button>
+
+                            <asp:DropDownList ID="ddlUser" Visible="false" runat="server" CssClass="btn btn-light" AutoPostBack="true" OnSelectedIndexChanged="ddlUser_SelectedIndexChanged"></asp:DropDownList>
+                            <%--</a>--%>
                         </li>
+
                     </ul>
                 </div>
-
+                <%--<a class="nav-link" href="LoginPage.aspx" >LOGOUT</a>
+                        </li>
+                    </ul>--%>
             </nav>
-            <nav class="navbar navbar-expand-md navbar-dark justify-content-center" style="background-color: #CBB677">
-                <ul class="nav navbar-nav text-center">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="CoordinatorHomePage.aspx">COORDINATOR HOME</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="NewCyberDay.aspx">NEW CYBERDAY</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="CoordinatorEvents.aspx">ADD TO SCHEDULE FOR EXISTING CYBERDAY</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="NewVolunteer.aspx">ADD/ASSIGN VOLUNTEER</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="SchoolRegister.aspx">REGISTER A NEW SCHOOL</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="TeacherRegister.aspx">REGISTER A CONTACT TEACHER</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="EventRosters.aspx">ROSTERS</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="MealTicket.aspx">MEAL TICKETS</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="CoordinatorStudentForms.aspx">FORMS ROSTER</a>
-                    </li>
-                </ul>
-            </nav>
+        </div>
 
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" >
-            </asp:ContentPlaceHolder>
+
+        <%--</nav>--%>
+        <nav class="navbar navbar-expand-md navbar-dark justify-content-center" style="background-color: #CBB677">
+            <ul class="nav navbar-nav text-center">
+                <li class="nav-item active">
+                    <a class="nav-link" href="CoordinatorHomePage.aspx">COORDINATOR HOME</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="NewCyberDay.aspx">NEW CYBERDAY</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="CoordinatorEvents.aspx">ADD TO SCHEDULE FOR EXISTING CYBERDAY</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="NewVolunteer.aspx">ADD/ASSIGN VOLUNTEER</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="SchoolRegister.aspx">REGISTER A NEW SCHOOL</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="TeacherRegister.aspx">REGISTER A CONTACT TEACHER</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="EventRosters.aspx">ROSTERS</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="MealTicket.aspx">MEAL TICKETS</a>
+                </li>
+            </ul>
+        </nav>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
         </div>
     </form>
     <script src="Scripts/jquery-3.5.1.min.js"></script>
