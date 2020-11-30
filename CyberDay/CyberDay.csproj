@@ -95,6 +95,7 @@
     <Content Include="Images\astheticQuad.jpg" />
     <Content Include="Images\Bluestone.jpg" />
     <Content Include="Images\COBphoto.jpg" />
+    <Content Include="Images\cyberdayPic.jpg" />
     <Content Include="Images\dukeDogs.png" />
     <Content Include="Images\ExploreJMU.jpg" />
     <Content Include="Images\jmu_football.jpg" />
@@ -225,6 +226,7 @@
     <Content Include="StyleSheetStudent.css" />
     <Content Include="TeacherHomePage.aspx" />
     <Content Include="TeacherRegister.aspx" />
+    <Content Include="TeacherRosters.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -432,6 +434,13 @@
     </Compile>
     <Compile Include="CoordinatorStudentForms.aspx.designer.cs">
       <DependentUpon>CoordinatorStudentForms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherRosters.aspx.cs">
+      <DependentUpon>TeacherRosters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeacherRosters.aspx.designer.cs">
+      <DependentUpon>TeacherRosters.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

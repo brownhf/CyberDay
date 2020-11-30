@@ -66,7 +66,7 @@
                     <a class="nav-link" href="CoordinatorEvents.aspx">ADD TO SCHEDULE FOR EXISTING CYBERDAY</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="NewVolunteer.aspx">ADD/ASSIGN VOLUNTEER</a>
+                    <a class="nav-link" href="NewVolunteer.aspx">ADD A VOLUNTEER</a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="SchoolRegister.aspx">REGISTER A NEW SCHOOL</a>
