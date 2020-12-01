@@ -103,11 +103,6 @@
                                 <asp:TextBox ID="lblStudentEmail" runat="server" Text='<%# Eval("Email") %>'></asp:TextBox>
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:TemplateField HeaderText="Shirt">
-                            <ItemTemplate>
-                                <asp:TextBox ID="lblStudentShirt" runat="server" Width="100" Text='<%# Eval("ShirtSize") %>'></asp:TextBox>
-                            </ItemTemplate>
-                        </asp:TemplateField>
                         <asp:TemplateField HeaderText="Notes">
                             <ItemTemplate>
                                 <asp:TextBox ID="lblStudentNotes" runat="server" Text='<%# Eval("Notes") %>'></asp:TextBox>
@@ -190,16 +185,6 @@
                         <asp:TemplateField HeaderText="Phone">
                             <ItemTemplate>
                                 <asp:TextBox ID="lblVolunteerPhone" runat="server" Width="100" Text='<%# Eval("PhoneNumber") %>'></asp:TextBox>
-                            </ItemTemplate>
-                        </asp:TemplateField>
-                        <asp:TemplateField HeaderText="Lunch">
-                            <ItemTemplate>
-                                <asp:TextBox ID="lblVolunteerLunch" runat="server" Width="50" Text='<%# Eval("LunchAttendance") %>'></asp:TextBox>
-                            </ItemTemplate>
-                        </asp:TemplateField>
-                        <asp:TemplateField HeaderText="CyberDay ID">
-                            <ItemTemplate>
-                                <asp:TextBox ID="lblVolunteerCyberDay" runat="server" Width="75" Text='<%# Eval("CyberDayID") %>'></asp:TextBox>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:CommandField ShowEditButton="true" />

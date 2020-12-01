@@ -78,7 +78,6 @@ namespace CyberDay
             TextBox txtStudentAge = grdvStudentRoster.Rows[e.RowIndex].FindControl("lblStudentAge") as TextBox;
             TextBox txtStudentGender = grdvStudentRoster.Rows[e.RowIndex].FindControl("lblStudentGender") as TextBox;
             TextBox txtStudentEmail = grdvStudentRoster.Rows[e.RowIndex].FindControl("lblStudentEmail") as TextBox;
-            TextBox txtStudentShirt = grdvStudentRoster.Rows[e.RowIndex].FindControl("lblStudentShirt") as TextBox;
             TextBox txtStudentNotes = grdvStudentRoster.Rows[e.RowIndex].FindControl("lblStudentNotes") as TextBox;
             TextBox txtStudentDietary = grdvStudentRoster.Rows[e.RowIndex].FindControl("lblStudentDietary") as TextBox;
             TextBox txtStudentAllergies = grdvStudentRoster.Rows[e.RowIndex].FindControl("lblStudentAllergies") as TextBox;
@@ -87,14 +86,13 @@ namespace CyberDay
             TextBox txtStudentCyberDay = grdvStudentRoster.Rows[e.RowIndex].FindControl("lblStudentCyberDay") as TextBox;
             SqlConnection sqlConnect = new SqlConnection(WebConfigurationManager.ConnectionStrings["CyberDayDB"].ToString());
             sqlConnect.Open();
-            SqlCommand studentUpdate = new SqlCommand("UPDATE [dbo].[Student] SET FirstName = @first, LastName = @last, Age = @age, Gender = @gender, Email = @email, ShirtSize = @shirt, Notes = @notes, Dietary = @dietary, Allergies = @allergies, TeacherID = @teacher, LunchAttendance = @lunch, CyberDayID = @cyber WHERE [dbo].[Student].[StudentID] = @studentID");
+            SqlCommand studentUpdate = new SqlCommand("UPDATE [dbo].[Student] SET FirstName = @first, LastName = @last, Age = @age, Gender = @gender, Email = @email, Notes = @notes, Dietary = @dietary, Allergies = @allergies, TeacherID = @teacher, LunchAttendance = @lunch, CyberDayID = @cyber WHERE [dbo].[Student].[StudentID] = @studentID");
             studentUpdate.Parameters.AddWithValue("@studentID", lblStudentID.Text);
             studentUpdate.Parameters.AddWithValue("@first", txtStudentFirst.Text);
             studentUpdate.Parameters.AddWithValue("@last", txtStudentLast.Text);
             studentUpdate.Parameters.AddWithValue("@age", txtStudentAge.Text);
             studentUpdate.Parameters.AddWithValue("@gender", txtStudentGender.Text);
             studentUpdate.Parameters.AddWithValue("@email", txtStudentEmail.Text);
-            studentUpdate.Parameters.AddWithValue("@shirt", txtStudentShirt.Text);
             studentUpdate.Parameters.AddWithValue("@notes", txtStudentNotes.Text);
             studentUpdate.Parameters.AddWithValue("@dietary", txtStudentDietary.Text);
             studentUpdate.Parameters.AddWithValue("@allergies", txtStudentAllergies.Text);

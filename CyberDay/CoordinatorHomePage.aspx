@@ -43,7 +43,12 @@
 
         <h3><a href="NewVolunteer.aspx">ADD A VOLUNTEER</a></h3>
         <br />
-        <p>Here you will be able to save a new volunteer, add the volunteer to any CyberDay, and assign the volunteer to an event.</p>
+        <p>Here you will be able to save a new volunteer to the system.</p>
+        <hr />
+
+        <h3><a href="AssignVolunteer.aspx">ASSIGN A VOLUNTEER</a></h3>
+        <br />
+        <p>Here you will be able to assign a volunteer to any given CyberDay.</p>
         <hr />
 
         <h3><a href="EventRosters.aspx">ROSTERS</a></h3>

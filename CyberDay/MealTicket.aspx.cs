@@ -55,7 +55,8 @@ namespace CyberDay
             using (SqlConnection con1 = new SqlConnection(WebConfigurationManager.ConnectionStrings["CyberDayDB"].ConnectionString))
             {
                 con1.Open();
-                String cmd = "select FirstName, LastName from [Lunch] where CyberDayID =" + ddlSelectCyberDay.SelectedValue;
+                //String cmd = "select FirstName, LastName from [Lunch] where CyberDayID =" + ddlSelectCyberDay.SelectedValue;
+                String cmd = "select [Name] from [Lunch] where CyberDayID =" + ddlSelectCyberDay.SelectedValue;
                 SqlDataAdapter sda = new SqlDataAdapter(cmd, con1);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
