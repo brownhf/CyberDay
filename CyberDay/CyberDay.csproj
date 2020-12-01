@@ -143,6 +143,7 @@
     <Content Include="ParentUploadPermission.aspx" />
     <Content Include="ParentsActivity.aspx" />
     <Content Include="CoordinatorStudentForms.aspx" />
+    <Content Include="CoordinatorTableauDashboard.aspx" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />
@@ -441,6 +442,13 @@
     </Compile>
     <Compile Include="TeacherRosters.aspx.designer.cs">
       <DependentUpon>TeacherRosters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoordinatorTableauDashboard.aspx.cs">
+      <DependentUpon>CoordinatorTableauDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoordinatorTableauDashboard.aspx.designer.cs">
+      <DependentUpon>CoordinatorTableauDashboard.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
