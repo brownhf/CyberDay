@@ -33,6 +33,9 @@
             border: 1px solid #e5e5e5;
             border-radius: 10px;
         }
+        td{
+            padding-top: 15px;
+        }
     </style>
     <div class="wrapper">
         <section class="activityInfo">

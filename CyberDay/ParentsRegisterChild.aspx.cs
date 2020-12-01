@@ -72,7 +72,7 @@ namespace CyberDay
             {
                 lblGenderError.Text = "Error - field left blank";
             }
-            else if (ddlLunchAttendance.SelectedValue == "select")
+            else if (ddlLunchAttendance.Text == "select")
             {
                 lblLunchAttendanceError.Text = "Error - field left blank";
             }
@@ -80,7 +80,7 @@ namespace CyberDay
             {
                 lblSelectMealError.Text = "Error - field left blank";
             }
-            else if(cbAllergies.Text == "")
+            else if(txtAllergies.Text == "")
             {
                 lblAllergiesError.Text = "Error - field left blank";
             }
@@ -99,9 +99,9 @@ namespace CyberDay
                 sqlComInsertStudent.Parameters.AddWithValue("@ShirtSize", ddlShirtSize.SelectedValue);
                 sqlComInsertStudent.Parameters.AddWithValue("@Notes", txtNotes.Text);
                 sqlComInsertStudent.Parameters.AddWithValue("@Dietary", ddlDietaryNeeds.SelectedValue);
-                sqlComInsertStudent.Parameters.AddWithValue("@Allergies", cbAllergies.Text);
+                sqlComInsertStudent.Parameters.AddWithValue("@Allergies", txtAllergies.Text);
                 sqlComInsertStudent.Parameters.AddWithValue("@TeacherID", ddlTeacher.SelectedValue);
-                sqlComInsertStudent.Parameters.AddWithValue("@LunchAttendance", ddlLunchAttendance.SelectedValue);
+                sqlComInsertStudent.Parameters.AddWithValue("@LunchAttendance", ddlLunchAttendance.Text);
                 sqlComInsertStudent.Parameters.AddWithValue("@CyberDayID", ddlCyberDay.SelectedValue);
 
                 SqlCommand sqlComInsertLunch = new SqlCommand(sqlInsertLunch, sqlCon);
@@ -131,6 +131,17 @@ namespace CyberDay
             txtAge.Text = "";
             txtNotes.Text = "";
             txtStudentEmail.Text = "";
+            txtAllergies.Text = "";
+        }
+
+        protected void btnPopulate_Click(object sender, EventArgs e)
+        {
+            txtFirstName.Text = "Elon";
+            txtLastName.Text = "Musk";
+            txtAge.Text = "13";
+            txtNotes.Text = "Student notes would go here";
+            txtStudentEmail.Text = "musk@tesla.com";
+            txtAllergies.Text = "None";
         }
     }
 }

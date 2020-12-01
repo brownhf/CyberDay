@@ -303,13 +303,13 @@ namespace CyberDay
         protected global::System.Web.UI.WebControls.Label lblAllergies;
 
         /// <summary>
-        /// cbAllergies control.
+        /// txtAllergies control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList cbAllergies;
+        protected global::System.Web.UI.WebControls.TextBox txtAllergies;
 
         /// <summary>
         /// lblAllergiesError control.
@@ -328,6 +328,15 @@ namespace CyberDay
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSubmit;
+
+        /// <summary>
+        /// btnPopulate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnPopulate;
 
         /// <summary>
         /// btnClear control.

@@ -78,6 +78,15 @@ namespace CyberDay
         protected global::System.Web.UI.WebControls.GridView gvFormsRoster;
 
         /// <summary>
+        /// btnExportExcel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnExportExcel;
+
+        /// <summary>
         /// sqlPopulateCyberDay control.
         /// </summary>
         /// <remarks>

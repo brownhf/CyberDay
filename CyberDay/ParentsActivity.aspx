@@ -44,9 +44,11 @@
                 <br />
                 <asp:Label ID="lblAct1" runat="server" Text="Activity 1:"></asp:Label>
                 <asp:DropDownList ID="ddlActivity1" runat="server" AutoPostBack="true"></asp:DropDownList>
+                <asp:Label ID="lblErrorActivity1" runat="server" Text="" ForeColor="Red"></asp:Label>
                 <br />
                 <asp:Label ID="lblAct2" runat="server" Text="Activity 2:"></asp:Label>
                 <asp:DropDownList ID="ddlActivity2" runat="server" AutoPostBack="true"></asp:DropDownList>
+                <asp:Label ID="lblErrorActivity2" runat="server" Text="" ForeColor="Red"></asp:Label>
                 <br />
                 <br />
                 <asp:Button ID="btnSignUp" runat="server" Text="Sign Up" OnClick="btnSignUp_Click" />

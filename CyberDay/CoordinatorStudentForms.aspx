@@ -68,6 +68,7 @@
                     <SortedDescendingCellStyle BackColor="#E9EBEF" />
                     <SortedDescendingHeaderStyle BackColor="#4870BE" />
                 </asp:GridView>
+                <asp:Button ID="btnExportExcel" runat="server" Text="Export" OnClick="btnExportExcel_Click" />
             </fieldset>
         </section>
     </div>
