@@ -29,6 +29,8 @@ namespace CyberDay
             duplicateQuery += "AND [Teacher].[PhoneNumber] = '" + txtPhone.Text.Trim() + "' ";
             duplicateQuery += "AND [Teacher].[ShirtSize] = '" + ddlShirtSize.Text.Trim() + "' ";
             duplicateQuery += "AND [Teacher].[SchoolID] = '" + ddlSchool.Text.Trim() + "' ";
+            duplicateQuery += "AND [Teacher].[LunchAttendance] = '" + ddlLunchAttendance.SelectedValue.Trim() + "' ";
+            duplicateQuery += "AND [Teacher].[CyberDayID] = '" + ddlCyberDay.SelectedValue + "' ";
             SqlConnection sc = new SqlConnection(WebConfigurationManager.ConnectionStrings["CyberDayDB"].ToString());
             SqlCommand duplicateCmd = new SqlCommand(duplicateQuery, sc);
             SqlDataAdapter duplicateTable = new SqlDataAdapter(duplicateCmd);
@@ -86,6 +88,11 @@ namespace CyberDay
                     System.Diagnostics.Debug.WriteLine("Error");
                 }
             }
+        }
+
+        protected void btnRedirectHome_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CoordinatorHomePage.aspx");
         }
     }
 }

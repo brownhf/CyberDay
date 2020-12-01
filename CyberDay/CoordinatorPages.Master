@@ -71,12 +71,6 @@
                     <a class="nav-link" href="NewVolunteer.aspx">ADD A VOLUNTEER</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="SchoolRegister.aspx">REGISTER A NEW SCHOOL</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="TeacherRegister.aspx">REGISTER A CONTACT TEACHER</a>
-                </li>
-                <li class="nav-item active">
                     <a class="nav-link" href="EventRosters.aspx">ROSTERS</a>
                 </li>
                 <li class="nav-item active">
@@ -84,6 +78,9 @@
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="CoordinatorStudentForms.aspx">FORMS ROSTER</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="CoordinatorTableauDashboard.aspx">TABLEAU</a>
                 </li>
             </ul>
         </nav>

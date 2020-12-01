@@ -229,6 +229,15 @@ namespace CyberDay {
         protected global::System.Web.UI.WebControls.Label lblAddStatusFail;
         
         /// <summary>
+        /// btnStep2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnStep2;
+        
+        /// <summary>
         /// SqlPopulateCoordinator control.
         /// </summary>
         /// <remarks>

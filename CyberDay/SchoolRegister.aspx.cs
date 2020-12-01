@@ -77,5 +77,10 @@ namespace CyberDay
                 }
             }
         }
+
+        protected void btnStep3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("TeacherRegister.aspx");
+        }
     }
 }

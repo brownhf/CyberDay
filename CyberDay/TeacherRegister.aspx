@@ -120,7 +120,7 @@
                         </asp:TableRow>
                         <asp:TableRow>
                             <asp:TableCell>
-                                <asp:Button ID="btnAddSchool" runat="server" Text="Register Teacher" OnClick="btnAddSchool_Click" />
+                                <asp:Button ID="btnAddSchool" runat="server" CausesValidation="true" Text="Register Teacher" OnClick="btnAddSchool_Click" />
                             </asp:TableCell>
                             <asp:TableCell>
                                 <asp:Label ID="lblAddStatusSuccess" runat="server" Text="" ForeColor="Green"></asp:Label>
@@ -129,8 +129,13 @@
                         </asp:TableRow>
                     </asp:Table>
                 </fieldset>
+                <br />
+                <br />
+                <fieldset>
+                    <asp:Button ID="btnRedirectHome" runat="server" CausesValidation="false" Text="Finished Creating CyberDay? Proceed Back to Coordinator Home Page" OnClick="btnRedirectHome_Click" />
+                </fieldset>
             </section>
     </div>
     <asp:SqlDataSource ID="sqlPopulateCyberDay" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDayDB %>" SelectCommand="SELECT [dbo].[CyberDay].[CyberDayID], [dbo].[CyberDay].[Date] + ' Coordinated By: ' + [dbo].[Coordinator].[FirstName] + ' ' + [dbo].[Coordinator].[LastName] AS CyberDayDisplay FROM [dbo].[CyberDay], [dbo].[Coordinator] WHERE [dbo].[CyberDay].[CoordinatorID] = [dbo].[Coordinator].[CoordinatorID] ORDER BY [dbo].[CyberDay].[CyberDayID] DESC" />
-    <asp:SqlDataSource ID="SqlPopulateSchool" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDayDB %>" SelectCommand="SELECT [dbo].[School].[SchoolID], [dbo].[School].[SchoolName] + ' On CyberDay Date: ' + [dbo].[CyberDay].[Date] AS SchoolDisplay FROM [dbo].[School], [dbo].[CyberDay] WHERE [dbo].[School].[CyberDayID] = [dbo].[CyberDay].[CyberDayID]" />
+    <asp:SqlDataSource ID="SqlPopulateSchool" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDayDB %>" SelectCommand="SELECT [dbo].[School].[SchoolID], [dbo].[School].[SchoolName] + ' On CyberDay Date: ' + [dbo].[CyberDay].[Date] AS SchoolDisplay FROM [dbo].[School], [dbo].[CyberDay] WHERE [dbo].[School].[CyberDayID] = [dbo].[CyberDay].[CyberDayID] ORDER BY [dbo].[School].[SchoolID] DESC" />
 </asp:Content>

@@ -79,9 +79,9 @@ namespace CyberDay
             }
         }
 
-        protected void btnRefreshEvents_Click(object sender, EventArgs e)
+        protected void gvbind()
         {
-            String sqlQuery = "SELECT [Event].[EventName], [Event].[Description], [Event].[Building], [Event].[RoomNumber], [Event].[StartTime] + ' - ' + [Event].[EndTime] AS [Time]";
+            String sqlQuery = "SELECT * ";
             sqlQuery += "FROM [Event] ";
             sqlQuery += "WHERE [Event].[CyberDayID] = " + ddlCyberDay.SelectedValue;
 
@@ -91,6 +91,63 @@ namespace CyberDay
             sqlAdapter.Fill(dtCyberDayEvents);
             grdvEvents.DataSource = dtCyberDayEvents;
             grdvEvents.DataBind();
+        }
+
+        protected void btnRefreshEvents_Click(object sender, EventArgs e)
+        {
+            gvbind();
+        }
+
+        protected void grdvEvents_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        {
+            grdvEvents.EditIndex = -1;
+            gvbind();
+        }
+
+        protected void grdvEvents_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            grdvEvents.EditIndex = e.NewEditIndex;
+            gvbind();
+        }
+
+        protected void grdvEvents_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            Label EventID = grdvEvents.Rows[e.RowIndex].FindControl("lblEventID") as Label;
+            SqlConnection sqlConnect = new SqlConnection(WebConfigurationManager.ConnectionStrings["CyberDayDB"].ToString());
+            sqlConnect.Open();
+            SqlCommand eventDelete = new SqlCommand("DELETE FROM [dbo].[Event] WHERE [dbo].[Event].[EventID] = @eventID");
+            eventDelete.Parameters.AddWithValue("@eventID", EventID.Text);
+            eventDelete.Connection = sqlConnect;
+            eventDelete.ExecuteNonQuery();
+            gvbind();
+            sqlConnect.Close();
+        }
+
+        protected void grdvEvents_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+            Label lblEventID = grdvEvents.Rows[e.RowIndex].FindControl("lblEventID") as Label;
+            TextBox txtActivity = grdvEvents.Rows[e.RowIndex].FindControl("lblActivity") as TextBox;
+            TextBox txtDescription = grdvEvents.Rows[e.RowIndex].FindControl("lblDescription") as TextBox;
+            TextBox txtBuilding= grdvEvents.Rows[e.RowIndex].FindControl("lblBuilding") as TextBox;
+            TextBox txtRoomNumber = grdvEvents.Rows[e.RowIndex].FindControl("lblRoomNumber") as TextBox;
+            TextBox txtStartTime = grdvEvents.Rows[e.RowIndex].FindControl("lblStartTime") as TextBox;
+            TextBox txtEndTime = grdvEvents.Rows[e.RowIndex].FindControl("lblEndTime") as TextBox;
+            Label lblCyberDayID = grdvEvents.Rows[e.RowIndex].FindControl("lblCyberDayID") as Label;
+            SqlConnection sqlConnect = new SqlConnection(WebConfigurationManager.ConnectionStrings["CyberDayDB"].ToString());
+            sqlConnect.Open();
+            SqlCommand eventUpdate = new SqlCommand("UPDATE [dbo].[Event] SET EventName = @activity, Description = @description, Building = @building, RoomNumber = @room, StartTime = @start, EndTime = @end, CyberDayID = @cyber WHERE [dbo].[Event].[EventID] = @eventID");
+            eventUpdate.Parameters.AddWithValue("@eventID", lblEventID.Text);
+            eventUpdate.Parameters.AddWithValue("@activity", txtActivity.Text);
+            eventUpdate.Parameters.AddWithValue("@description", txtDescription.Text);
+            eventUpdate.Parameters.AddWithValue("@building", txtBuilding.Text);
+            eventUpdate.Parameters.AddWithValue("@room", txtRoomNumber.Text);
+            eventUpdate.Parameters.AddWithValue("@start", txtStartTime.Text);
+            eventUpdate.Parameters.AddWithValue("@end", txtEndTime.Text);
+            eventUpdate.Parameters.AddWithValue("@cyber", lblCyberDayID.Text);
+            eventUpdate.Connection = sqlConnect;
+            eventUpdate.ExecuteNonQuery();
+            gvbind();
+            sqlConnect.Close();
         }
     }
 }
