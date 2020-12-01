@@ -72,7 +72,7 @@ namespace CyberDay
             {
                 lblGenderError.Text = "Error - field left blank";
             }
-            else if (ddlLunchAttendance.SelectedValue == "select")
+            else if (ddlLunchAttendance.Text == "select")
             {
                 lblLunchAttendanceError.Text = "Error - field left blank";
             }
@@ -101,7 +101,7 @@ namespace CyberDay
                 sqlComInsertStudent.Parameters.AddWithValue("@Dietary", ddlDietaryNeeds.SelectedValue);
                 sqlComInsertStudent.Parameters.AddWithValue("@Allergies", cbAllergies.Text);
                 sqlComInsertStudent.Parameters.AddWithValue("@TeacherID", ddlTeacher.SelectedValue);
-                sqlComInsertStudent.Parameters.AddWithValue("@LunchAttendance", ddlLunchAttendance.SelectedValue);
+                sqlComInsertStudent.Parameters.AddWithValue("@LunchAttendance", ddlLunchAttendance.Text);
                 sqlComInsertStudent.Parameters.AddWithValue("@CyberDayID", ddlCyberDay.SelectedValue);
 
                 SqlCommand sqlComInsertLunch = new SqlCommand(sqlInsertLunch, sqlCon);

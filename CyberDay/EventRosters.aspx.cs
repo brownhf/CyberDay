@@ -106,7 +106,7 @@ namespace CyberDay
             TextBox txtStudentAllergies = grdvStudentRoster.Rows[e.RowIndex].FindControl("lblStudentAllergies") as TextBox;
             TextBox txtStudentTeacher = grdvStudentRoster.Rows[e.RowIndex].FindControl("lblStudentTeacher") as TextBox;
             TextBox txtStudentLunch = grdvStudentRoster.Rows[e.RowIndex].FindControl("lblStudentLunch") as TextBox;
-            TextBox txtStudentCyberDay = grdvStudentRoster.Rows[e.RowIndex].FindControl("lblStudentCyberDay") as TextBox;
+            TextBox txtStudentCyberDay = grdvStudentRoster.Rows[e.RowIndex].FindControl("lblStudentCyberDay") as TextBox; 
             SqlConnection sqlConnect = new SqlConnection(WebConfigurationManager.ConnectionStrings["CyberDayDB"].ToString());
             sqlConnect.Open();
             SqlCommand studentUpdate = new SqlCommand("UPDATE [dbo].[Student] SET FirstName = @first, LastName = @last, Age = @age, Gender = @gender, Email = @email, ShirtSize = @shirt, Notes = @notes, Dietary = @dietary, Allergies = @allergies, TeacherID = @teacher, LunchAttendance = @lunch, CyberDayID = @cyber WHERE [dbo].[Student].[StudentID] = @studentID");

@@ -73,7 +73,7 @@ namespace CyberDay
         protected void grdvStudentRoster_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
             Label lblStudentID = grdvStudentRoster.Rows[e.RowIndex].FindControl("lblStudentID") as Label;
-            TextBox txtStudentFirst = grdvStudentRoster.Rows[e.RowIndex].FindControl("lblStudentFirst") as TextBox;
+            TextBox txtStudentFirst = grdvStudentRoster.Rows[e.RowIndex].FindControl("lblStudentFirst") as TextBox;            
             TextBox txtStudentLast = grdvStudentRoster.Rows[e.RowIndex].FindControl("lblStudentLast") as TextBox;
             TextBox txtStudentAge = grdvStudentRoster.Rows[e.RowIndex].FindControl("lblStudentAge") as TextBox;
             TextBox txtStudentGender = grdvStudentRoster.Rows[e.RowIndex].FindControl("lblStudentGender") as TextBox;
