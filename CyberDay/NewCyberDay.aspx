@@ -28,7 +28,7 @@
             <section class="newCyber">
                 <fieldset>
                     <div>
-                        <asp:Label ID="lblNewCyberDay" runat="server" Text="Create a New CyberDay" Font-Bold="true" Font-Size="Larger"></asp:Label>
+                        <asp:Label ID="lblNewCyberDay" runat="server" Text="Step 1: Create a New CyberDay" Font-Bold="true" Font-Size="Larger"></asp:Label>
                         <br />
                         <asp:Label ID="lblDate" runat="server" Text="Set a Date: " ></asp:Label>
 
@@ -180,14 +180,15 @@
                     </div>
 
                 </fieldset>
-
                 <br />
                 <br />
+                <fieldset>
+                    <asp:Button ID="btnStep2" runat="server" Text="Proceed To Step 2: School Registration" OnClick="btnStep2_Click" />
+                </fieldset>
+                
 
                 
             </section>
         </div>
     <asp:SqlDataSource ID="SqlPopulateCoordinator" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDayDB %>" SelectCommand="SELECT CoordinatorID, FirstName + ' ' + LastName AS CoordinatorDisplay FROM Coordinator ORDER BY CoordinatorID" />
-   
-
 </asp:Content>

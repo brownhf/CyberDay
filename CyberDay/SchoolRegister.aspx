@@ -30,7 +30,7 @@
                     <asp:Table runat="server">
                         <asp:TableRow>
                             <asp:TableCell>
-                                <asp:Label ID="lblRegisterSchool" runat="server" Text="Add a School to a CyberDay" Font-Bold="true" Font-Size="Larger"></asp:Label>
+                                <asp:Label ID="lblRegisterSchool" runat="server" Text="Step 2: Add a School to a CyberDay" Font-Bold="true" Font-Size="Larger"></asp:Label>
                             </asp:TableCell>
                         </asp:TableRow>
                         <asp:TableRow>
@@ -96,6 +96,11 @@
                             </asp:TableCell>
                         </asp:TableRow>
                     </asp:Table>
+                </fieldset>
+                <br />
+                <br />
+                <fieldset>
+                    <asp:Button ID="btnStep3" runat="server" CausesValidation="false" Text="Proceed to Step 3: Register a School Contact" OnClick="btnStep3_Click" />
                 </fieldset>
             </section>
     </div>

@@ -33,7 +33,7 @@
 
         <h3><a href="NewCyberDay.aspx">NEW CYBERDAY</a></h3>
         <br />
-        <p>Click here to create a new cyberday, and build an event schedule.</p>
+        <p>Click here to create a new cyberday, add a school to the date, and a contact.</p>
         <hr />
 
         <h3><a href="CoordinatorEvents.aspx">ADD TO SCHEDULE FOR AN EXISTING CYBERDAY</a></h3>
@@ -46,11 +46,6 @@
         <p>Here you will be able to save a new volunteer, add the volunteer to any CyberDay, and assign the volunteer to an event.</p>
         <hr />
 
-        <h3><a href="SchoolRegister.aspx">REGISTER A SCHOOL</a></h3>
-        <br />
-        <p>Here you will be able to save a new school to the system for teachers and students to register to.</p>
-        <hr />
-
         <h3><a href="EventRosters.aspx">ROSTERS</a></h3>
         <br />
         <p>Here you will be able to select from a variety of roster options.</p>
@@ -60,6 +55,17 @@
         <br />
         <p>Here you will be able to view meal ticket information needed for a CyberDay.</p>
         <hr />
+
+        <h3><a href="CoordinatorStudentForms.aspx" >FORMS ROSTER</a></h3>
+        <br />
+        <p>Here you will be able to view which students have had permission and photo release forms submitted for.</p>
+        <hr />
+
+        <h3><a href="CoordinatorTableauDashboard.aspx">TABLEAU</a></h3>
+        <br />
+        <p>Here you will be able to view our Tableau tables highlighting a couple different data visualization options.</p>
+        <hr />
+
 
     </section>
 </asp:Content>

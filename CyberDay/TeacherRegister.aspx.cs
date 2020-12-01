@@ -87,5 +87,10 @@ namespace CyberDay
                 }
             }
         }
+
+        protected void btnRedirectHome_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CoordinatorHomePage.aspx");
+        }
     }
 }

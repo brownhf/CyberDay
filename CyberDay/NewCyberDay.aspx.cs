@@ -68,6 +68,12 @@ namespace CyberDay
                     System.Diagnostics.Debug.WriteLine("Error");
                 }
             }
-        }                
+        }
+
+        protected void btnStep2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SchoolRegister.aspx");
+        }
     }
 }
+
