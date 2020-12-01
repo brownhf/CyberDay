@@ -26,7 +26,6 @@
             text-align: center;
             padding: 50px;
             margin-left: 150px;
-            
         }
     </style>
     <div class="wrapper">
@@ -35,30 +34,24 @@
                 <asp:Table runat="server">
                     <asp:TableRow>
                         <asp:TableCell>
-                            <asp:Label ID="lblMealTicketInfo" runat="server" Text="View Total Quantity and Price of Tickets for a CyberDay: " Font-Bold="true" Font-Size="Larger"></asp:Label>
+                            <asp:Label ID="lblMealTicketInfo" runat="server" Text="View Total Quantity and Price of Tickets for a CyberDay: " Font-Bold="true" Font-Size="Larger" ></asp:Label>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow>
                         <asp:TableCell>
                             <asp:Label ID="lblSelectCyberDay" runat="server" Text="Select CyberDay: "></asp:Label>
-                        </asp:TableCell>
-                        <asp:TableCell>
                             <asp:DropDownList ID="ddlSelectCyberDay" runat="server" DataSourceID="sqlPopulateCyberDay" DataTextField="CyberDayDisplay" DataValueField="CyberDayID" OnSelectedIndexChanged="ddlSelectCyberDay_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow>
                         <asp:TableCell>
-                            <asp:Button ID="btnTicketQuantity" runat="server" Text="Print the Total Tickets for the Given CyberDay" OnClick="btnTicketQuantity_Click"/>
-                        </asp:TableCell>
-                        <asp:TableCell>
-                            <asp:Button ID="btnTicketPrice" runat="server" Text="Print the Total Price of Tickets for the Given CyberDay" OnClick="btnTicketPrice_Click"/>
+                            <asp:Button ID="btnTicketQuantity" runat="server" Text="Print the Total Tickets" OnClick="btnTicketQuantity_Click"/>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow>
                         <asp:TableCell>
                             <asp:Label ID="lblTicketQuantity" runat="server" Text=""></asp:Label>
-                        </asp:TableCell>
-                        <asp:TableCell>
+                            <br />
                             <asp:Label ID="lblTicketPrice" runat="server" Text=""></asp:Label>
                         </asp:TableCell>
                     </asp:TableRow>
