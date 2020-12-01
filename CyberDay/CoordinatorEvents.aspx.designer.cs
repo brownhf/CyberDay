@@ -256,6 +256,15 @@ namespace CyberDay {
         protected global::System.Web.UI.WebControls.Label lblGridviewTitle;
         
         /// <summary>
+        /// ddlCyberDay2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlCyberDay2;
+        
+        /// <summary>
         /// btnRefreshEvents control.
         /// </summary>
         /// <remarks>

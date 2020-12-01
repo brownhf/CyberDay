@@ -11,12 +11,12 @@
             margin-right: auto;
             margin-left: auto;
         }
-        /*.wrapper {
+        .wrapper {
             margin: 80px;
-        }*/
+        }
         .rosters{
-            /*max-width: 1200px;*/
-            /*margin: 0 auto;*/
+            max-width: 1600px;
+            margin: 0 auto;
             background-color: #fff;
             padding: 15px 40px 50px;
             border: 1px solid #e5e5e5;
@@ -24,6 +24,8 @@
         }
     </style>
     
+    <div class="wrapper">
+        
         <section class="rosters">
           
             <fieldset>
@@ -64,6 +66,7 @@
             </fieldset>
 
             <br />
+            <hr />
             <br />
 
             <fieldset>
@@ -142,6 +145,7 @@
             </fieldset>
 
             <br />
+            <hr />
             <br />
 
             <fieldset>
@@ -204,6 +208,7 @@
                 </asp:GridView>
             </fieldset>
         </section>
+    </div>
 
     <asp:SqlDataSource ID="sqlPopulateCyberDay" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDayDB %>" SelectCommand="SELECT [dbo].[CyberDay].[CyberDayID], [dbo].[CyberDay].[Date] + ' Coordinated By: ' + [dbo].[Coordinator].[FirstName] + ' ' + [dbo].[Coordinator].[LastName] AS CyberDayDisplay FROM [dbo].[CyberDay], [dbo].[Coordinator] WHERE [dbo].[CyberDay].[CoordinatorID] = [dbo].[Coordinator].[CoordinatorID] ORDER BY [dbo].[CyberDay].[CyberDayID] DESC" />
 </asp:Content>

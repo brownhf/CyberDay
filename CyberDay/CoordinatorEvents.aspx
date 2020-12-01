@@ -7,7 +7,7 @@
             background: #eee;
         }
         section {
-            width: 75%;
+            width: 100%;
             margin-right: auto;
             margin-left: auto;
         }
@@ -15,7 +15,7 @@
             margin: 80px;
         }
         .newCyber {
-            max-width: 800px;
+            max-width: 1100px;
             margin: 0 auto;
             background-color: #fff;
             padding: 15px 40px 50px;
@@ -43,7 +43,7 @@
                         </asp:TableRow>
                         <asp:TableRow>
                             <asp:TableCell>
-                                <asp:Label ID="lblEventName" runat="server" Text="Event Name: "></asp:Label>
+                                <asp:Label ID="lblEventName" runat="server" Text="Activity Name: "></asp:Label>
                             </asp:TableCell>
                             <asp:TableCell>
                                 <asp:TextBox ID="txtEventName" runat="server" Width="400px" AutoCompleteType="Disabled"></asp:TextBox>
@@ -51,7 +51,7 @@
                         </asp:TableRow>
                         <asp:TableRow>
                             <asp:TableCell>
-                                <asp:Label ID="lblEventDescription" runat="server" Text="Event Description: "></asp:Label>
+                                <asp:Label ID="lblEventDescription" runat="server" Text="Activity Description: "></asp:Label>
                             </asp:TableCell>
                             <asp:TableCell>
                                 <asp:TextBox ID="txtEventDescription" runat="server" Width="400px" Height="200px" TextMode="MultiLine" AutoCompleteType="Disabled"></asp:TextBox>
@@ -141,7 +141,7 @@
                         </asp:TableRow>
                         <asp:TableRow>
                             <asp:TableCell>
-                                <asp:Button ID="btnAddEvent" runat="server" Text="Add Event to Selected CyberDay" OnClick="btnAddEvent_Click" />
+                                <asp:Button ID="btnAddEvent" runat="server" Text="Add Activity to the CyberDay" OnClick="btnAddEvent_Click" />
                             </asp:TableCell>
                             <asp:TableCell>
                                 <asp:Label ID="lblAddStatusSuccessEvent" runat="server" Text="" ForeColor="Green"></asp:Label>
@@ -157,20 +157,67 @@
                     <asp:Table runat="server">
                         <asp:TableRow>
                             <asp:TableCell>
-                                <asp:Label ID="lblGridviewTitle" runat="server" Text="View Events for the Currently Selected CyberDay "></asp:Label>
+                                <asp:Label ID="lblGridviewTitle" runat="server" Text="View, Edit, and/or Delete Activities for a CyberDay" Font-Bold="true" Font-Size="Larger"></asp:Label>
                             </asp:TableCell>
                         </asp:TableRow>
                         <asp:TableRow>
                             <asp:TableCell>
-                                <asp:Button ID="btnRefreshEvents" runat="server" Text="View/Refresh Associated Events" OnClick="btnRefreshEvents_Click" />
+                                <asp:DropDownList ID="ddlCyberDay2" runat="server" DataSourceID="sqlPopulateCyberDay" DataTextField="CyberDayDisplay" DataValueField="CyberDayID" ></asp:DropDownList>
                             </asp:TableCell>
-                        </asp:TableRow>
-                        <asp:TableRow>
                             <asp:TableCell>
-                                <asp:GridView ID="grdvEvents" runat="server" EmptyDataText="Selected CyberDay currently has no associated events"></asp:GridView>
+                                <asp:Button ID="btnRefreshEvents" runat="server" Text="View Activity Schedule for Selected CyberDay" OnClick="btnRefreshEvents_Click" />
                             </asp:TableCell>
                         </asp:TableRow>
                     </asp:Table>
+                </fieldset>
+                <br />
+                <fieldset>
+                                <asp:GridView ID="grdvEvents" runat="server" EmptyDataText="Selected CyberDay currently has no associated events" Caption="Activity Schedule:" AutoGenerateColumns="false" DataKeyNames="EventID" OnRowCancelingEdit="grdvEvents_RowCancelingEdit" OnRowEditing="grdvEvents_RowEditing" OnRowDeleting="grdvEvents_RowDeleting" OnRowUpdating="grdvEvents_RowUpdating">
+                                    <Columns>
+                                        <asp:TemplateField HeaderText="ID">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblEventID" runat="server" Width="25" Text='<%# Eval("EventID") %>'></asp:Label>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Activity">
+                                            <ItemTemplate>
+                                                <asp:TextBox ID="lblActivity" runat="server" Width="100" Text='<%# Eval("EventName") %>'></asp:TextBox>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Description">
+                                            <ItemTemplate>
+                                                <asp:TextBox ID="lblDescription" runat="server" Width="300" Text='<%# Eval("Description") %>'></asp:TextBox>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Building">
+                                            <ItemTemplate>
+                                                <asp:TextBox ID="lblBuilding" runat="server" Width="100" Text='<%# Eval("Building") %>'></asp:TextBox>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Room Number">
+                                            <ItemTemplate>
+                                                <asp:TextBox ID="lblRoomNumber" runat="server" Width="100" Text='<%# Eval("RoomNumber") %>'></asp:TextBox>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="Start Time">
+                                            <ItemTemplate>
+                                                <asp:TextBox ID="lblStartTime" runat="server" Width="75" Text='<%# Eval("StartTime") %>'></asp:TextBox>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="End Time">
+                                            <ItemTemplate>
+                                                <asp:TextBox ID="lblEndTime" runat="server" Width="75" Text='<%# Eval("EndTime") %>'></asp:TextBox>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="CyberDay ID">
+                                            <ItemTemplate>
+                                                <asp:Label ID="lblCyberDayID" runat="server" Width="75" Text='<%# Eval("CyberDayID") %>'></asp:Label>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:CommandField ShowEditButton="true" />
+                                        <asp:CommandField ShowDeleteButton="true" />
+                                    </Columns>
+                                </asp:GridView>
                 </fieldset>
             </section>
     </div>

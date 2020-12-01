@@ -11,12 +11,12 @@
             margin-right: auto;
             margin-left: auto;
         }
-        /*.wrapper {
+        .wrapper {
             margin: 80px;
-        }*/
+        }
         .roster {
-            /*max-width: 800px;
-            margin: 0 auto;*/
+            max-width: 1600px;
+            margin: 0 auto;
             background-color: #fff;
             padding: 15px 40px 50px;
             border: 1px solid #e5e5e5;
@@ -24,7 +24,7 @@
         }
     </style>
 
-    <%--<div class="wrapper">--%>
+    <div class="wrapper">
         <section class="roster">
             <fieldset>
                 <asp:Table runat="server">
@@ -117,6 +117,6 @@
                 </asp:GridView>
             </fieldset>
         </section>
-   <%-- </div>--%>
+    </div>
     <asp:SqlDataSource ID="sqlPopulateTeacher" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDayDB %>" SelectCommand="SELECT [dbo].[Teacher].[TeacherID], [dbo].[Teacher].[FirstName] + ' ' + [dbo].[Teacher].[LastName] AS TeacherName FROM [dbo].[Teacher]"></asp:SqlDataSource>
 </asp:Content>
