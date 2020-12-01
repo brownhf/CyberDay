@@ -37,16 +37,6 @@ namespace CyberDay
 
 
             lblTicketQuantity.Text = "Total Lunch Tickets: " + count.ToString();
-        }
-
-        protected void btnTicketPrice_Click(object sender, EventArgs e)
-        {
-            SqlConnection sc = new SqlConnection(WebConfigurationManager.ConnectionStrings["CyberDayDB"].ToString());
-            sc.Open();
-            SqlCommand counter = sc.CreateCommand();
-            counter.CommandText = "SELECT count(Attendance) from Lunch WHERE Attendance = 'yes' AND CyberDayID =" + ddlSelectCyberDay.SelectedValue;
-            int count = (int)counter.ExecuteScalar();
-
             lblTicketPrice.Text = "Total Price of Lunch Tickets: $" + (count * 14).ToString();
         }
 
@@ -55,8 +45,7 @@ namespace CyberDay
             using (SqlConnection con1 = new SqlConnection(WebConfigurationManager.ConnectionStrings["CyberDayDB"].ConnectionString))
             {
                 con1.Open();
-                //String cmd = "select FirstName, LastName from [Lunch] where CyberDayID =" + ddlSelectCyberDay.SelectedValue;
-                String cmd = "select [Name] from [Lunch] where CyberDayID =" + ddlSelectCyberDay.SelectedValue;
+                String cmd = "select LastName AS [Last Name], FirstName AS [First Name] from [Lunch] where CyberDayID =" + ddlSelectCyberDay.SelectedValue + "ORDER BY LastName ASC";
                 SqlDataAdapter sda = new SqlDataAdapter(cmd, con1);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
@@ -80,6 +69,7 @@ namespace CyberDay
             Paragraph p = new Paragraph();
             Chunk cd = new Chunk("CyberDay:  " + ddlSelectCyberDay.SelectedItem + "    ", textFont);
             p.Add(cd);
+            p.Alignment = Element.ALIGN_CENTER;
 
             PdfPTable pdfTable = new PdfPTable(grdLunchAttendance.HeaderRow.Cells.Count);
             pdfTable.SpacingBefore = 50;
@@ -92,6 +82,8 @@ namespace CyberDay
             foreach (TableCell headerCell in grdLunchAttendance.HeaderRow.Cells)
             {
                 PdfPCell pdfCell = new PdfPCell(new Phrase(headerCell.Text));
+                pdfCell.VerticalAlignment = Element.ALIGN_CENTER;
+                pdfCell.HorizontalAlignment = Element.ALIGN_CENTER;
                 pdfTable.AddCell(pdfCell);
             }
 
@@ -100,9 +92,13 @@ namespace CyberDay
                 foreach (TableCell tableCell in gridViewRow.Cells)
                 {
                     PdfPCell pdfCell = new PdfPCell(new Phrase(tableCell.Text));
+                    pdfCell.HorizontalAlignment = Element.ALIGN_CENTER;
+                    pdfCell.VerticalAlignment = Element.ALIGN_CENTER;
                     pdfTable.AddCell(pdfCell);
+                    
                 }
             }
+
 
             Document pdfDocument = new Document(PageSize.A4, 50, 50, 50, 50);
             PdfWriter.GetInstance(pdfDocument, Response.OutputStream);

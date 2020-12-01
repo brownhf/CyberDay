@@ -29,8 +29,8 @@ namespace CyberDay
 
 
 
-            try
-            {
+          try
+           {
                 string filename = Path.GetFileName(FileUpload1.PostedFile.FileName);
                 string contentType = FileUpload1.PostedFile.ContentType;
                 using (Stream fs = FileUpload1.PostedFile.InputStream)
@@ -41,17 +41,23 @@ namespace CyberDay
 
                         using (SqlConnection con = new SqlConnection(sqlConnect))
                         {
+                        
 
-                            string query = "INSERT INTO ProjectUploads VALUES (@Student_Name,@Project_Name, @ContentType, @Data, @Comments, @Date)";
-                            using (SqlCommand cmd = new SqlCommand(query))
+                        string query = "INSERT INTO ProjectUploads VALUES (@Project_Name, @FileType, @DataFile, @Comments, @Date, @StudentID)";
+                       
+
+
+
+                        using (SqlCommand cmd = new SqlCommand(query,con))
                             {
-                                cmd.Connection = con;
-                                cmd.Parameters.AddWithValue("@Student_Name", studentNametxt.Text);
+                                
                                 cmd.Parameters.AddWithValue("@Project_Name", filename);
-                                cmd.Parameters.AddWithValue("@ContentType", contentType);
-                                cmd.Parameters.AddWithValue("@Data", bytes);
+                                cmd.Parameters.AddWithValue("@FileType", contentType);
+                                cmd.Parameters.AddWithValue("@DataFile", bytes);
                                 cmd.Parameters.AddWithValue("@Comments", cmmttxt.Text);
                                 cmd.Parameters.AddWithValue("@Date", DateTime.Now.ToString("yyyy-MM-dd h:mm:ss tt"));
+                                cmd.Parameters.AddWithValue("@StudentID", studentDDL.SelectedValue);
+                                
                                 con.Open();
                                 cmd.ExecuteNonQuery();
                                 con.Close();
@@ -63,7 +69,7 @@ namespace CyberDay
                 StatusLabel.ForeColor = System.Drawing.Color.Green;
                 StatusLabel.Text = "File uploaded successfully.";
                 cmmttxt.Text = "";
-                studentNametxt.Text = "";
+                
 
             }
 

@@ -150,33 +150,6 @@ namespace CyberDay
         protected global::System.Web.UI.WebControls.Label lblEmailError;
 
         /// <summary>
-        /// lblShirtSize control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblShirtSize;
-
-        /// <summary>
-        /// ddlShirtSize control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlShirtSize;
-
-        /// <summary>
-        /// lblShirtSizeError control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblShirtSizeError;
-
-        /// <summary>
         /// lblNotes control.
         /// </summary>
         /// <remarks>

@@ -85,17 +85,7 @@
             <p>We are here to answer any questions you may have about CyberDay. Reach out to us and well respond as soon as we can.</p>
             <asp:Table ID="contactTable" runat="server" CssClass="contact">
 
-                <%-- DO WE NEED A 'TO' TEXTBOX? WONT IT ALWAYS JUST BE GOING TO THE SAME TWO COORDINATORS? --%>
-                <%--   <asp:TableRow>
-                    <asp:TableCell>
-               <a>To:</a> 
-                    </asp:TableCell>
-                    <asp:TableCell>
-                        <asp:TextBox ID="totxt" runat="server" Width="500px" Height="20px" CssClass="txt"></asp:TextBox>
-                    </asp:TableCell>
-                </asp:TableRow>--%>
-               
-            
+          
                <asp:TableRow>
                     <asp:TableCell>
                <a>Name:</a> 

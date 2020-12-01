@@ -34,13 +34,26 @@
        
     }
 
-     
-     
+    .ddl{
+        border-radius: 25px;
+        width: 500px;
+        height:40px;
+        border: solid;
+        border-color: rebeccapurple;
+        text-align: center;
+        padding-left: 200px;
+        margin-bottom: 30px;
+        
 
- 
+    }
+
+     
    
     </style>
-   <div class="wrapper"> 
+   
+    
+    
+    <div class="wrapper"> 
     <div class ="test">
     
         
@@ -48,19 +61,24 @@
         <br />
         <br />
 
-        
-        <asp:TextBox ID="studentNametxt" runat="server" placeholder="Name" class="form-control"></asp:TextBox>
 
-        <br />
-        <br />
-    
-        
+        <h5>Select Your Name</h5>
+        <asp:DropDownList ID="studentDDL" 
+            runat="server" 
+            AutoPostBack="true" 
+            DataSourceID="studentDS" 
+            DataValueField="StudentID" 
+            DataTextField="Name" 
+            CssClass="ddl"  
+            placeholder="Select Your Name" >
+            <asp:ListItem Selected="true" Value="0" Text="<--Select-->" />
+        </asp:DropDownList>
         
         <asp:FileUpload id="FileUpload1" runat="server" />
          <asp:RequiredFieldValidator 
              ID="fileRequiredFV"
              runat="server" 
-             ErrorMessage=" * Required *" 
+             ErrorMessage=" * Required * " 
              ControlToValidate="FileUpload1" 
              SetFocusOnError="true" 
              ForeColor="Red">
@@ -77,7 +95,7 @@
         <asp:Button runat="server" id="uploadBttn" text="Submit" onclick="uploadbttn_Click" class="btn btn-primary"/>
         <asp:Label runat="server" id="StatusLabel" text="Upload status: " />
         
-       
+        <asp:SqlDataSource ID="studentDS" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDayDB %>" SelectCommand="Select StudentID, LastName + ' '+ ',' + ' ' + FirstName As Name From Student Order By Name ASC"></asp:SqlDataSource>
     
     </div>
 </div>

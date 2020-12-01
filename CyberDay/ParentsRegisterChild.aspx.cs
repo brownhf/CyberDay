@@ -8,6 +8,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.Configuration; //Lets us access our Web.config file!
+using System.Drawing;
 
 namespace CyberDay
 {
@@ -20,7 +21,7 @@ namespace CyberDay
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            string sqlInsertStudent = "Insert Into Student Values (@FirstName, @LastName, @Age, @Gender, @Email, @ShirtSize, @Notes, @Dietary, @Allergies, @TeacherID, @LunchAttendance, @CyberDayID)";
+            string sqlInsertStudent = "Insert Into Student Values (@FirstName, @LastName, @Age, @Gender, @Email, @Notes, @Dietary, @Allergies, @TeacherID, @LunchAttendance, @CyberDayID)";
             string sqlCheck = "Select Count(1) From Student Where FirstName = @FirstName and LastName = @LastName and TeacherID = @TeacherID and Email = @Email";
             string sqlInsertLunch = "Insert Into Lunch Values (@FirstName, @LastName, @Attendance, @CyberDayID)";
             SqlConnection sqlCon = new SqlConnection(WebConfigurationManager.ConnectionStrings["CyberDayDB"].ToString());
@@ -46,6 +47,7 @@ namespace CyberDay
             int parsedValue;
             if(userCheckNum == 1)
             {
+                lblStudentSubmitError.ForeColor = Color.Red;
                 lblStudentSubmitError.Text = "Error - Duplicate Student Record";
             }
             else if(txtFirstName.Text == "")
@@ -63,10 +65,6 @@ namespace CyberDay
             else if(txtNotes.Text == "")
             {
                 lblNotesError.Text = "Error - field left blank";
-            }
-            else if(ddlShirtSize.SelectedValue == "select")
-            {
-                lblShirtSizeError.Text = "Error - field left blank";
             }
             else if(ddlGenders.SelectedValue == "select")
             {
@@ -96,7 +94,6 @@ namespace CyberDay
                 sqlComInsertStudent.Parameters.AddWithValue("@Age", txtAge.Text);
                 sqlComInsertStudent.Parameters.AddWithValue("@Gender", ddlGenders.SelectedValue);
                 sqlComInsertStudent.Parameters.AddWithValue("@Email", txtStudentEmail.Text);
-                sqlComInsertStudent.Parameters.AddWithValue("@ShirtSize", ddlShirtSize.SelectedValue);
                 sqlComInsertStudent.Parameters.AddWithValue("@Notes", txtNotes.Text);
                 sqlComInsertStudent.Parameters.AddWithValue("@Dietary", ddlDietaryNeeds.SelectedValue);
                 sqlComInsertStudent.Parameters.AddWithValue("@Allergies", txtAllergies.Text);
@@ -114,12 +111,12 @@ namespace CyberDay
                 sqlComInsertStudent.ExecuteNonQuery();
                 sqlComInsertLunch.ExecuteNonQuery();
                 sqlCon.Close();
+                lblStudentSubmitError.ForeColor = Color.Green;
                 lblStudentSubmitError.Text = "Student Signed Up!";
                 //Clear text fields
                 Session["FirstName"] = txtFirstName.Text.ToString();
                 Session["LastName"] = txtLastName.Text.ToString();
                 Session["CyberDayID"] = ddlCyberDay.SelectedValue;
-                Response.Redirect("ParentsActivity.aspx");
 
             }
         }
@@ -132,6 +129,8 @@ namespace CyberDay
             txtNotes.Text = "";
             txtStudentEmail.Text = "";
             txtAllergies.Text = "";
+            ddlGenders.SelectedIndex = 0;
+            ddlDietaryNeeds.SelectedIndex = 0;
         }
 
         protected void btnPopulate_Click(object sender, EventArgs e)
@@ -142,6 +141,9 @@ namespace CyberDay
             txtNotes.Text = "Student notes would go here";
             txtStudentEmail.Text = "musk@tesla.com";
             txtAllergies.Text = "None";
+            ddlGenders.SelectedIndex = 1;
+            ddlDietaryNeeds.SelectedIndex = 1;
+
         }
     }
 }
