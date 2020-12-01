@@ -51,6 +51,15 @@ namespace CyberDay
         protected global::System.Web.UI.WebControls.DropDownList ddlActivity1;
 
         /// <summary>
+        /// lblErrorActivity1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrorActivity1;
+
+        /// <summary>
         /// lblAct2 control.
         /// </summary>
         /// <remarks>
@@ -67,6 +76,15 @@ namespace CyberDay
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlActivity2;
+
+        /// <summary>
+        /// lblErrorActivity2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrorActivity2;
 
         /// <summary>
         /// btnSignUp control.

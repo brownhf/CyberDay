@@ -207,12 +207,7 @@
                             <asp:Label ID="lblAllergies" runat="server" Text="Allergies:"></asp:Label>
                         </td>
                         <td>
-                            <asp:CheckBoxList ID="cbAllergies" runat="server">
-                                <asp:ListItem Text="Peanut"></asp:ListItem>
-                                <asp:ListItem Text="Dairy"></asp:ListItem>
-                                <asp:ListItem Text="Other"></asp:ListItem>
-                                <asp:ListItem Text="None"></asp:ListItem>
-                            </asp:CheckBoxList>
+                            <asp:TextBox ID="txtAllergies" runat="server"></asp:TextBox>
                         </td>
                         <td>
                             <asp:Label ID="lblAllergiesError" runat="server" Text="" ForeColor="Red" Font-Italic="true"></asp:Label>
@@ -221,6 +216,9 @@
                     <tr>
                         <td>
                             <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
+                        </td>
+                        <td>
+                            <asp:Button ID="btnPopulate" runat="server" Text="Populate" OnClick="btnPopulate_Click" />
                         </td>
                         <td>
                             <asp:Button ID="btnClear" runat="server" Text="Clear" OnClick="btnClear_Click" />
