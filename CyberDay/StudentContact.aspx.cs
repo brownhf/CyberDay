@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Net;
 using System.Net.Mail;
-using System.Windows.Forms;
+using System.Windows;
 
 
 namespace CyberDay
@@ -48,6 +48,7 @@ namespace CyberDay
                 smtpClient.Send(message);
                 MessageBox.Show("Your email has been sent!");
 
+                nametxt.Text = "";
                 fromtxt.Text = "";
                 subjecttxt.Text = "";
                 mesgtxt.Text = "";

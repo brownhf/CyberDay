@@ -13,15 +13,11 @@
     </asp:ContentPlaceHolder>
     <style>
 
-        /*  section{
-            width: 75%;
-            margin-right: auto;
-            margin-left: auto;
-        }*/
+        
 
         
        .nav- ul li a.active{
-            background-color:green;
+            background-color:purple;
         }
         a:hover{
             background-color: #450084;
@@ -44,7 +40,6 @@
                 </div>
             </nav>
 
-            <%-- NavBar2...Still need to work out formatting and spacing, as well as some of the links/onclick events --%>
             <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #CBB677">
                 <ul class="nav navbar-nav text-center">
                     <li class="nav-item active">
@@ -61,28 +56,12 @@
                         <a class="nav-link" href="StudentContact.aspx">CONTACT</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" onclick="btnReturnHome_Click">HOME PAGE</a>
+                        <a class="nav-link" href="MainPage.aspx">HOME PAGE</a>
                     </li>
                 </ul>
             </nav>
 
-            <%--<asp:Table runat="server" HorizontalAlign="Right">
-                <asp:TableRow>
-                    <asp:TableCell>
-                        <asp:Button ID="Button1" runat="server" Text="Logout" OnClick="btnLogOut_Click" CausesValidation="false" />
-                    </asp:TableCell>
-                </asp:TableRow>
-                <asp:TableRow>
-                    <asp:TableCell>
-                        <asp:Label ID="lblUserDetails" runat="server" Text=""></asp:Label>
-                    </asp:TableCell>
-                </asp:TableRow>
-                <asp:TableRow>
-                    <asp:TableCell>
-                        <asp:Button ID="btnReturnHome" runat="server" Text="Return To Home Page" OnClick="btnReturnHome_Click" CausesValidation="false" />
-                    </asp:TableCell>
-                </asp:TableRow>
-            </asp:Table>--%>
+           
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 
             </asp:ContentPlaceHolder>
@@ -90,22 +69,7 @@
 
         <div>
 
-            <%--<fieldset>
-                <asp:Table runat="server">
-                    <asp:TableRow>
-                        <asp:TableCell>
-                            <asp:Label ID="lblTitle" runat="server" Text="CyberDay Management System: Student Portal " Font-Bold="true" ForeColor="Purple" Font-Size="X-Large"></asp:Label>
-                            <div class="topnav">
-                                <a class="active" href="StudentHome.aspx">Home</a>
-                                <a href="StudentActivity.aspx">Activity Info</a>
-                                <a href="StudentUpdate.aspx">Upload Project</a>
-                                <a href="StudentContact.aspx">Contact</a>
-                            </div>
-                        </asp:TableCell>
-                    </asp:TableRow>
-                </asp:Table>
-            </fieldset>
-            <br />--%>
+           
 
             <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
                 <section>
