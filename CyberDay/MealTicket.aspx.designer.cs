@@ -51,15 +51,6 @@ namespace CyberDay
         protected global::System.Web.UI.WebControls.Button btnTicketQuantity;
 
         /// <summary>
-        /// btnTicketPrice control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnTicketPrice;
-
-        /// <summary>
         /// lblTicketQuantity control.
         /// </summary>
         /// <remarks>
@@ -87,13 +78,13 @@ namespace CyberDay
         protected global::System.Web.UI.WebControls.GridView grdLunchAttendance;
 
         /// <summary>
-        /// srcLunchAttendance control.
+        /// btnPdf control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource srcLunchAttendance;
+        protected global::System.Web.UI.WebControls.Button btnPdf;
 
         /// <summary>
         /// sqlPopulateCyberDay control.

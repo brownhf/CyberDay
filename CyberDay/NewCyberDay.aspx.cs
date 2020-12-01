@@ -26,6 +26,7 @@ namespace CyberDay
             duplicateQuery += "WHERE [CyberDay].[Date] = '" + ddlMonth.SelectedValue + "/" + ddlDay.SelectedValue + "/" + ddlYear.SelectedValue + "' ";
             duplicateQuery += "AND [CyberDay].[StartTime] = '" + ddlHour.SelectedValue + ":" + ddlMinute.SelectedValue + ddlAmPm.Text.Trim() + "' ";
             duplicateQuery += "AND [CyberDay].[EndTime] = '" + ddlHourEnd.SelectedValue + ":" + ddlMinuteEnd.SelectedValue + ddlAmPmEnd.Text.Trim() + "' ";
+            duplicateQuery += "AND [CyberDay].[CoordinatorID] = '" + ddlAddCoordinator.SelectedValue + "' ";
 
 
 
@@ -68,6 +69,12 @@ namespace CyberDay
                     System.Diagnostics.Debug.WriteLine("Error");
                 }
             }
-        }                
+        }
+
+        protected void btnStep2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SchoolRegister.aspx");
+        }
     }
 }
+

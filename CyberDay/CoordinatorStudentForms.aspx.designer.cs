@@ -11,106 +11,88 @@ namespace CyberDay
 {
 
 
-    public partial class WebForm1
+    public partial class WebForm4
     {
 
         /// <summary>
-        /// lblEmail control.
+        /// lblSelectCyberDay control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEmail;
+        protected global::System.Web.UI.WebControls.Label lblSelectCyberDay;
 
         /// <summary>
-        /// txtEmail control.
+        /// ddlCyberDayDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        protected global::System.Web.UI.WebControls.DropDownList ddlCyberDayDate;
 
         /// <summary>
-        /// lblConfirmEmail control.
+        /// lblSelectForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblConfirmEmail;
+        protected global::System.Web.UI.WebControls.Label lblSelectForm;
 
         /// <summary>
-        /// txtConfirmEmail control.
+        /// ddlForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtConfirmEmail;
+        protected global::System.Web.UI.WebControls.DropDownList ddlForm;
 
         /// <summary>
-        /// lblStudent control.
+        /// btnSubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblStudent;
+        protected global::System.Web.UI.WebControls.Button btnSubmit;
 
         /// <summary>
-        /// ddlStudents control.
+        /// lblPrintError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlStudents;
+        protected global::System.Web.UI.WebControls.Label lblPrintError;
 
         /// <summary>
-        /// fileUploadPermission control.
+        /// gvFormsRoster control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fileUploadPermission;
+        protected global::System.Web.UI.WebControls.GridView gvFormsRoster;
 
         /// <summary>
-        /// btnUpload control.
+        /// btnExportExcel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnUpload;
+        protected global::System.Web.UI.WebControls.Button btnExportExcel;
 
         /// <summary>
-        /// lblError control.
+        /// sqlPopulateCyberDay control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblError;
-
-        /// <summary>
-        /// btnBack control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBack;
-
-        /// <summary>
-        /// srcStudent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource srcStudent;
+        protected global::System.Web.UI.WebControls.SqlDataSource sqlPopulateCyberDay;
     }
 }

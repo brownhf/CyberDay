@@ -33,6 +33,9 @@
             border: 1px solid #e5e5e5;
             border-radius: 10px;
         }
+        td{
+            padding-top: 15px;
+        }
     </style>
     <div class="wrapper">
         <section class="activityInfo">
@@ -60,7 +63,8 @@
                             <asp:Label ID="lblFirstNameError" runat="server" Text="" ForeColor="Red" Font-Italic="true"></asp:Label>
                         </td>
                     </tr>
-                    <tr>
+
+                    <tr >
                         <td>
                             <asp:Label ID="lblLastName" runat="server" Text="Last Name:"></asp:Label>
                         </td>
@@ -114,22 +118,6 @@
                     </tr>
                     <tr>
                         <td>
-                            <asp:Label ID="lblShirtSize" runat="server" Text="Shirt Size:"></asp:Label>
-                        </td>
-                        <td>
-                            <asp:DropDownList ID="ddlShirtSize" runat="server">
-                                <asp:ListItem Text="--Select--" Value="select"></asp:ListItem>
-                                <asp:ListItem Text="Small" Value="Small"></asp:ListItem>
-                                <asp:ListItem Text="Medium" Value="Medium"></asp:ListItem>
-                                <asp:ListItem Text="Large" Value="Large"></asp:ListItem>
-                            </asp:DropDownList>
-                        </td>
-                        <td>
-                            <asp:Label ID="lblShirtSizeError" runat="server" Text="" ForeColor="Red" Font-Italic="true"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
                             <asp:Label ID="lblNotes" runat="server" Text="Notes:"></asp:Label>
                             <br />
                         </td>
@@ -167,7 +155,6 @@
                             <h4>Student Meal Info:</h4>
                         </td>
                     </tr>
-                    <tr>
                         <tr>
                         <td>
                             <asp:Label ID="lblLunchAttendance" runat="server" Text="Attending Lunch:"></asp:Label>
@@ -203,12 +190,7 @@
                             <asp:Label ID="lblAllergies" runat="server" Text="Allergies:"></asp:Label>
                         </td>
                         <td>
-                            <asp:CheckBoxList ID="cbAllergies" runat="server">
-                                <asp:ListItem Text="Peanut"></asp:ListItem>
-                                <asp:ListItem Text="Dairy"></asp:ListItem>
-                                <asp:ListItem Text="Other"></asp:ListItem>
-                                <asp:ListItem Text="None"></asp:ListItem>
-                            </asp:CheckBoxList>
+                            <asp:TextBox ID="txtAllergies" runat="server"></asp:TextBox>
                         </td>
                         <td>
                             <asp:Label ID="lblAllergiesError" runat="server" Text="" ForeColor="Red" Font-Italic="true"></asp:Label>
@@ -219,12 +201,15 @@
                             <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
                         </td>
                         <td>
+                            <asp:Button ID="btnPopulate" runat="server" Text="Populate" OnClick="btnPopulate_Click" />
+                        </td>
+                        <td>
                             <asp:Button ID="btnClear" runat="server" Text="Clear" OnClick="btnClear_Click" />
                         </td>
                     </tr>
                     <tr>
                         <td>
-                             <asp:Label ID="lblStudentSubmitError" runat="server" Text="" ForeColor="Red"></asp:Label>
+                             <asp:Label ID="lblStudentSubmitError" runat="server" Text=""></asp:Label>
                         </td>
                     </tr>
                 </table>

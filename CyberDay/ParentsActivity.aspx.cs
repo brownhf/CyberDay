@@ -57,28 +57,51 @@ namespace CyberDay
         {
             SqlConnection sqlCon = new SqlConnection(WebConfigurationManager.ConnectionStrings["CyberDayDB"].ToString());
             string sqlQuery = "Insert Into StudentEvent Values (@EventID, @StudentID)";
+            string sqlCheck = "Select Count(1) From StudentEvent Where EventID = @EventID and StudentID = @StudentID";
+            string sqlCheck2 = "Select Count(1) From StudentEvent Where EventID = @EventID and StudentID = @StudentID";
             string studentIDQuery = "Select StudentID From Student Where FirstName = '" + Session["FirstName"].ToString() + "' and LastName = '" + Session["LastName"].ToString() + "'";
             SqlCommand sqlComCheckID = new SqlCommand(studentIDQuery, sqlCon);
             sqlCon.Open();
             int studentID = Convert.ToInt32(sqlComCheckID.ExecuteScalar());
             sqlCon.Close();
 
-            SqlCommand sqlCom1 = new SqlCommand(sqlQuery, sqlCon);
-            sqlCom1.Parameters.AddWithValue("@StudentID", studentID);
-            sqlCom1.Parameters.AddWithValue("@EventID", ddlActivity1.SelectedValue);
+            SqlCommand sqlComCheck = new SqlCommand(sqlCheck, sqlCon);
+            sqlComCheck.Parameters.AddWithValue("@StudentID", studentID);
+            sqlComCheck.Parameters.AddWithValue("@EventID", ddlActivity1.SelectedValue);
             sqlCon.Open();
-            sqlCom1.ExecuteNonQuery();
+            int check1 = Convert.ToInt32(sqlComCheck.ExecuteScalar());
             sqlCon.Close();
 
-            string sqlQuery2 = "Insert Into StudentEvent Values (@EventID, @StudentID)";
-            SqlCommand sqlCom2 = new SqlCommand(sqlQuery2, sqlCon);
-            sqlCom2.Parameters.AddWithValue("@StudentID", studentID);
-            sqlCom2.Parameters.AddWithValue("@EventID", ddlActivity2.SelectedValue);
+            SqlCommand sqlComCheck2 = new SqlCommand(sqlCheck2, sqlCon);
+            sqlComCheck2.Parameters.AddWithValue("@StudentID", studentID);
+            sqlComCheck2.Parameters.AddWithValue("@EventID", ddlActivity2.SelectedValue);
             sqlCon.Open();
-            sqlCom2.ExecuteNonQuery();
+            int check2 = Convert.ToInt32(sqlComCheck2.ExecuteScalar());
             sqlCon.Close();
-            lblSignUpError.Text = "Student Successfully Signed Up For Events!";
 
+            if (check1 == 0 && check2 == 0 && (ddlActivity1.SelectedValue != ddlActivity2.SelectedValue))
+            {
+                SqlCommand sqlCom1 = new SqlCommand(sqlQuery, sqlCon);
+                sqlCom1.Parameters.AddWithValue("@StudentID", studentID);
+                sqlCom1.Parameters.AddWithValue("@EventID", ddlActivity1.SelectedValue);
+                sqlCon.Open();
+                sqlCom1.ExecuteNonQuery();
+                sqlCon.Close();
+
+                string sqlQuery2 = "Insert Into StudentEvent Values (@EventID, @StudentID)";
+                SqlCommand sqlCom2 = new SqlCommand(sqlQuery2, sqlCon);
+                sqlCom2.Parameters.AddWithValue("@StudentID", studentID);
+                sqlCom2.Parameters.AddWithValue("@EventID", ddlActivity2.SelectedValue);
+                sqlCon.Open();
+                sqlCom2.ExecuteNonQuery();
+                sqlCon.Close();
+                lblSignUpError.Text = "Student Successfully Signed Up For Events!";
+            }
+            else
+            {
+                lblErrorActivity1.Text = "Error - Student may already be signed up for one or more event";
+                lblErrorActivity2.Text = "**Please make sure activity 1 and activity 2 are not the same!";
+            }
         }
 
         protected void btnDone_Click(object sender, EventArgs e)

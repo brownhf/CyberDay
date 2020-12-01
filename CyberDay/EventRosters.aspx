@@ -7,7 +7,7 @@
             background: #eee;
         }
         section {
-            width: 75%;
+            width: 100%;
             margin-right: auto;
             margin-left: auto;
         }
@@ -15,7 +15,7 @@
             margin: 80px;
         }
         .rosters{
-            max-width: 800px;
+            max-width: 1600px;
             margin: 0 auto;
             background-color: #fff;
             padding: 15px 40px 50px;
@@ -25,6 +25,7 @@
     </style>
     
     <div class="wrapper">
+        
         <section class="rosters">
           
             <fieldset>
@@ -55,7 +56,7 @@
                     </asp:TableRow>
                     <asp:TableRow>
                         <asp:TableCell>
-                            <asp:Button ID="btnSelectCyberDay" runat="server" Text="Print CyberDay Roster" OnClick="btnSelectCyberDay_Click" />
+                            <asp:Button ID="btnSelectCyberDay" runat="server" Text="View CyberDay Roster" OnClick="btnSelectCyberDay_Click" />
                         </asp:TableCell>
                         <asp:TableCell>
                             <asp:Label ID="lblIncorrectSelections" runat="server" Text=""></asp:Label>
@@ -65,15 +66,146 @@
             </fieldset>
 
             <br />
-
-            <fieldset>
-                <asp:GridView ID="grdvStudentRoster" runat="server" EmptyDataText="No Students Associated" />
-            </fieldset>
-
+            <hr />
             <br />
 
             <fieldset>
-                <asp:GridView ID="grdvVolunteerRoster" runat="server" EmptyDataText="No Volunteers Associated" />
+                <asp:Label ID="lblStudentTitle" runat="server" Text="Student Roster: " Font-Bold="true" Font-Size="Larger"></asp:Label>
+                <asp:GridView ID="grdvStudentRoster" runat="server" EmptyDataText="No Students Associated" Caption="Student Roster:" AutoGenerateColumns="false" DataKeyNames="StudentID" OnRowCancelingEdit="grdvStudentRoster_RowCancelingEdit" OnRowEditing="grdvStudentRoster_RowEditing" OnRowDeleting="grdvStudentRoster_RowDeleting" OnRowUpdating="grdvStudentRoster_RowUpdating">
+                    <Columns>
+                        <asp:TemplateField HeaderText="ID">
+                            <ItemTemplate>
+                                <asp:Label ID="lblStudentID" runat="server" Width="25" Text='<%# Eval("StudentID") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="First Name">
+                            <ItemTemplate>
+                                <asp:TextBox ID="lblStudentFirst" runat="server" Width="100" Text='<%# Eval("FirstName") %>'></asp:TextBox>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Last Name">
+                            <ItemTemplate>
+                                <asp:TextBox ID="lblStudentLast" runat="server" Width="100" Text='<%# Eval("LastName") %>'></asp:TextBox>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Age">
+                            <ItemTemplate>
+                                <asp:TextBox ID="lblStudentAge" runat="server" Width="50" Text='<%# Eval("Age") %>'></asp:TextBox>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Gender">
+                            <ItemTemplate>
+                                <asp:TextBox ID="lblStudentGender" runat="server" Width="75" Text='<%# Eval("Gender") %>'></asp:TextBox>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Email">
+                            <ItemTemplate>
+                                <asp:TextBox ID="lblStudentEmail" runat="server" Text='<%# Eval("Email") %>'></asp:TextBox>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Shirt">
+                            <ItemTemplate>
+                                <asp:TextBox ID="lblStudentShirt" runat="server" Width="100" Text='<%# Eval("ShirtSize") %>'></asp:TextBox>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Notes">
+                            <ItemTemplate>
+                                <asp:TextBox ID="lblStudentNotes" runat="server" Text='<%# Eval("Notes") %>'></asp:TextBox>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Dietary">
+                            <ItemTemplate>
+                                <asp:TextBox ID="lblStudentDietary" runat="server" Width="100" Text='<%# Eval("Dietary") %>'></asp:TextBox>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Allergies">
+                            <ItemTemplate>
+                                <asp:TextBox ID="lblStudentAllergies" runat="server" Text='<%# Eval("Allergies") %>'></asp:TextBox>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Teacher ID">
+                            <ItemTemplate>
+                                <asp:TextBox ID="lblStudentTeacher" runat="server" Width="75" Text='<%# Eval("TeacherID") %>'></asp:TextBox>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Lunch">
+                            <ItemTemplate>
+                                <asp:TextBox ID="lblStudentLunch" runat="server" Width="50" Text='<%# Eval("LunchAttendance") %>'></asp:TextBox>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="CyberDay ID">
+                            <ItemTemplate>
+                                <asp:TextBox ID="lblStudentCyberDay" runat="server" Width="75" Text='<%# Eval("CyberDayID") %>'></asp:TextBox>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:CommandField ShowEditButton="true" />
+                        <asp:CommandField ShowDeleteButton="true" />
+                    </Columns>
+                </asp:GridView>
+            </fieldset>
+
+            <br />
+            <hr />
+            <br />
+
+            <fieldset>
+                <asp:Label ID="lblVolunteerTitle" runat="server" Text="Volunteer Roster: " Font-Bold="true" Font-Size="Larger"></asp:Label>
+                <asp:GridView ID="grdvVolunteerRoster" runat="server" EmptyDataText="No Volunteers Associated" Caption="Volunteer Roster:" AutoGenerateColumns="false" DataKeyNames="VolunteerID" OnRowCancelingEdit="grdvVolunteerRoster_RowCancelingEdit" OnRowEditing="grdvVolunteerRoster_RowEditing" OnRowDeleting="grdvVolunteerRoster_RowDeleting" OnRowUpdating="grdvVolunteerRoster_RowUpdating" >
+                    <Columns>
+                        <asp:TemplateField HeaderText="ID">
+                            <ItemTemplate>
+                                <asp:Label ID="lblVolunteerID" runat="server" Width="25" Text='<%# Eval("VolunteerID") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="First Name">
+                            <ItemTemplate>
+                                <asp:TextBox ID="lblVolunteerFirst" runat="server" Width="100" Text='<%# Eval("FirstName") %>'></asp:TextBox>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Last Name">
+                            <ItemTemplate>
+                                <asp:TextBox ID="lblVolunteerLast" runat="server" Width="100" Text='<%# Eval("LastName") %>'></asp:TextBox>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Gender">
+                            <ItemTemplate>
+                                <asp:TextBox ID="lblVolunteerGender" runat="server" Width="75" Text='<%# Eval("Gender") %>'></asp:TextBox>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="JMU Affiliation">
+                            <ItemTemplate>
+                                <asp:TextBox ID="lblVolunteerAffiliation" runat="server" Width="100" Text='<%# Eval("CISRelation") %>'></asp:TextBox>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Previous Participation">
+                            <ItemTemplate>
+                                <asp:TextBox ID="lblVolunteerParticipation" runat="server" Width="50" Text='<%# Eval("PreviousParticipation") %>'></asp:TextBox>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Email">
+                            <ItemTemplate>
+                                <asp:TextBox ID="lblVolunteerEmail" runat="server" Text='<%# Eval("Email") %>'></asp:TextBox>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Phone">
+                            <ItemTemplate>
+                                <asp:TextBox ID="lblVolunteerPhone" runat="server" Width="100" Text='<%# Eval("PhoneNumber") %>'></asp:TextBox>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Lunch">
+                            <ItemTemplate>
+                                <asp:TextBox ID="lblVolunteerLunch" runat="server" Width="50" Text='<%# Eval("LunchAttendance") %>'></asp:TextBox>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="CyberDay ID">
+                            <ItemTemplate>
+                                <asp:TextBox ID="lblVolunteerCyberDay" runat="server" Width="75" Text='<%# Eval("CyberDayID") %>'></asp:TextBox>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:CommandField ShowEditButton="true" />
+                        <asp:CommandField ShowDeleteButton="true" />
+                    </Columns>
+                </asp:GridView>
             </fieldset>
         </section>
     </div>

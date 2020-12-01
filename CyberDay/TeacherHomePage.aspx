@@ -33,9 +33,9 @@
         <p>Click here to add another teacher or faculty member to register as a chaperone for the event.</p>
         <hr />
 
-        <h3><a href="TeacherRoster.aspx">VIEW/EDIT A CLASS ROSTER</a></h3>
+        <h3><a href="TeacherRosters.aspx">VIEW/EDIT A CLASS ROSTER</a></h3>
         <br />
-        <p>Click here for a Teacher to be able to view and/or edit a class roster attending a CyberDay.</p>
+        <p>Click here for a Teacher to be able to view and/or edit their class roster attending a CyberDay.</p>
         <hr />
 
 

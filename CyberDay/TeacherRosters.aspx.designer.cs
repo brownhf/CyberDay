@@ -7,65 +7,54 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CyberDay
-{
-
-
-    public partial class StudentPages
-    {
-
+namespace CyberDay {
+    
+    
+    public partial class TeacherRosters {
+        
         /// <summary>
-        /// head control.
+        /// lblTeacherRoster control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
-
+        protected global::System.Web.UI.WebControls.Label lblTeacherRoster;
+        
         /// <summary>
-        /// form1 control.
+        /// ddlTeacher control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
+        protected global::System.Web.UI.WebControls.DropDownList ddlTeacher;
+        
         /// <summary>
-        /// btnUserLogin control.
+        /// btnViewRoster control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton btnUserLogin;
-
+        protected global::System.Web.UI.WebControls.Button btnViewRoster;
+        
         /// <summary>
-        /// ddlUser control.
+        /// grdvStudentRoster control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlUser;
-
+        protected global::System.Web.UI.WebControls.GridView grdvStudentRoster;
+        
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// sqlPopulateTeacher control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
-
-        /// <summary>
-        /// ContentPlaceHolder2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder2;
+        protected global::System.Web.UI.WebControls.SqlDataSource sqlPopulateTeacher;
     }
 }

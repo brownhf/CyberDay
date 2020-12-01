@@ -33,12 +33,31 @@
             border: 1px solid #e5e5e5;
             border-radius: 10px;
         }
+        td{
+            padding-top: 15px;
+        }
     </style>
     <div class="wrapper">
         <section class="activityInfo">
             <fieldset class="info">
                 <h2>Upload Permission Form</h2>
                 <table>
+                    <tr>
+                        <td>
+                            <asp:Label ID="lblEmail" runat="server" Text="Enter Your Email:"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Label ID="lblConfirmEmail" runat="server" Text="Confirm Your Email:"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtConfirmEmail" runat="server"></asp:TextBox>
+                        </td>
+                    </tr>
                     <tr>
                         <td>
                             <asp:Label ID="lblStudent" runat="server" Text="Student Name:"></asp:Label>
@@ -61,7 +80,7 @@
                     <tr>
                         <td>
                             <br />
-                            <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
+                            <asp:Label ID="lblError" runat="server" Text="" ForeColor="Red"></asp:Label>
                         </td>
                         <td>
                             <asp:Button ID="btnBack" runat="server" Text="Back" OnClick="btnBack_Click" />
