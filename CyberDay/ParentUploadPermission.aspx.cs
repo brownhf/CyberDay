@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using System.Net.Mail;
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.Configuration; //Lets us access our Web.config file!
@@ -48,7 +48,11 @@ namespace CyberDay
                                 {
                                     lblError.Text = "This students form has already been uploaded";
                                 }
-                                else
+                                else if (txtEmail.Text != txtConfirmEmail.Text)
+                                {
+                                    lblError.Text = "Error - emails do not match";
+                                }
+                                else if (check == 0 && (txtEmail.Text == txtConfirmEmail.Text))
                                 {
                                     using (SqlCommand cmd = new SqlCommand(query, sqlCon))
                                     {
@@ -62,6 +66,37 @@ namespace CyberDay
                                         sqlCon.Close();
 
                                         lblError.Text = "Success! CyberDay Permission Form Uploaded!";
+
+                                        //Send Confirmation Email
+                                        System.Net.Mail.MailMessage mail = new System.Net.Mail.MailMessage();
+                                        mail.To.Add(txtConfirmEmail.Text);
+                                        mail.From = new MailAddress("thisIsATestExample1234@gmail.com", "Permission Slip Successfully Uploaded", System.Text.Encoding.UTF8);
+                                        mail.Subject = "Permission Form Successfully Uploaded";
+                                        mail.SubjectEncoding = System.Text.Encoding.UTF8;
+                                        mail.Body = "You have successfully uploaded a permission form for your student!";
+                                        mail.BodyEncoding = System.Text.Encoding.UTF8;
+                                        mail.IsBodyHtml = true;
+                                        mail.Priority = MailPriority.High;
+                                        SmtpClient client = new SmtpClient();
+                                        client.Credentials = new System.Net.NetworkCredential("thisIsATestExample1234@gmail.com", "Dukes98!");
+                                        client.Port = 587;
+                                        client.Host = "smtp.gmail.com";
+                                        client.EnableSsl = true;
+                                        try
+                                        {
+                                            client.Send(mail);
+                                        }
+                                        catch (Exception ex)
+                                        {
+                                            Exception ex2 = ex;
+                                            string errorMessage = string.Empty;
+                                            while (ex2 != null)
+                                            {
+                                                errorMessage += ex2.ToString();
+                                                ex2 = ex2.InnerException;
+                                            }
+                                        }
+
                                     }
 
                                 }

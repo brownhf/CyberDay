@@ -118,22 +118,6 @@
                     </tr>
                     <tr>
                         <td>
-                            <asp:Label ID="lblShirtSize" runat="server" Text="Shirt Size:"></asp:Label>
-                        </td>
-                        <td>
-                            <asp:DropDownList ID="ddlShirtSize" runat="server">
-                                <asp:ListItem Text="--Select--" Value="select"></asp:ListItem>
-                                <asp:ListItem Text="Small" Value="Small"></asp:ListItem>
-                                <asp:ListItem Text="Medium" Value="Medium"></asp:ListItem>
-                                <asp:ListItem Text="Large" Value="Large"></asp:ListItem>
-                            </asp:DropDownList>
-                        </td>
-                        <td>
-                            <asp:Label ID="lblShirtSizeError" runat="server" Text="" ForeColor="Red" Font-Italic="true"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
                             <asp:Label ID="lblNotes" runat="server" Text="Notes:"></asp:Label>
                             <br />
                         </td>
@@ -171,7 +155,6 @@
                             <h4>Student Meal Info:</h4>
                         </td>
                     </tr>
-                    <tr>
                         <tr>
                         <td>
                             <asp:Label ID="lblLunchAttendance" runat="server" Text="Attending Lunch:"></asp:Label>
@@ -226,7 +209,7 @@
                     </tr>
                     <tr>
                         <td>
-                             <asp:Label ID="lblStudentSubmitError" runat="server" Text="" ForeColor="Red"></asp:Label>
+                             <asp:Label ID="lblStudentSubmitError" runat="server" Text=""></asp:Label>
                         </td>
                     </tr>
                 </table>
