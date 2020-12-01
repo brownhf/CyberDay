@@ -76,6 +76,15 @@ namespace CyberDay {
         protected global::System.Web.UI.WebControls.Label lblIncorrectSelections;
         
         /// <summary>
+        /// lblStudentTitle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblStudentTitle;
+        
+        /// <summary>
         /// grdvStudentRoster control.
         /// </summary>
         /// <remarks>
@@ -83,6 +92,15 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView grdvStudentRoster;
+        
+        /// <summary>
+        /// lblVolunteerTitle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblVolunteerTitle;
         
         /// <summary>
         /// grdvVolunteerRoster control.

@@ -7,16 +7,16 @@
             background: #eee;
         }
         section {
-            width: 75%;
+            width: 100%;
             margin-right: auto;
             margin-left: auto;
         }
-        .wrapper {
+        /*.wrapper {
             margin: 80px;
-        }
+        }*/
         .roster {
-            max-width: 800px;
-            margin: 0 auto;
+            /*max-width: 800px;
+            margin: 0 auto;*/
             background-color: #fff;
             padding: 15px 40px 50px;
             border: 1px solid #e5e5e5;
@@ -24,7 +24,7 @@
         }
     </style>
 
-    <div class="wrapper">
+    <%--<div class="wrapper">--%>
         <section class="roster">
             <fieldset>
                 <asp:Table runat="server">
@@ -46,29 +46,29 @@
             <fieldset>
                 <asp:GridView ID="grdvStudentRoster" runat="server" EmptyDataText="No Students Associated" AutoGenerateColumns="false" DataKeyNames="StudentID" OnRowCancelingEdit="grdvStudentRoster_RowCancelingEdit" OnRowEditing="grdvStudentRoster_RowEditing" OnRowDeleting="grdvStudentRoster_RowDeleting" OnRowUpdating="grdvStudentRoster_RowUpdating">
                     <Columns>
-                        <asp:TemplateField HeaderText="Student ID">
+                        <asp:TemplateField HeaderText="ID">
                             <ItemTemplate>
-                                <asp:Label ID="lblStudentID" runat="server" Text='<%# Eval("StudentID") %>'></asp:Label>
+                                <asp:Label ID="lblStudentID" runat="server" Width="25" Text='<%# Eval("StudentID") %>'></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="First Name">
                             <ItemTemplate>
-                                <asp:TextBox ID="lblStudentFirst" runat="server" Text='<%# Eval("FirstName") %>'></asp:TextBox>
+                                <asp:TextBox ID="lblStudentFirst" runat="server" Width="100" Text='<%# Eval("FirstName") %>'></asp:TextBox>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Last Name">
                             <ItemTemplate>
-                                <asp:TextBox ID="lblStudentLast" runat="server" Text='<%# Eval("LastName") %>'></asp:TextBox>
+                                <asp:TextBox ID="lblStudentLast" runat="server" Width="100" Text='<%# Eval("LastName") %>'></asp:TextBox>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Age">
                             <ItemTemplate>
-                                <asp:TextBox ID="lblStudentAge" runat="server" Text='<%# Eval("Age") %>'></asp:TextBox>
+                                <asp:TextBox ID="lblStudentAge" runat="server" Width="50" Text='<%# Eval("Age") %>'></asp:TextBox>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Gender">
                             <ItemTemplate>
-                                <asp:TextBox ID="lblStudentGender" runat="server" Text='<%# Eval("Gender") %>'></asp:TextBox>
+                                <asp:TextBox ID="lblStudentGender" runat="server" Width="75" Text='<%# Eval("Gender") %>'></asp:TextBox>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Email">
@@ -76,9 +76,9 @@
                                 <asp:TextBox ID="lblStudentEmail" runat="server" Text='<%# Eval("Email") %>'></asp:TextBox>
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:TemplateField HeaderText="ShirtSize">
+                        <asp:TemplateField HeaderText="Shirt Size">
                             <ItemTemplate>
-                                <asp:TextBox ID="lblStudentShirt" runat="server" Text='<%# Eval("ShirtSize") %>'></asp:TextBox>
+                                <asp:TextBox ID="lblStudentShirt" runat="server" Width="100" Text='<%# Eval("ShirtSize") %>'></asp:TextBox>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Notes">
@@ -88,7 +88,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Dietary">
                             <ItemTemplate>
-                                <asp:TextBox ID="lblStudentDietary" runat="server" Text='<%# Eval("Dietary") %>'></asp:TextBox>
+                                <asp:TextBox ID="lblStudentDietary" runat="server" Width="100" Text='<%# Eval("Dietary") %>'></asp:TextBox>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Allergies">
@@ -98,17 +98,17 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Teacher ID">
                             <ItemTemplate>
-                                <asp:TextBox ID="lblStudentTeacher" runat="server" Text='<%# Eval("TeacherID") %>'></asp:TextBox>
+                                <asp:TextBox ID="lblStudentTeacher" runat="server" Width="75" Text='<%# Eval("TeacherID") %>'></asp:TextBox>
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:TemplateField HeaderText="Lunch Attendance">
+                        <asp:TemplateField HeaderText="Lunch">
                             <ItemTemplate>
-                                <asp:TextBox ID="lblStudentLunch" runat="server" Text='<%# Eval("LunchAttendance") %>'></asp:TextBox>
+                                <asp:TextBox ID="lblStudentLunch" runat="server" Width="50" Text='<%# Eval("LunchAttendance") %>'></asp:TextBox>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="CyberDay ID">
                             <ItemTemplate>
-                                <asp:TextBox ID="lblStudentCyberDay" runat="server" Text='<%# Eval("CyberDayID") %>'></asp:TextBox>
+                                <asp:TextBox ID="lblStudentCyberDay" runat="server" Width="75" Text='<%# Eval("CyberDayID") %>'></asp:TextBox>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:CommandField ShowEditButton="true" />
@@ -117,6 +117,6 @@
                 </asp:GridView>
             </fieldset>
         </section>
-    </div>
+   <%-- </div>--%>
     <asp:SqlDataSource ID="sqlPopulateTeacher" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDayDB %>" SelectCommand="SELECT [dbo].[Teacher].[TeacherID], [dbo].[Teacher].[FirstName] + ' ' + [dbo].[Teacher].[LastName] AS TeacherName FROM [dbo].[Teacher]"></asp:SqlDataSource>
 </asp:Content>
