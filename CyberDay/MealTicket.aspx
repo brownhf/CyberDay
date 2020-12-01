@@ -43,7 +43,7 @@
                             <asp:Label ID="lblSelectCyberDay" runat="server" Text="Select CyberDay: "></asp:Label>
                         </asp:TableCell>
                         <asp:TableCell>
-                            <asp:DropDownList ID="ddlSelectCyberDay" runat="server" DataSourceID="sqlPopulateCyberDay" DataTextField="CyberDayDisplay" DataValueField="CyberDayID" OnSelectedIndexChanged="ddlSelectCyberDay_SelectedIndexChanged"></asp:DropDownList>
+                            <asp:DropDownList ID="ddlSelectCyberDay" runat="server" DataSourceID="sqlPopulateCyberDay" DataTextField="CyberDayDisplay" DataValueField="CyberDayID" OnSelectedIndexChanged="ddlSelectCyberDay_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow>
@@ -67,7 +67,6 @@
                 <div>
                     <asp:GridView
                         ID="grdLunchAttendance"
-                        DataSourceID="srcLunchAttendance"
                         runat="server"
                         CellPadding="3"
                         CellSpacing="2"
@@ -81,10 +80,5 @@
             </fieldset>
         </section>
     </div>
-    <asp:SqlDataSource ID="srcLunchAttendance" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDayDB %>" SelectCommand="SELECT [dbo].[Lunch].[FirstName], [dbo].[Lunch].[LastName] FROM [dbo].[Lunch] WHERE [dbo].[Lunch].[Attendance] = 'yes' AND [dbo].[Lunch].[CyberDayID] = @CyberDay">
-            <SelectParameters>
-                <asp:ControlParameter ControlID="ddlSelectCyberDay" PropertyName="SelectedValue" Name="CyberDay" Type="String" />
-            </SelectParameters>
-    </asp:SqlDataSource>
     <asp:SqlDataSource ID="sqlPopulateCyberDay" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDayDB %>" SelectCommand="SELECT [dbo].[CyberDay].[CyberDayID], [dbo].[CyberDay].[Date] + ' Coordinated By: ' + [dbo].[Coordinator].[FirstName] + ' ' + [dbo].[Coordinator].[LastName] AS CyberDayDisplay FROM [dbo].[CyberDay], [dbo].[Coordinator] WHERE [dbo].[CyberDay].[CoordinatorID] = [dbo].[Coordinator].[CoordinatorID] ORDER BY [dbo].[CyberDay].[CyberDayID] DESC" />
 </asp:Content>

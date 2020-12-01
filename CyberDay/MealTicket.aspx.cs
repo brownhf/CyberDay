@@ -67,7 +67,27 @@ namespace CyberDay
 
         protected void btnPdf_Click(object sender, EventArgs e)
         {
+
+            Paragraph para = new Paragraph();
+            Chunk c = new Chunk("    ");
+            para.Add(c);
+
+            iTextSharp.text.Font textFont = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA
+                                                , 18
+                                                , iTextSharp.text.Font.BOLD
+                                                , BaseColor.DARK_GRAY); ;
+            Paragraph p = new Paragraph();
+            Chunk cd = new Chunk("CyberDay:  " + ddlSelectCyberDay.SelectedItem + "    ", textFont);
+            p.Add(cd);
+
             PdfPTable pdfTable = new PdfPTable(grdLunchAttendance.HeaderRow.Cells.Count);
+            pdfTable.SpacingBefore = 50;
+            pdfTable.SpacingAfter = 100;
+            pdfTable.HorizontalAlignment = Element.ALIGN_CENTER;
+            pdfTable.DefaultCell.Padding = 5;
+            pdfTable.DefaultCell.FixedHeight = 50;
+
+
             foreach (TableCell headerCell in grdLunchAttendance.HeaderRow.Cells)
             {
                 PdfPCell pdfCell = new PdfPCell(new Phrase(headerCell.Text));
@@ -87,6 +107,8 @@ namespace CyberDay
             PdfWriter.GetInstance(pdfDocument, Response.OutputStream);
 
             pdfDocument.Open();
+            pdfDocument.Add(para);
+            pdfDocument.Add(p);
             pdfDocument.Add(pdfTable);
             pdfDocument.Close();
 
