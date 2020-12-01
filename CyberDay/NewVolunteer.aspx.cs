@@ -30,8 +30,8 @@ namespace CyberDay
             duplicateQuery += "AND [Volunteer].[PreviousParticipation] = '" + ddlPreviousParticipation.Text.Trim() + "' ";
             duplicateQuery += "AND [Volunteer].[Email] = '" + txtEmail.Text.Trim() + "' ";
             duplicateQuery += "AND [Volunteer].[PhoneNumber] = '" + txtPhone.Text.Trim() + "' ";
-            duplicateQuery += "AND [Volunteer].[LunchAttendance] = '" + ddlLunchAttendance.Text.Trim() + "' ";
-            duplicateQuery += "AND [Volunteer].[CyberDayID] = '" + ddlCyberDay.Text.Trim() + "' ";
+            duplicateQuery += "AND [Volunteer].[LunchAttendance] = '" + ddlLunchAttendance.SelectedValue.Trim() + "' ";
+            duplicateQuery += "AND [Volunteer].[CyberDayID] = '" + ddlCyberDay.SelectedValue.Trim() + "' ";
 
             string sqlInsertLunch = "Insert Into Lunch Values (@FirstName, @LastName, @Attendance, @CyberDayID)";
 

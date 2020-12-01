@@ -17,16 +17,6 @@ namespace CyberDay
         {
             lblAddStatusFailEvent.Visible = false;
             lblAddStatusSuccessEvent.Visible = false;
-            //String sqlQuery = "SELECT [Event].[EventName], [Event].[Description], [Event].[Building], [Event].[RoomNumber], [Event].[StartTime] + ' - ' + [Event].[EndTime] AS [Time]";
-            //sqlQuery += "FROM [Event] ";
-            //sqlQuery += "WHERE [Event].[CyberDayID] = " + ddlCyberDay.SelectedValue + "";
-
-            //SqlConnection sqlConnect2 = new SqlConnection(WebConfigurationManager.ConnectionStrings["CyberDayDB"].ToString());
-            //SqlDataAdapter sqlAdapter = new SqlDataAdapter(sqlQuery, sqlConnect2);
-            //DataTable dtCyberDayEvents = new DataTable();
-            //sqlAdapter.Fill(dtCyberDayEvents);
-            //grdvEvents.DataSource = dtCyberDayEvents;
-            //grdvEvents.DataBind();
         }
 
         protected void btnAddEvent_Click(object sender, EventArgs e)
