@@ -22,17 +22,21 @@
             border: 1px solid #e5e5e5;
             border-radius: 10px;
         }
+        
     </style>    
     
     <div class="wrapper">
             <section class="newCyber">
                 <fieldset>
-                    <asp:Table runat="server">
+                    <asp:Table runat="server" CellPadding="10">
                         <asp:TableRow>
                             <asp:TableCell>
-                                <asp:Label ID="lblBuildSchedule" runat="server" Text="Build a CyberDay Schedule" Font-Bold="true" Font-Size="Larger"></asp:Label>
+                                <asp:Label ID="lblBuildSchedule" runat="server" Text="Build a CyberDay Schedule" Font-Bold="true" Font-Size="Larger" ></asp:Label>
                             </asp:TableCell>
                         </asp:TableRow>
+
+                        <asp:TableRow></asp:TableRow>
+
                         <asp:TableRow>
                             <asp:TableCell>
                                 <asp:Label ID="lblCyberDay" runat="server" Text="Assign to CyberDay: "></asp:Label>
@@ -41,6 +45,9 @@
                                 <asp:DropDownList ID="ddlCyberDay" runat="server" DataSourceID="sqlPopulateCyberDay" DataTextField="CyberDayDisplay" DataValueField="CyberDayID" ></asp:DropDownList>
                             </asp:TableCell>
                         </asp:TableRow>
+
+                        <asp:TableRow></asp:TableRow>
+
                         <asp:TableRow>
                             <asp:TableCell>
                                 <asp:Label ID="lblEventName" runat="server" Text="Activity Name: "></asp:Label>
@@ -49,6 +56,9 @@
                                 <asp:TextBox ID="txtEventName" runat="server" Width="400px" AutoCompleteType="Disabled"></asp:TextBox>
                             </asp:TableCell>
                         </asp:TableRow>
+
+                        <asp:TableRow></asp:TableRow>
+
                         <asp:TableRow>
                             <asp:TableCell>
                                 <asp:Label ID="lblEventDescription" runat="server" Text="Activity Description: "></asp:Label>
@@ -154,7 +164,7 @@
                 <br />
                 <hr />
                 <fieldset>
-                    <asp:Table runat="server">
+                    <asp:Table runat="server" CellPadding="10">
                         <asp:TableRow>
                             <asp:TableCell>
                                 <asp:Label ID="lblGridviewTitle" runat="server" Text="View, Edit, and/or Delete Activities for a CyberDay" Font-Bold="true" Font-Size="Larger"></asp:Label>

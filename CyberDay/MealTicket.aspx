@@ -31,7 +31,7 @@
     <div class="wrapper">
         <section class="newCyber">
             <fieldset>
-                <asp:Table runat="server">
+                <asp:Table runat="server" CellPadding="10">
                     <asp:TableRow>
                         <asp:TableCell>
                             <asp:Label ID="lblMealTicketInfo" runat="server" Text="View Total Quantity and Price of Tickets for a CyberDay: " Font-Bold="true" Font-Size="Larger" ></asp:Label>

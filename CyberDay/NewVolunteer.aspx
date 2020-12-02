@@ -68,6 +68,7 @@
                             </asp:DropDownList>
                         </asp:TableCell>
                     </asp:TableRow>
+              
                     <asp:TableRow>
                         <asp:TableCell>
                             <asp:Label ID="lblVolunteerType" runat="server" Text="Volunteer Type: "></asp:Label>

@@ -29,7 +29,7 @@
         <section class="rosters">
           
             <fieldset>
-                <asp:Table runat="server">
+                <asp:Table runat="server" CellPadding="10">
                     <asp:TableRow>
                         <asp:TableCell>
                             <asp:Label ID="lblCyberDayRoster" runat="server" Text="View a CyberDay Roster: " Font-Bold="true" Font-Size="Larger"></asp:Label>

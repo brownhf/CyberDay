@@ -26,7 +26,7 @@
     <div class="wrapper">
         <section class="assign">
             <fieldset>
-                <asp:Table runat="server">
+                <asp:Table runat="server" CellPadding="10">
                     <asp:TableRow>
                         <asp:TableCell>
                             <asp:Label ID="lblVolunteer" runat="server" Text="Select a Volunteer: "></asp:Label>
