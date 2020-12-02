@@ -62,7 +62,7 @@
                 </div>
             </nav>
 
-            <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #CBB677">
+            <nav class="navbar navbar-expand-md navbar-dark justify-content-center" style="background-color: #CBB677">
                 <ul class="nav navbar-nav text-center">
                     <li class="nav-item active">
                         <a class="nav-link" href="StudentHome.aspx">HOME</a>
@@ -77,9 +77,7 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="StudentContact.aspx">CONTACT</a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="MainPage.aspx">HOME PAGE</a>
-                    </li>
+                  
                 </ul>
             </nav>
 
