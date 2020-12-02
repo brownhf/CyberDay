@@ -7,11 +7,14 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <%--<asp:Image ID="headImg" runat="server" CssClass="headImg" ImageUrl="Images/studentsOnQuad.jpg" />--%>
     <%--<asp:Image ID="aerialQuad" runat="server" CssClass="aerialQuad" ImageUrl="Images/aerial-quad.jpg" Height="417px" Width="1249px" />--%>
-    <asp:Image ID="dukeDogs" runat="server" CssClass="dukeDogs" ImageUrl="Images/dukeDogs.png" />
+    <asp:Image ID="CyberDay" runat="server" CssClass="CyberDay" ImageUrl="Images/cyberdayPic.jpg" />
     <style>
         /*WAS HAVING ISSUE WITH CURRENT PICTURE FITTING WHOLE SCREEN SO I HAD TO FIND A NEW ONE*/
-        .dukeDogs {
-            max-width: 100%;
+        .CyberDay {
+            width: 50%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
         /*SECTION IS THE BODY OF THE SUB PAGES/THE CONTENT PLACE HOLDERS BODY, SO THE 75% ONLY APPLIES TO THAT PORTION OF THE PAGE*/
         section {

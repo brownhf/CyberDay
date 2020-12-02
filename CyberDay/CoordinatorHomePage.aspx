@@ -9,10 +9,10 @@
     <style>
         /*WAS HAVING ISSUE WITH CURRENT PICTURE FITTING WHOLE SCREEN SO I HAD TO FIND A NEW ONE*/
         .CyberDay {
-            max-width: 100%;
-            align-content: center;
-            height: 350px;
-            width: 1490px;
+            width: 50%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
             
             
         }
