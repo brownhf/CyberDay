@@ -219,8 +219,8 @@
     <asp:SqlDataSource
         ID="srcTeachers"
         ConnectionString="<%$ ConnectionStrings:CyberDayDB %>"
-        SelectCommand="Select TeacherID, FirstName + ' ' + LastName as [Name] From Teacher"
+        SelectCommand="Select TeacherID, FirstName + ' ' + LastName as [Name] From Teacher ORDER BY TeacherID DESC"
         runat="server"></asp:SqlDataSource>
-    <asp:SqlDataSource ID="sqlPopulateCyberDay" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDayDB %>" SelectCommand="SELECT [dbo].[CyberDay].[CyberDayID], [dbo].[CyberDay].[Date] + ' Coordinated By: ' + [dbo].[Coordinator].[FirstName] + ' ' + [dbo].[Coordinator].[LastName] AS CyberDayDisplay FROM [dbo].[CyberDay], [dbo].[Coordinator] WHERE [dbo].[CyberDay].[CoordinatorID] = [dbo].[Coordinator].[CoordinatorID] ORDER BY [dbo].[CyberDay].[CyberDayID] DESC" />
+    <asp:SqlDataSource ID="sqlPopulateCyberDay" runat="server" ConnectionString="<%$ ConnectionStrings:CyberDayDB %>" SelectCommand="SELECT [dbo].[CyberDay].[CyberDayID], [dbo].[CyberDay].[Date] + ' With Teacher: ' + [dbo].[Teacher].[FirstName] + ' ' + [dbo].[Teacher].[LastName] AS CyberDayDisplay FROM [dbo].[CyberDay], [dbo].[Teacher] WHERE [dbo].[CyberDay].[CyberDayID] = [dbo].[Teacher].[CyberDayID] ORDER BY [dbo].[Teacher].[TeacherID] DESC" />
 </asp:Content>
 
