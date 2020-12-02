@@ -11,6 +11,7 @@ using System.Data;
 using System.Net.Mail;
 using System.Data.SqlClient;
 using System.Web.Configuration; //Lets us access our Web.config file!
+using System.Drawing;
 
 namespace CyberDay
 {
@@ -48,9 +49,10 @@ namespace CyberDay
                                 }
                                 if (check == 1)
                                 {
+                                    lblError.ForeColor = Color.Red;
                                     lblError.Text = "This students form has already been uploaded";
                                 }
-                                else
+                                else if (check == 0 && (txtEmail.Text == txtConfirmEmail.Text))
                                 {
                                     using (SqlCommand cmd = new SqlCommand(query, sqlCon))
                                     {
@@ -63,6 +65,7 @@ namespace CyberDay
                                         cmd.ExecuteNonQuery();
                                         sqlCon.Close();
 
+                                        lblError.ForeColor = Color.Green;
                                         lblError.Text = "Success! Photo Release Form Uploaded!";
 
                                         //Send Confirmation Email

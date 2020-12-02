@@ -41,7 +41,7 @@
     <div class="wrapper">
         <section class="activityInfo">
             <fieldset class="info">
-                <h2>Upload Permission Form</h2>
+                <h2>Upload Photo Release Form</h2>
                 <table>
                     <tr>
                         <td>
