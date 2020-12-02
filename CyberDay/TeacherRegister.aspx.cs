@@ -93,5 +93,13 @@ namespace CyberDay
         {
             Response.Redirect("CoordinatorHomePage.aspx");
         }
+
+        protected void btnPopulateBoxes_Click(object sender, EventArgs e)
+        {
+            txtFirst.Text = "Daniel";
+            txtLast.Text = "Rosen";
+            txtEmail.Text = "rosen@yahoo.com";
+            txtPhone.Text = "483-384-7629";
+        }
     }
 }
