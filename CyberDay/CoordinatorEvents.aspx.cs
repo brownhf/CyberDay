@@ -152,10 +152,10 @@ namespace CyberDay
 
         protected void btnPopulateBoxes_Click(object sender, EventArgs e)
         {
-            txtEventName = "PowerPoint";
-            txtEventDescription = "Learn the basics of ppt";
-            txtBuilding = "Showker";
-            txtRoomNumber = "105";
+            txtEventName.Text = "PowerPoint";
+            txtEventDescription.Text = "Learn the basics of ppt";
+            txtBuilding.Text = "Showker";
+            txtRoomNumber.Text = "105";
         }
     }
 }
