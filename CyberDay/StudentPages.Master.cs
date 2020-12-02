@@ -12,25 +12,27 @@ namespace CyberDay
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["Username"] != null)
+            if (!IsPostBack) 
             {
-                //btnLogin.Visible = false;
-                btnUserLogin.Visible = false;
+                if (Session["Username"] != null)
+                {
+                    //btnLogin.Visible = false;
+                    btnUserLogin.Visible = false;
 
-                string currentUser = Session["Username"].ToString();
+                    string currentUser = Session["Username"].ToString();
 
-                ddlUser.Visible = true;
-                ddlUser.Items.Insert(0, currentUser);
-                ListItem separator = new ListItem("----------", "");
-                separator.Attributes.Add("disabled", "true");
-                ddlUser.Items.Insert(1, separator);
-                ddlUser.Items.Insert(2, "Logout");
-                //if(ddlUser.SelectedIndex == 2)
-                //{
-                //    Session.Abandon();
-                //    Response.Redirect(Request.RawUrl);
-                //}
-
+                    ddlUser.Visible = true;
+                    ddlUser.Items.Insert(0, currentUser);
+                    ListItem separator = new ListItem("----------", "");
+                    separator.Attributes.Add("disabled", "true");
+                    ddlUser.Items.Insert(1, separator);
+                    ddlUser.Items.Insert(2, "Logout");
+                    //if(ddlUser.SelectedIndex == 2)
+                    //{
+                    //    Session.Abandon();
+                    //    Response.Redirect(Request.RawUrl);
+                    //}
+                }
             }
         }
 
