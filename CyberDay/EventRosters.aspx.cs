@@ -147,6 +147,10 @@ namespace CyberDay
             Label volunteerID = grdvVolunteerRoster.Rows[e.RowIndex].FindControl("lblVolunteerID") as Label;
             SqlConnection sqlConnect = new SqlConnection(WebConfigurationManager.ConnectionStrings["CyberDayDB"].ToString());
             sqlConnect.Open();
+            SqlCommand volunteerRosterDelete = new SqlCommand("DELETE FROM [dbo].[VolunteerRoster] WHERE [dbo].[VolunteerRoster].[VolunteerID] = @volunteerID");
+            volunteerRosterDelete.Parameters.AddWithValue("@volunteerID", volunteerID.Text);
+            volunteerRosterDelete.Connection = sqlConnect;
+            volunteerRosterDelete.ExecuteNonQuery();
             SqlCommand volunteerDelete = new SqlCommand("DELETE FROM [dbo].[Volunteer] WHERE [dbo].[Volunteer].[VolunteerID] = @volunteerID");
             volunteerDelete.Parameters.AddWithValue("@volunteerID", volunteerID.Text);
             volunteerDelete.Connection = sqlConnect;

@@ -84,5 +84,14 @@ namespace CyberDay
         {
             Response.Redirect("TeacherRegister.aspx");
         }
+
+        protected void btnPopulateBoxes_Click(object sender, EventArgs e)
+        {
+            txtSchoolName.Text = "Massanutten Middle";
+            txtStreet.Text = "100 Massanutten Ln";
+            txtCity.Text = "Elkton";
+            txtState.Text = "VA";
+            txtZip.Text = "23858";
+        }
     }
 }

@@ -14,7 +14,7 @@ using System.Drawing;
 
 namespace CyberDay
 {
-    public partial class ParentChaperone : System.Web.UI.Page
+    public partial class TeacherChaperone : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -47,24 +47,24 @@ namespace CyberDay
             lblEmailError.Text = "";
             lblAllergiesError.Text = "";
 
-            if(numCheck == 1)
+            if (numCheck == 1)
             {
                 lblDuplicateError.ForeColor = Color.Red;
                 lblDuplicateError.Text = "Error - Chaperone already exists";
             }
-            else if(txtFirstName.Text == "")
+            else if (txtFirstName.Text == "")
             {
                 lblFirstNameError.Text = "Error - field cannot be blank";
             }
-            else if(txtLastName.Text == "")
+            else if (txtLastName.Text == "")
             {
                 lblLastNameError.Text = "Error - field cannot be blank";
             }
-            else if(txtPhoneNumber.Text == "")
+            else if (txtPhoneNumber.Text == "")
             {
                 lblPhoneNumber.Text = "Error - field cannot be blank";
             }
-            else if(txtEmail.Text == "")
+            else if (txtEmail.Text == "")
             {
                 lblEmailError.Text = "Error - field cannot be blank";
             }
@@ -72,7 +72,7 @@ namespace CyberDay
             {
                 lblLunchAttendanceError.Text = "Error - field left blank";
             }
-            else if(txtAllergies.Text == "")
+            else if (txtAllergies.Text == "")
             {
                 lblAllergiesError.Text = "Error - field cannot be blank";
             }
@@ -101,17 +101,6 @@ namespace CyberDay
                 lblDuplicateError.ForeColor = Color.Green;
                 lblDuplicateError.Text = "Chaperone Successfully Signed Up!";
             }
-        }
-
-        protected void btnPopulate_Click(object sender, EventArgs e)
-        {
-            txtFirstName.Text = "John";
-            txtLastName.Text = "Smith";
-            txtPhoneNumber.Text = "540-809-9099";
-            txtEmail.Text = "johnsmith@gmail.com";
-            ddlCyberDay.SelectedIndex = 0;
-            ddlLunchAttendance.SelectedIndex = 1;
-            txtAllergies.Text = "None";
         }
     }
 }

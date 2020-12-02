@@ -114,6 +114,11 @@
                                 <asp:Label ID="lblAddStatusFail" runat="server" Text="" ForeColor="Red"></asp:Label>
                             </asp:TableCell>
                         </asp:TableRow>
+                        <asp:TableRow>
+                            <asp:TableCell>
+                                <asp:Button ID="btnPopulateBoxes" runat="server" Text="Populate" CausesValidation="false" OnClick="btnPopulateBoxes_Click" />
+                            </asp:TableCell>
+                        </asp:TableRow>
                     </asp:Table>
                 </fieldset>
                 <br />

@@ -21,9 +21,11 @@
             height: auto;
         }
 
-        .quad {
-            max-width: 100%;
-            height: auto;
+        .CyberDay {
+            width: 50%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         footer {
@@ -99,7 +101,7 @@
                     </ul>
                 </nav>
 
-                <asp:Image ID="Image2" CssClass="quad" runat="server" ImageUrl="~/Images/0.jpg" />
+                <asp:Image ID="CyberDay" runat="server" CssClass="CyberDay" ImageUrl="Images/cyberdayPic.jpg" />
 
             </header>
             <section class="sectionContent" runat="server">

@@ -55,11 +55,13 @@
                     </li>--%>
                 </ul>
             </nav>
-            <asp:Image ID="imgQuad" CssClass="astheticQuad" ImageUrl="Images/jmu_football.jpg" runat="server" />
+            <asp:Image ID="CyberDay" runat="server" CssClass="CyberDay" ImageUrl="Images/cyberdayPic.jpg" />
             <style>
-                .astheticQuad{
-                    max-width: 100%;
-                    max-height: 20%;
+                .CyberDay{
+                    width: 50%;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
                 }
                 h1{
                     text-align:center;

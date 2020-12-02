@@ -9,8 +9,12 @@
     <style>
         /*WAS HAVING ISSUE WITH CURRENT PICTURE FITTING WHOLE SCREEN SO I HAD TO FIND A NEW ONE*/
         .CyberDay {
-            max-width: 100%;
-            align-content: center;
+            width: 50%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            
+            
         }
         /*SECTION IS THE BODY OF THE SUB PAGES/THE CONTENT PLACE HOLDERS BODY, SO THE 75% ONLY APPLIES TO THAT PORTION OF THE PAGE*/
         section {

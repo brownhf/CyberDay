@@ -2,12 +2,15 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:Image ID="ExploreJMU" runat="server" CssClass="ExploreJMU" ImageUrl="Images/ExploreJMU.jpg" />
+    <asp:Image ID="CyberDay" runat="server" CssClass="CyberDay" ImageUrl="Images/cyberdayPic.jpg" />
 
     <style>
         /*WAS HAVING ISSUE WITH CURRENT PICTURE FITTING WHOLE SCREEN SO I HAD TO FIND A NEW ONE*/
-        .ExploreJMU {
-            max-width: 100%;
+        .CyberDay {
+            width: 50%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
         /*SECTION IS THE BODY OF THE SUB PAGES/THE CONTENT PLACE HOLDERS BODY, SO THE 75% ONLY APPLIES TO THAT PORTION OF THE PAGE*/
         section {
@@ -28,7 +31,7 @@
         <h1>TEACHER HOME</h1>
         <hr />
 
-        <h3><a href="ParentChaperone.aspx">REGISTER OTHER TEACHERS/CHAPERONES</a></h3>
+        <h3><a href="TeacherChaperone.aspx">REGISTER OTHER TEACHERS/CHAPERONES</a></h3>
         <br />
         <p>Click here to add another teacher or faculty member to register as a chaperone for the event.</p>
         <hr />

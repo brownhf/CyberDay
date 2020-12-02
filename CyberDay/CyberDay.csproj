@@ -91,18 +91,7 @@
     <Content Include="CoordinatorHomePage.aspx" />
     <Content Include="CreateAccountPage.aspx" />
     <Content Include="EventRosters.aspx" />
-    <Content Include="Images\0.jpg" />
-    <Content Include="Images\aerial-quad.jpg" />
-    <Content Include="Images\astheticQuad.jpg" />
-    <Content Include="Images\Bluestone.jpg" />
-    <Content Include="Images\COBphoto.jpg" />
     <Content Include="Images\cyberdayPic.jpg" />
-    <Content Include="Images\dukeDogs.png" />
-    <Content Include="Images\ExploreJMU.jpg" />
-    <Content Include="Images\jmu_football.jpg" />
-    <Content Include="Images\students-on-quad.jpg" />
-    <Content Include="Images\studentsOnQuad.jpg" />
-    <Content Include="Images\wilson.jpg" />
     <Content Include="LoginPage.aspx" />
     <Content Include="MainPage.aspx" />
     <Content Include="MealTicket.aspx" />
@@ -228,6 +217,7 @@
     <Content Include="StudentHome.aspx" />
     <Content Include="StudentUpdate.aspx" />
     <Content Include="StyleSheetStudent.css" />
+    <Content Include="TeacherChaperone.aspx" />
     <Content Include="TeacherHomePage.aspx" />
     <Content Include="TeacherRegister.aspx" />
     <Content Include="TeacherRosters.aspx" />
@@ -410,6 +400,13 @@
     </Compile>
     <Compile Include="StudentUpdate.aspx.designer.cs">
       <DependentUpon>StudentUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherChaperone.aspx.cs">
+      <DependentUpon>TeacherChaperone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeacherChaperone.aspx.designer.cs">
+      <DependentUpon>TeacherChaperone.aspx</DependentUpon>
     </Compile>
     <Compile Include="TeacherHomePage.aspx.cs">
       <DependentUpon>TeacherHomePage.aspx</DependentUpon>

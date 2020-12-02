@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CyberDay {
-    
-    
-    public partial class NewCyberDay {
-        
+namespace CyberDay
+{
+
+
+    public partial class NewCyberDay
+    {
+
         /// <summary>
         /// lblNewCyberDay control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblNewCyberDay;
-        
+
         /// <summary>
         /// lblDate control.
         /// </summary>
@@ -29,52 +31,16 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblDate;
-        
+
         /// <summary>
-        /// ddlMonth control.
+        /// Calendar1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlMonth;
-        
-        /// <summary>
-        /// lbl1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl1;
-        
-        /// <summary>
-        /// ddlDay control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlDay;
-        
-        /// <summary>
-        /// lbl2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl2;
-        
-        /// <summary>
-        /// ddlYear control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlYear;
-        
+        protected global::System.Web.UI.WebControls.Calendar Calendar1;
+
         /// <summary>
         /// lblStartTime control.
         /// </summary>
@@ -83,7 +49,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblStartTime;
-        
+
         /// <summary>
         /// ddlHour control.
         /// </summary>
@@ -92,7 +58,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlHour;
-        
+
         /// <summary>
         /// lbl3 control.
         /// </summary>
@@ -101,7 +67,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl3;
-        
+
         /// <summary>
         /// ddlMinute control.
         /// </summary>
@@ -110,7 +76,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlMinute;
-        
+
         /// <summary>
         /// lbl4 control.
         /// </summary>
@@ -119,7 +85,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl4;
-        
+
         /// <summary>
         /// ddlAmPm control.
         /// </summary>
@@ -128,7 +94,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlAmPm;
-        
+
         /// <summary>
         /// lblEndTime control.
         /// </summary>
@@ -137,7 +103,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblEndTime;
-        
+
         /// <summary>
         /// ddlHourEnd control.
         /// </summary>
@@ -146,7 +112,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlHourEnd;
-        
+
         /// <summary>
         /// Label2 control.
         /// </summary>
@@ -155,7 +121,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label2;
-        
+
         /// <summary>
         /// ddlMinuteEnd control.
         /// </summary>
@@ -164,7 +130,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlMinuteEnd;
-        
+
         /// <summary>
         /// Label3 control.
         /// </summary>
@@ -173,7 +139,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label3;
-        
+
         /// <summary>
         /// ddlAmPmEnd control.
         /// </summary>
@@ -182,7 +148,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlAmPmEnd;
-        
+
         /// <summary>
         /// lblAddCoordinator control.
         /// </summary>
@@ -191,7 +157,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAddCoordinator;
-        
+
         /// <summary>
         /// ddlAddCoordinator control.
         /// </summary>
@@ -200,7 +166,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlAddCoordinator;
-        
+
         /// <summary>
         /// btnCreateCyberDay control.
         /// </summary>
@@ -209,7 +175,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCreateCyberDay;
-        
+
         /// <summary>
         /// lblAddStatusSuccess control.
         /// </summary>
@@ -218,7 +184,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAddStatusSuccess;
-        
+
         /// <summary>
         /// lblAddStatusFail control.
         /// </summary>
@@ -227,7 +193,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAddStatusFail;
-        
+
         /// <summary>
         /// btnStep2 control.
         /// </summary>
@@ -236,7 +202,7 @@ namespace CyberDay {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnStep2;
-        
+
         /// <summary>
         /// SqlPopulateCoordinator control.
         /// </summary>
