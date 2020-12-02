@@ -2,8 +2,29 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div>
-        <section>
+    <style>
+        body {
+            background: #eee;
+        }
+        section {
+            width: 75%;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .wrapper {
+            margin: 80px;
+        }
+        .assign {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 15px 40px 50px;
+            border: 1px solid #e5e5e5;
+            border-radius: 10px;
+        }
+    </style>
+    <div class="wrapper">
+        <section class="assign">
             <fieldset>
                 <asp:Table runat="server">
                     <asp:TableRow>
