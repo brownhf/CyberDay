@@ -128,6 +128,7 @@
                 </asp:TableRow>
 
             </asp:Table>
+            <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
 
         </section>
 

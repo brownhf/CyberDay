@@ -47,15 +47,15 @@ namespace CyberDay
             }
             else if (Session["Username"].ToString() != "admin" && Session["UserType"].ToString() != "Coordinator")
             {
-                MessageBox.Show("Invalid Login Credentials");
+                //MessageBox.Show("Invalid Login Credentials");
             }
             else if (Session["UserType"].ToString() == "Parent")
             {
-                MessageBox.Show("Invalid Credentials");
+                //MessageBox.Show("Invalid Credentials");
             }
             else if (Session["UserType"].ToString() == "Teacher")
             {
-                MessageBox.Show("Invalid Credentials");
+                //MessageBox.Show("Invalid Credentials");
             }
         }
 
@@ -88,11 +88,11 @@ namespace CyberDay
             }
             else if (Session["Username"].ToString() != "admin" || Session["UserType"].ToString() != "Parent")
             {
-                MessageBox.Show("Must be logged in as a parent or admin");
+                //MessageBox.Show("Must be logged in as a parent or admin");
             }
             else if (Session["UserType"].ToString() == "Teacher")
             {
-                MessageBox.Show("Invalid Credentials");
+                //MessageBox.Show("Invalid Credentials");
             }
         }
 
@@ -108,11 +108,11 @@ namespace CyberDay
             }
             else if (Session["Username"].ToString() != "admin" || Session["UserType"].ToString() != "Teacher")
             {
-                MessageBox.Show("Must be logged in as a teacher or admin");
+                //MessageBox.Show("Must be logged in as a teacher or admin");
             }
             else if (Session["UserType"].ToString() == "Parent")
             {
-                MessageBox.Show("Invalid Credentials");
+                //MessageBox.Show("Invalid Credentials");
             }
         }
     }

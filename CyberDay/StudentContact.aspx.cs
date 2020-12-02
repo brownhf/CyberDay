@@ -45,7 +45,7 @@ namespace CyberDay
 
                 smtpClient.EnableSsl = true;
                 smtpClient.Send(message);
-                MessageBox.Show("Your email has been sent!");
+                lblError.Text = "Your email has been sent";
 
                 fromtxt.Text = "";
                 subjecttxt.Text = "";
@@ -54,7 +54,7 @@ namespace CyberDay
 
             catch
             {
-                MessageBox.Show("Something went wrong, please try again");
+                lblError.Text = "Something went wrong";
             }
 
 
