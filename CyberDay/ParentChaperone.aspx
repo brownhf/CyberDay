@@ -156,7 +156,7 @@
                             <asp:Button ID="btnSubmit" runat="server" Text="Sign Up" OnClick="btnSubmit_Click" />
                         </td>
                         <td>
-                            <asp:Button ID="btnPopulate" runat="server" Text="Populate" />
+                            <asp:Button ID="btnPopulate" runat="server" Text="Populate" OnClick="btnPopulate_Click" CausesValidation="false"/>
                         </td>
                     </tr>
                     <tr>

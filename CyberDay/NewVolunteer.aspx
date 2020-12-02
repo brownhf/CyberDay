@@ -119,6 +119,9 @@
                             <asp:Button ID="btnSaveVolunteer" runat="server" Text="Save New Volunteer" OnClick="btnSaveVolunteer_Click" />
                         </asp:TableCell>
                         <asp:TableCell>
+                            <asp:Button ID="Button1" runat="server" Text="Populate" OnClick="Button1_Click" CausesValidation="false"/>
+                        </asp:TableCell>
+                        <asp:TableCell>
                             <asp:Label ID="lblAddStatusSuccess" runat="server" Text="" ForeColor="Green"></asp:Label>
                             <asp:Label ID="lblAddStatusFail" runat="server" Text="" ForeColor="Red"></asp:Label>
                         </asp:TableCell>

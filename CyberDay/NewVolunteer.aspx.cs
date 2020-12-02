@@ -80,5 +80,16 @@ namespace CyberDay
                 }
             }
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            txtFirst.Text = "Bill";
+            txtLast.Text = "Gates";
+            ddlGender.SelectedIndex = 0;
+            ddlVolunteerType.SelectedIndex = 1;
+            ddlPreviousParticipation.SelectedIndex = 1;
+            txtEmail.Text = "billgates@live.com";
+            txtPhone.Text = "804-560-5030";
+        }
     }
 }
