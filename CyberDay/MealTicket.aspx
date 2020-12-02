@@ -65,7 +65,7 @@
                         CellSpacing="2"
                         CssClass="dv"
                         BorderColor="Purple"
-                        AlternatingRowStyle-BackColor="PaleGoldenrod">
+                        AlternatingRowStyle-BackColor="PaleGoldenrod" EmptyDataText="No Data">
                     </asp:GridView>
                     <br />
                     <asp:Button ID="btnPdf" runat="server" Text="Download" OnClick="btnPdf_Click" />

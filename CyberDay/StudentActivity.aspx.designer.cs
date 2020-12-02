@@ -24,15 +24,6 @@ namespace CyberDay
         protected global::System.Web.UI.WebControls.DropDownList cyberDayDDL;
 
         /// <summary>
-        /// eventDDL control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList eventDDL;
-
-        /// <summary>
         /// searchbttn control.
         /// </summary>
         /// <remarks>
@@ -42,13 +33,13 @@ namespace CyberDay
         protected global::System.Web.UI.WebControls.Button searchbttn;
 
         /// <summary>
-        /// DV control.
+        /// gvActivity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DetailsView DV;
+        protected global::System.Web.UI.WebControls.GridView gvActivity;
 
         /// <summary>
         /// pdfbttn control.

@@ -20,11 +20,8 @@ namespace CyberDay
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                //btnPdf.Visible = false;
+            
 
-            }
         }
 
         protected void btnTicketQuantity_Click(object sender, EventArgs e)
@@ -95,7 +92,7 @@ namespace CyberDay
                     pdfCell.HorizontalAlignment = Element.ALIGN_CENTER;
                     pdfCell.VerticalAlignment = Element.ALIGN_CENTER;
                     pdfTable.AddCell(pdfCell);
-                    
+
                 }
             }
 

@@ -28,10 +28,6 @@ namespace CyberDay
                     ddlUser.Items.Insert(1, separator);
                     ddlUser.Items.Insert(2, "Logout");
                 }
-                else
-                {
-                    MessageBox.Show("Something is wrong");
-                }
                 //if(ddlUser.SelectedIndex == 2)
                 //{
                 //    Session.Abandon();

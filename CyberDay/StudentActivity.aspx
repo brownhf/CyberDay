@@ -93,19 +93,10 @@
                         CssClass="cybDDL" 
                         DataSourceID="cyberDayDS" 
                         DataTextField="Date" 
-                        DataValueField="CyberDayID" 
-                        OnSelectedIndexChanged="CyberDayDDL_SelectedIndexChanged">
+                        DataValueField="CyberDayID">
                     </asp:DropDownList>
                     
                 
-                    <asp:DropDownList ID="eventDDL" 
-                        runat="server" 
-                        CssClass="cybDDL" 
-                        AutoPostBack="true"  
-                        DataTextField="EventName"
-                        DataValueField="EventID" >                           
-                    </asp:DropDownList>
-
                     <asp:Button ID="searchbttn" 
                         runat="server" 
                         Text="Search" 
@@ -114,7 +105,8 @@
                </div>
                <br />
                        
-                <asp:DetailsView ID="DV" 
+                <asp:GridView
+                    ID="gvActivity"
                     runat="server" 
                     Height="250px" 
                     Width="300px" 
@@ -123,14 +115,15 @@
                     HeaderStyle-Font-Bold="true" 
                     CssClass="dv" 
                     BorderColor="Purple" 
-                    AlternatingRowStyle-BackColor="PaleGoldenrod">  
-                </asp:DetailsView>
+                    AlternatingRowStyle-BackColor="PaleGoldenrod"
+                    EmptyDataText="No activities associated with this event">  
+                </asp:GridView>
                 <br />
                 
                 
                 <asp:Button ID="pdfbttn" 
                 runat="server" 
-                Text="Export to PDF" 
+                Text="Export to Excel" 
                 class=" btn-primary btn"
                 OnClick="pdfbttn_Click" />
                 

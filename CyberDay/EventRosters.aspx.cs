@@ -173,7 +173,7 @@ namespace CyberDay
             TextBox txtVolunteerCyberDay = grdvVolunteerRoster.Rows[e.RowIndex].FindControl("lblVolunteerCyberDay") as TextBox;
             SqlConnection sqlConnect = new SqlConnection(WebConfigurationManager.ConnectionStrings["CyberDayDB"].ToString());
             sqlConnect.Open();
-            SqlCommand volunteerUpdate = new SqlCommand("UPDATE [dbo].[Volunteer] SET FirstName = @first, LastName = @last, Gender = @gender, CISRelation = @affiliation, PreviousParticipation = @participation, Email = @email, LunchAttendance = @lunch, CyberDayID = @cyber WHERE [dbo].[Volunteer].[VolunteerID] = @volunteerID");
+            SqlCommand volunteerUpdate = new SqlCommand("UPDATE [dbo].[Volunteer] SET FirstName = @first, LastName = @last, Gender = @gender, CISRelation = @affiliation, PreviousParticipation = @participation, Email = @email WHERE [dbo].[Volunteer].[VolunteerID] = @volunteerID");
             volunteerUpdate.Parameters.AddWithValue("@volunteerID", lblVolunteerID.Text);
             volunteerUpdate.Parameters.AddWithValue("@first", txtVolunteerFirst.Text);
             volunteerUpdate.Parameters.AddWithValue("@last", txtVolunteerLast.Text);
@@ -182,8 +182,6 @@ namespace CyberDay
             volunteerUpdate.Parameters.AddWithValue("@participation", txtVolunteerParticipation.Text);
             volunteerUpdate.Parameters.AddWithValue("@email", txtVolunteerEmail.Text);
             volunteerUpdate.Parameters.AddWithValue("@phone", txtVolunteerPhone.Text);
-            volunteerUpdate.Parameters.AddWithValue("@lunch", txtVolunteerLunch.Text);
-            volunteerUpdate.Parameters.AddWithValue("@cyber", txtVolunteerCyberDay.Text);
             volunteerUpdate.Connection = sqlConnect;
             volunteerUpdate.ExecuteNonQuery();
             gvbind();
