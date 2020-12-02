@@ -28,7 +28,7 @@
         <h1>TEACHER HOME</h1>
         <hr />
 
-        <h3><a href="ParentChaperone.aspx">REGISTER OTHER TEACHERS/CHAPERONES</a></h3>
+        <h3><a href="TeacherChaperone.aspx">REGISTER OTHER TEACHERS/CHAPERONES</a></h3>
         <br />
         <p>Click here to add another teacher or faculty member to register as a chaperone for the event.</p>
         <hr />
