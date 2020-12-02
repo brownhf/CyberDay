@@ -88,10 +88,10 @@
                             <a class="nav-link" id="coordinatorLink" runat="server" href="" onserverclick="coordinatorLink_ServerClick">COORDINATORS</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="TeacherHomePage.aspx">TEACHERS</a>
+                            <a class="nav-link" id="teacherLink" runat="server" onserverclick="teacherLink_ServerClick">TEACHERS</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="ParentsHome.aspx">PARENTS</a>
+                            <a class="nav-link" id="parentLink" runat="server" onserverclick="parentLink_ServerClick">PARENTS</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="StudentHome.aspx">STUDENTS</a>

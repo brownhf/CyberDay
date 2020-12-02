@@ -17,6 +17,7 @@ namespace CyberDay
         {
             lblAddStatusFail.Visible = false;
             lblAddStatusSuccess.Visible = false;
+            btnStep2.Visible = false;
         }
 
         protected void btnCreateCyberDay_Click(object sender, EventArgs e)
@@ -60,6 +61,7 @@ namespace CyberDay
                     lblAddStatusFail.Visible = false;
                     lblAddStatusSuccess.Visible = true;
                     lblAddStatusSuccess.Text = "CyberDay succesfully created";
+                    btnStep2.Visible = true;
                 }
                 catch (Exception)
                 {

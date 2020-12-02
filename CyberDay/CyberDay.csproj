@@ -108,6 +108,8 @@
     <Content Include="MealTicket.aspx" />
     <Content Include="NewCyberDay.aspx" />
     <Content Include="NewVolunteer.aspx" />
+    <Content Include="NonAdminCreateAccount.aspx" />
+    <Content Include="NonAdminLogin.aspx" />
     <Content Include="OtherFacultyMembers.aspx" />
     <Content Include="ParentChaperone.aspx" />
     <Content Include="ParentPhotoReleaseForm.aspx" />
@@ -308,6 +310,20 @@
     </Compile>
     <Compile Include="NewVolunteer.aspx.designer.cs">
       <DependentUpon>NewVolunteer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NonAdminCreateAccount.aspx.cs">
+      <DependentUpon>NonAdminCreateAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NonAdminCreateAccount.aspx.designer.cs">
+      <DependentUpon>NonAdminCreateAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NonAdminLogin.aspx.cs">
+      <DependentUpon>NonAdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NonAdminLogin.aspx.designer.cs">
+      <DependentUpon>NonAdminLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="OtherFacultyMembers.aspx.cs">
       <DependentUpon>OtherFacultyMembers.aspx</DependentUpon>

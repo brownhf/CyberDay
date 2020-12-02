@@ -131,6 +131,7 @@ namespace CyberDay
             txtAllergies.Text = "";
             ddlGenders.SelectedIndex = 0;
             ddlDietaryNeeds.SelectedIndex = 0;
+            ddlLunchAttendance.SelectedIndex = 0;
         }
 
         protected void btnPopulate_Click(object sender, EventArgs e)
@@ -143,6 +144,7 @@ namespace CyberDay
             txtAllergies.Text = "None";
             ddlGenders.SelectedIndex = 1;
             ddlDietaryNeeds.SelectedIndex = 1;
+            ddlLunchAttendance.SelectedIndex = 1;
 
         }
     }

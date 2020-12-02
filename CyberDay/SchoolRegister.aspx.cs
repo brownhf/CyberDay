@@ -17,6 +17,7 @@ namespace CyberDay
         {
             lblAddStatusFail.Visible = false;
             lblAddStatusSuccess.Visible = false;
+            btnStep3.Visible = false;
         }
 
         protected void btnAddSchool_Click(object sender, EventArgs e)
@@ -61,6 +62,7 @@ namespace CyberDay
                     lblAddStatusFail.Visible = false;
                     lblAddStatusSuccess.Visible = true;
                     lblAddStatusSuccess.Text = "School succesfully Added";
+                    btnStep3.Visible = true;
 
                     txtSchoolName.Text = String.Empty;
                     txtStreet.Text = String.Empty;

@@ -17,6 +17,7 @@ namespace CyberDay
         {
             lblAddStatusFail.Visible = false;
             lblAddStatusSuccess.Visible = false;
+            btnRedirectHome.Visible = false;
         }
 
         protected void btnAddSchool_Click(object sender, EventArgs e)
@@ -73,6 +74,7 @@ namespace CyberDay
                     lblAddStatusFail.Visible = false;
                     lblAddStatusSuccess.Visible = true;
                     lblAddStatusSuccess.Text = "Teacher succesfully created";
+                    btnRedirectHome.Visible = true;
 
                     txtFirst.Text = String.Empty;
                     txtLast.Text = String.Empty;

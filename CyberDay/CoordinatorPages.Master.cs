@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Windows;
 
 namespace CyberDay
 {
@@ -26,6 +27,10 @@ namespace CyberDay
                     separator.Attributes.Add("disabled", "true");
                     ddlUser.Items.Insert(1, separator);
                     ddlUser.Items.Insert(2, "Logout");
+                }
+                else
+                {
+                    MessageBox.Show("Something is wrong");
                 }
                 //if(ddlUser.SelectedIndex == 2)
                 //{

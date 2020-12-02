@@ -11,70 +11,70 @@ namespace CyberDay
 {
 
 
-    public partial class MainPage
+    public partial class NonAdminLogin
     {
 
         /// <summary>
-        /// form1 control.
+        /// form2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form2;
 
         /// <summary>
-        /// btnUserLogin control.
+        /// lblBlankIncorrectLogin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton btnUserLogin;
+        protected global::System.Web.UI.WebControls.Label lblBlankIncorrectLogin;
 
         /// <summary>
-        /// ddlUser control.
+        /// txtUsername control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlUser;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtUsername;
 
         /// <summary>
-        /// coordinatorLink control.
+        /// txtPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor coordinatorLink;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword txtPassword;
 
         /// <summary>
-        /// teacherLink control.
+        /// btnLogin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor teacherLink;
+        protected global::System.Web.UI.WebControls.Button btnLogin;
 
         /// <summary>
-        /// parentLink control.
+        /// lblCreateAccount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor parentLink;
+        protected global::System.Web.UI.WebControls.Label lblCreateAccount;
 
         /// <summary>
-        /// Image2 control.
+        /// lnkBtnCreateAccount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image2;
+        protected global::System.Web.UI.WebControls.LinkButton lnkBtnCreateAccount;
     }
 }

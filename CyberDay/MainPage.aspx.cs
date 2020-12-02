@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Services.Description;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Windows;
 
 namespace CyberDay
 {
@@ -39,9 +41,21 @@ namespace CyberDay
             {
                 Response.Redirect("LoginPage.aspx");
             }
-            else
+            else if (Session["Username"].ToString() == "admin" && Session["UserType"].ToString() == "Coordinator")
             {
                 Response.Redirect("CoordinatorHomePage.aspx");
+            }
+            else if (Session["Username"].ToString() != "admin" && Session["UserType"].ToString() != "Coordinator")
+            {
+                MessageBox.Show("Invalid Login Credentials");
+            }
+            else if (Session["UserType"].ToString() == "Parent")
+            {
+                MessageBox.Show("Invalid Credentials");
+            }
+            else if (Session["UserType"].ToString() == "Teacher")
+            {
+                MessageBox.Show("Invalid Credentials");
             }
         }
 
@@ -52,13 +66,54 @@ namespace CyberDay
 
             //if (ddlUser.SelectedItem.Value == "Logout")
             //{
-
+            //    Session["Username"] = "";
+            //    Session["UserType"] = "";
             //}
         }
 
         protected void btnUserLogin_ServerClick(object sender, EventArgs e)
         {
             Response.Redirect("LoginPage.aspx");
+        }
+
+        protected void parentLink_ServerClick(object sender, EventArgs e)
+        {
+            if (Session["UserType"] == null)
+            {
+                Response.Redirect("NonAdminLogin.aspx");
+            }
+            else if (Session["UserType"].ToString() == "Parent" || Session["Username"].ToString() == "admin")
+            {
+                Response.Redirect("ParentsHome.aspx");
+            }
+            else if (Session["Username"].ToString() != "admin" || Session["UserType"].ToString() != "Parent")
+            {
+                MessageBox.Show("Must be logged in as a parent or admin");
+            }
+            else if (Session["UserType"].ToString() == "Teacher")
+            {
+                MessageBox.Show("Invalid Credentials");
+            }
+        }
+
+        protected void teacherLink_ServerClick(object sender, EventArgs e)
+        {
+            if (Session["UserType"] == null)
+            {
+                Response.Redirect("NonAdminLogin.aspx");
+            }
+            else if (Session["UserType"].ToString() == "Teacher" || Session["Username"].ToString() == "admin")
+            {
+                Response.Redirect("TeacherHomePage.aspx");
+            }
+            else if (Session["Username"].ToString() != "admin" || Session["UserType"].ToString() != "Teacher")
+            {
+                MessageBox.Show("Must be logged in as a teacher or admin");
+            }
+            else if (Session["UserType"].ToString() == "Parent")
+            {
+                MessageBox.Show("Invalid Credentials");
+            }
         }
     }
 }
