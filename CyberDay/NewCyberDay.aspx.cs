@@ -21,12 +21,14 @@ namespace CyberDay
 
         protected void btnCreateCyberDay_Click(object sender, EventArgs e)
         {
+            
             DataSet duplicateSet = new DataSet();
             String duplicateQuery = "SELECT * FROM [dbo].[CyberDay] ";
-            duplicateQuery += "WHERE [CyberDay].[Date] = '" + ddlMonth.SelectedValue + "/" + ddlDay.SelectedValue + "/" + ddlYear.SelectedValue + "' ";
+            duplicateQuery += "WHERE [CyberDay].[Date] = '" + Calendar1.SelectedDate.ToShortDateString() + "' ";
             duplicateQuery += "AND [CyberDay].[StartTime] = '" + ddlHour.SelectedValue + ":" + ddlMinute.SelectedValue + ddlAmPm.Text.Trim() + "' ";
             duplicateQuery += "AND [CyberDay].[EndTime] = '" + ddlHourEnd.SelectedValue + ":" + ddlMinuteEnd.SelectedValue + ddlAmPmEnd.Text.Trim() + "' ";
             duplicateQuery += "AND [CyberDay].[CoordinatorID] = '" + ddlAddCoordinator.SelectedValue + "' ";
+
 
 
 
@@ -50,7 +52,7 @@ namespace CyberDay
                     String insertCmd = "INSERT INTO CyberDay VALUES (@ddlDate, @ddlStartTime, @ddlEndTime, @ddlAddCoordinator)";
                     SqlConnection sqlConnect = new SqlConnection(WebConfigurationManager.ConnectionStrings["CyberDayDB"].ToString());
                     SqlCommand sqlCommand = new SqlCommand(insertCmd, sqlConnect);
-                    sqlCommand.Parameters.AddWithValue("@ddlDate", HttpUtility.HtmlEncode(ddlMonth.SelectedValue + "/" + ddlDay.SelectedValue + "/" + ddlYear.SelectedValue));
+                    sqlCommand.Parameters.AddWithValue("@ddlDate", HttpUtility.HtmlEncode(Calendar1.SelectedDate.ToShortDateString()));
                     sqlCommand.Parameters.AddWithValue("@ddlStartTime", HttpUtility.HtmlEncode(ddlHour.SelectedValue + ":" + ddlMinute.SelectedValue + ddlAmPm.Text.Trim()));
                     sqlCommand.Parameters.AddWithValue("@ddlEndTime", HttpUtility.HtmlEncode(ddlHourEnd.SelectedValue + ":" + ddlMinuteEnd.SelectedValue + ddlAmPmEnd.Text.Trim()));
                     sqlCommand.Parameters.AddWithValue("@ddlAddCoordinator", HttpUtility.HtmlEncode(ddlAddCoordinator.SelectedValue));
@@ -71,9 +73,15 @@ namespace CyberDay
             }
         }
 
-        protected void btnStep2_Click(object sender, EventArgs e)
+    protected void btnStep2_Click(object sender, EventArgs e)
         {
             Response.Redirect("SchoolRegister.aspx");
+        }
+
+        protected void Calendar1_SelectionChanged(object sender, EventArgs e)
+        {
+            string cal = Calendar1.SelectedDate.ToShortDateString();
+
         }
     }
 }
