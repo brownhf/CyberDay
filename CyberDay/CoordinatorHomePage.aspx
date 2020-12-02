@@ -11,6 +11,10 @@
         .CyberDay {
             max-width: 100%;
             align-content: center;
+            height: 350px;
+            width: 1490px;
+            
+            
         }
         /*SECTION IS THE BODY OF THE SUB PAGES/THE CONTENT PLACE HOLDERS BODY, SO THE 75% ONLY APPLIES TO THAT PORTION OF THE PAGE*/
         section {
