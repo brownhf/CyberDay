@@ -27,7 +27,6 @@ namespace CyberDay
             duplicateQuery += "AND [Teacher].[LastName] = '" + txtLast.Text.Trim() + "' ";
             duplicateQuery += "AND [Teacher].[Email] = '" + txtEmail.Text.Trim() + "' ";
             duplicateQuery += "AND [Teacher].[PhoneNumber] = '" + txtPhone.Text.Trim() + "' ";
-            duplicateQuery += "AND [Teacher].[ShirtSize] = '" + ddlShirtSize.Text.Trim() + "' ";
             duplicateQuery += "AND [Teacher].[SchoolID] = '" + ddlSchool.Text.Trim() + "' ";
             duplicateQuery += "AND [Teacher].[LunchAttendance] = '" + ddlLunchAttendance.SelectedValue.Trim() + "' ";
             duplicateQuery += "AND [Teacher].[CyberDayID] = '" + ddlCyberDay.SelectedValue + "' ";
@@ -48,22 +47,22 @@ namespace CyberDay
 
                 try
                 {
-                    String insertCmd = "INSERT INTO Teacher VALUES (@txtFirst, @txtLast, @txtEmail, @txtPhone, @ddlShirtSize, @ddlSchool, @LunchAttendance, @CyberDayID)";
-                    string sqlInsertLunch = "Insert Into Lunch Values (@FirstName, @LastName, @Attendance, @CyberDayID)";
+                    String insertCmd = "INSERT INTO Teacher VALUES (@txtFirst, @txtLast, @txtEmail, @txtPhone, @ddlSchool, @LunchAttendance, @CyberDayID)";
                     SqlConnection sqlConnect = new SqlConnection(WebConfigurationManager.ConnectionStrings["CyberDayDB"].ToString());
                     SqlCommand sqlCommand = new SqlCommand(insertCmd, sqlConnect);
                     sqlCommand.Parameters.AddWithValue("@txtFirst", HttpUtility.HtmlEncode(txtFirst.Text.Trim()));
                     sqlCommand.Parameters.AddWithValue("@txtLast", HttpUtility.HtmlEncode(txtLast.Text.Trim()));
                     sqlCommand.Parameters.AddWithValue("@txtEmail", HttpUtility.HtmlEncode(txtEmail.Text.Trim()));
                     sqlCommand.Parameters.AddWithValue("@txtPhone", HttpUtility.HtmlEncode(txtPhone.Text.Trim()));
-                    sqlCommand.Parameters.AddWithValue("@ddlShirtSize", HttpUtility.HtmlEncode(ddlShirtSize.Text.Trim()));
                     sqlCommand.Parameters.AddWithValue("@ddlSchool", HttpUtility.HtmlEncode(ddlSchool.SelectedValue));
                     sqlCommand.Parameters.AddWithValue("@LunchAttendance", HttpUtility.HtmlEncode(ddlLunchAttendance.SelectedValue));
                     sqlCommand.Parameters.AddWithValue("@CyberDayID", HttpUtility.HtmlEncode(ddlCyberDay.SelectedValue));
 
+                    string sqlInsertLunch = "Insert Into Lunch Values (@FirstName, @LastName, @Attendance, @CyberDayID)";
+
                     SqlCommand sqlComInsertLunch = new SqlCommand(sqlInsertLunch, sqlConnect);
-                    sqlComInsertLunch.Parameters.AddWithValue("@FirstName", txtFirst.Text);
-                    sqlComInsertLunch.Parameters.AddWithValue("@LastName", txtLast.Text);
+                    sqlComInsertLunch.Parameters.AddWithValue("@FirstName", txtFirst.Text.Trim());
+                    sqlComInsertLunch.Parameters.AddWithValue("@LastName", txtLast.Text.Trim());
                     sqlComInsertLunch.Parameters.AddWithValue("@Attendance", ddlLunchAttendance.SelectedValue);
                     sqlComInsertLunch.Parameters.AddWithValue("@CyberDayID", ddlCyberDay.SelectedValue);
 

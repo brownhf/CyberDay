@@ -71,6 +71,9 @@
                     <a class="nav-link" href="NewVolunteer.aspx">ADD A VOLUNTEER</a>
                 </li>
                 <li class="nav-item active">
+                    <a class="nav-link" href="AssignVolunteer.aspx">ASSIGN VOLUNTEER</a>
+                </li>
+                <li class="nav-item active">
                     <a class="nav-link" href="EventRosters.aspx">ROSTERS</a>
                 </li>
                 <li class="nav-item active">
