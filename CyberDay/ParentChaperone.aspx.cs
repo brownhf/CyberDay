@@ -102,5 +102,16 @@ namespace CyberDay
                 lblDuplicateError.Text = "Chaperone Successfully Signed Up!";
             }
         }
+
+        protected void btnPopulate_Click(object sender, EventArgs e)
+        {
+            txtFirstName.Text = "John";
+            txtLastName.Text = "Smith";
+            txtPhoneNumber.Text = "540-809-9099";
+            txtEmail.Text = "johnsmith@gmail.com";
+            ddlCyberDay.SelectedIndex = 0;
+            ddlLunchAttendance.SelectedIndex = 1;
+            txtAllergies.Text = "None";
+        }
     }
 }
